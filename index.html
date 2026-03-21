@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FinanceHub — Organizador Financeiro</title>
+    <meta name="description" content="Gestão completa de finanças pessoais: gastos, cartões de crédito e investimentos">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+</head>
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span>FinanceHub</span>
+        </div>
+        <ul class="nav-links">
+            <li class="active" data-tab="dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                <span>Dashboard</span>
+            </li>
+            <li data-tab="income">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><polyline points="17 7 12 2 7 7"/><line x1="1" y1="23" x2="23" y2="23"/></svg>
+                <span>Receitas</span>
+            </li>
+            <li data-tab="expenses">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 010-4h14v4"/><path d="M3 5v14a2 2 0 002 2h16v-5"/><path d="M18 12a2 2 0 000 4h4v-4h-4z"/></svg>
+                <span>Gastos Mensais</span>
+            </li>
+            <li data-tab="creditcard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span>Cartão de Crédito</span>
+            </li>
+            <li data-tab="investments">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                <span>Investimentos</span>
+            </li>
+            <li data-tab="settings">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                <span>Configurações</span>
+            </li>
+        </ul>
+        <div class="sidebar-footer">FinanceHub v1.0 &copy; 2026</div>
+    </nav>
+
+    <div class="main-wrapper">
+        <header class="header">
+            <div style="display:flex;align-items:center;gap:12px">
+                <button class="mobile-toggle" id="menu-toggle">☰</button>
+                <div class="header-left">
+                    <h1 id="page-title">Dashboard</h1>
+                    <p id="page-sub">Visão geral das suas finanças</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-secondary btn-sm" id="logout-btn" style="display:none;">Sair</button>
+                <div class="avatar" id="avatar">W</div>
+            </div>
+        </header>
+        <main class="content">
+            <section id="tab-dashboard" class="tab-content active"></section>
+            <section id="tab-income" class="tab-content"></section>
+            <section id="tab-expenses" class="tab-content"></section>
+            <section id="tab-creditcard" class="tab-content"></section>
+            <section id="tab-investments" class="tab-content"></section>
+            <section id="tab-settings" class="tab-content"></section>
+        </main>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal" id="modal-container"></div>
+    </div>
+
+    <div id="auth-overlay" class="auth-overlay">
+        <div class="auth-box">
+            <div class="auth-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:32px;height:32px;color:var(--accent)"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2 style="font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--purple));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent">FinanceHub</h2>
+            </div>
+            <h3 id="auth-title" style="margin-bottom:20px; text-align:center; font-weight:600; font-size:1.1rem;">Acessar Conta</h3>
+            <div id="auth-error" class="audit-alert audit-alert-danger" style="display:none; padding:10px; margin-bottom:15px; font-size:0.8rem; border-radius:8px;"></div>
+            <form id="auth-form" class="auth-form" autocomplete="off">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="auth-email" required placeholder="seu@email.com">
+                </div>
+                <div class="form-group" style="margin-bottom:24px;">
+                    <label>Senha</label>
+                    <input type="password" id="auth-password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:12px; font-size:0.95rem" id="auth-submit-btn">Entrar</button>
+            </form>
+            <div id="auth-forgot-wrap" style="text-align:center; margin-top:12px; font-size:0.82rem;">
+                <a href="#" id="auth-forgot-link" style="color:var(--t3); text-decoration:none;">Esqueci minha senha</a>
+            </div>
+            <div class="auth-toggle" style="margin-top:20px; text-align:center; font-size:0.85rem; color:var(--t3);">
+                <span id="auth-toggle-text">Não tem conta?</span> 
+                <a href="#" id="auth-toggle-link" style="color:var(--accent); text-decoration:none; font-weight:600;">Cadastrar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';</script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
