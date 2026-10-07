@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Eleições 2026 — Apuração e Pesquisas</title>
+    <meta name="description" content="Apuração oficial do TSE em tempo real com mapa 3D (Brasil, UF, município, zona e seção) e agregador de pesquisas do 2º turno Lula × Flávio Bolsonaro.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/eleicoes.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗳️</text></svg>">
+    <style>
+        body{display:block}
+        .el-shell-head{position:sticky;top:0;z-index:50;background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+        .el-shell-head h1{font-size:1.15rem;font-weight:800;display:flex;align-items:center;gap:10px}
+        .el-shell-head h1 a{color:inherit;text-decoration:none}
+        .el-shell-head .sub{font-size:.8rem;color:var(--t3)}
+        .el-shell-main{padding:20px 24px 40px;max-width:1680px;margin:0 auto}
+        @media (max-width:640px){.el-shell-head,.el-shell-main{padding-left:16px;padding-right:16px}}
+    </style>
+</head>
+<body>
+    <header class="el-shell-head">
+        <h1><a href="index.html" title="Voltar ao FinanceHub">🗳️ Eleições 2026</a></h1>
+        <div class="seg" id="shell-tabs" role="tablist">
+            <button data-tab="apuracao">Apuração ao vivo</button>
+            <button data-tab="pesquisas">Pesquisas 2º turno</button>
+        </div>
+        <span class="sub" id="shell-sub"></span>
+    </header>
+    <main class="el-shell-main">
+        <section id="tab-apuracao" class="tab-content"></section>
+        <section id="tab-pesquisas" class="tab-content"></section>
+    </main>
+    <script type="module">
+        import * as apuracao from './js/eleicoes/apuracao.js';
+        import * as pesquisas from './js/eleicoes/pesquisas.js';
+        const TABS = {
+            apuracao: { m: apuracao, sub: 'Resultados oficiais do TSE · Brasil › UF › município › zona › seção' },
+            pesquisas: { m: pesquisas, sub: 'Lula × Flávio Bolsonaro · consolidado, projeção e comparação com 2022' },
+        };
+        document.documentElement.setAttribute('data-theme', JSON.parse(localStorage.getItem('fh_settings') || '{}').theme || 'dark');
+        Object.entries(TABS).forEach(([id, t]) => t.m.init(document.getElementById('tab-' + id)));
+        function show(id) {
+            document.querySelectorAll('#shell-tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
+            document.querySelectorAll('.tab-content').forEach(s => s.classList.toggle('active', s.id === 'tab-' + id));
+            document.getElementById('shell-sub').textContent = TABS[id].sub;
+            if (id === 'pesquisas') history.replaceState(null, '', '#pesquisas');
+            TABS[id].m.render();
+        }
+        document.getElementById('shell-tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(b.dataset.tab); });
+        show(location.hash.startsWith('#pesquisas') ? 'pesquisas' : 'apuracao');
+    </script>
+</body>
+</html>

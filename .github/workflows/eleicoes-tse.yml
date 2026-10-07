@@ -17,7 +17,7 @@ on:
         type: boolean
         default: false
   push:
-    branches: [ccr-98653d89-r5ar8b]
+    branches: [main, ccr-98653d89-r5ar8b]
     paths: ['scripts/eleicoes/sync-tse.mjs', 'js/eleicoes/normalize.js', '.github/workflows/eleicoes-tse.yml']
 
 permissions:

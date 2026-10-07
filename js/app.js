@@ -5,6 +5,8 @@ import * as expenses from './expenses.js';
 import * as creditcard from './creditcard.js';
 import * as investments from './investments.js';
 import * as settings from './settings.js';
+import * as apuracao from './eleicoes/apuracao.js';
+import * as pesquisas from './eleicoes/pesquisas.js';
 import { getSettings } from './storage.js';
 import { initAuth } from './auth.js';
 
@@ -14,10 +16,17 @@ const TABS = {
     expenses: { module: expenses, title: 'Gastos Mensais', sub: 'Controle de gastos fixos e variáveis' },
     creditcard: { module: creditcard, title: 'Cartão de Crédito', sub: 'Gestão de cartões e fatura' },
     investments: { module: investments, title: 'Investimentos', sub: 'Acompanhamento da carteira' },
+    apuracao: { module: apuracao, title: 'Apuração 2026', sub: 'Resultados oficiais do TSE — Brasil, UF, município, zona e seção' },
+    pesquisas: { module: pesquisas, title: 'Pesquisas 2º turno', sub: 'Lula × Flávio Bolsonaro: cada pesquisa, consolidado, projeção e comparação com 2022' },
     settings: { module: settings, title: 'Configurações', sub: 'Tema, categorias e metas financeiras' }
 };
 
-let activeTab = 'dashboard';
+let activeTab = tabFromHash();
+
+function tabFromHash() {
+    const h = location.hash.replace('#', '').split('?')[0];
+    return ['apuracao', 'pesquisas'].includes(h) ? h : 'dashboard';
+}
 
 function switchTab(tabId) {
     if (!TABS[tabId]) return;
@@ -36,6 +45,10 @@ function switchTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
     const tabEl = document.getElementById('tab-' + tabId);
     tabEl.classList.add('active');
+
+    // Abas eleitorais têm URL própria (compartilhável); demais limpam o hash
+    if (tabId === 'pesquisas') history.replaceState(null, '', '#pesquisas');
+    else if (tabId !== 'apuracao' && location.hash) history.replaceState(null, '', location.pathname);
 
     // Render the module
     if (TABS[tabId].module.render) {

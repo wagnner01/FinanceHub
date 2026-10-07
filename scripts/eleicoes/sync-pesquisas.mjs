@@ -5,6 +5,7 @@
 // Uso: node scripts/eleicoes/sync-pesquisas.mjs [--arquivo wikitext.json] [--so-2022]
 import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { parse2026, parse2022 } from './parse-pesquisas.mjs';
+import { analisar } from '../../js/eleicoes/modelo.js';
 
 const OUT = 'data/pesquisas';
 const API = page => `https://pt.wikipedia.org/w/api.php?action=parse&format=json&prop=wikitext|revid&formatversion=2&page=${encodeURIComponent(page)}`;
@@ -67,3 +68,22 @@ if (args.includes('--so-2022') || args.includes('--com-2022')) {
     };
     await writeIfChanged(`${OUT}/presidente-2t-2022.json`, data, x => [x.polls, x.agregadores]);
 }
+
+// Histórico diário da projeção (permite auditar o modelo depois da eleição)
+try {
+    const d26 = JSON.parse(await readFile(`${OUT}/presidente-2t-2026.json`, 'utf8'));
+    const d22 = JSON.parse(await readFile(`${OUT}/presidente-2t-2022.json`, 'utf8'));
+    const hoje = new Date().toISOString().slice(0, 10);
+    const a = analisar(d26, d22, hoje > d26.eleicao ? d26.eleicao : hoje);
+    let hist = [];
+    try { hist = JSON.parse(await readFile(`${OUT}/projecoes.json`, 'utf8')); } catch { /* novo */ }
+    const r = x => Math.round(x * 100) / 100;
+    const entry = {
+        dia: hoje, consolidadoLula: r(a.serie.at(-1)?.lula), projecaoLula: r(a.projecao.lula),
+        intervalo90: a.projecao.intervalo.map(r), probLula: r(a.projecao.probLula * 100),
+        projecaoAjustadaLula: r(a.projecaoAjustada.lula), pesquisas: a.serie.at(-1)?.n,
+    };
+    hist = hist.filter(h => h.dia !== hoje).concat(entry).sort((x, y) => x.dia.localeCompare(y.dia));
+    await writeFile(`${OUT}/projecoes.json`, JSON.stringify(hist, null, 1));
+    console.log('projeção do dia', entry);
+} catch (e) { console.warn('projeção não calculada:', e.message); }

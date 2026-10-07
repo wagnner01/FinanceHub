@@ -7,7 +7,7 @@ on:
     - cron: '43 23 * * *'   # 20h43 BRT (pesquisas costumam sair à noite)
   workflow_dispatch:
   push:
-    branches: [ccr-98653d89-r5ar8b]
+    branches: [main, ccr-98653d89-r5ar8b]
     paths: ['scripts/eleicoes/*pesquisas*.mjs', 'scripts/eleicoes/wikitext.mjs', '.github/workflows/eleicoes-pesquisas.yml']
 
 permissions:

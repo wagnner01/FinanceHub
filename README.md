@@ -115,6 +115,25 @@ project-root/
 
 For full structure with descriptions → see `llm.md § Project Structure`.
 
+## Eleições 2026 (apuração + pesquisas)
+
+Duas abas novas no app (**Apuração 2026** e **Pesquisas 2º turno**) e uma página pública sem login: [`eleicoes.html`](./eleicoes.html).
+
+| Peça | O que faz |
+|------|-----------|
+| `js/eleicoes/tse.js` | Consulta o CDN oficial do TSE ao vivo (CORS liberado); cai no snapshot de `data/eleicoes/` se falhar |
+| `js/eleicoes/bu.js` | Decodifica o boletim de urna (`-bu.dat`, ASN.1) de cada seção no navegador |
+| `js/eleicoes/mapa.js` | MapLibre GL: satélite + relevo 3D + atmosfera; fallback SVG 2D |
+| `js/eleicoes/modelo.js` | Consolidado ponderado, viés 2022, projeção e probabilidade |
+| `scripts/eleicoes/sync-tse.mjs` | Snapshot TSE (Brasil, UFs, todos os cargos, municípios) |
+| `scripts/eleicoes/sync-pesquisas.mjs` | Coleta das pesquisas de 2º turno + histórico diário da projeção |
+| `.github/workflows/eleicoes-*.yml` | Agendamento (TSE a cada 6h e a cada 10 min na noite de 25/10; pesquisas 2×/dia) |
+
+> Agendamentos (`schedule`) do GitHub Actions só rodam na branch padrão — a automação diária liga depois do merge em `main`.
+> Também dá para disparar manualmente em *Actions → Run workflow*.
+
+Hierarquia navegável: Brasil › UF › município › zona › seção (URL compartilhável, ex.: `eleicoes.html#apuracao?t=1&c=3&uf=rj`).
+
 ## Environment variables
 
 Copy `.env.example` to `.env` and fill in the values below.
