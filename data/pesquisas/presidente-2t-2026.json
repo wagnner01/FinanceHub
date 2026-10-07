@@ -1,0 +1,2537 @@
+{
+ "disputa": "Lula (PT) × Flávio Bolsonaro (PL)",
+ "eleicao": "2026-10-25",
+ "primeiroTurno": "2026-10-04",
+ "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
+ "coletadoEm": "2026-10-07T00:52:58.852Z",
+ "polls": [
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-10-03",
+   "fim": "2026-10-03",
+   "amostra": 4006,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 46,
+   "outros": 7,
+   "validos": {
+    "lula": 50.54,
+    "flavio": 49.46
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-10-02",
+   "fim": "2026-10-03",
+   "amostra": 3702,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 44,
+   "outros": 14,
+   "validos": {
+    "lula": 48.84,
+    "flavio": 51.16
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-10-01",
+   "fim": "2026-10-03",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 44,
+   "outros": 10,
+   "validos": {
+    "lula": 51.11,
+    "flavio": 48.89
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-09-29",
+   "fim": "2026-10-03",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45.1,
+   "flavio": 48,
+   "outros": 6.9,
+   "validos": {
+    "lula": 48.44,
+    "flavio": 51.56
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-09-30",
+   "fim": "2026-10-02",
+   "amostra": 2400,
+   "margem": 2.04,
+   "lula": 44,
+   "flavio": 49,
+   "outros": 7,
+   "validos": {
+    "lula": 47.31,
+    "flavio": 52.69
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-09-30",
+   "fim": "2026-10-02",
+   "amostra": 4000,
+   "margem": 1.5,
+   "lula": 46,
+   "flavio": 46,
+   "outros": 8,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-09-30",
+   "fim": "2026-10-02",
+   "amostra": 2007,
+   "margem": 2.2,
+   "lula": 47.3,
+   "flavio": 43.1,
+   "outros": 9.8,
+   "validos": {
+    "lula": 52.32,
+    "flavio": 47.68
+   }
+  },
+  {
+   "instituto": "IFP",
+   "contratante": "IFP",
+   "inicio": "2026-09-29",
+   "fim": "2026-10-02",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45.88,
+   "flavio": 45.01,
+   "outros": 9.11,
+   "validos": {
+    "lula": 50.48,
+    "flavio": 49.52
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-09-27",
+   "fim": "2026-10-02",
+   "amostra": 5000,
+   "margem": 1,
+   "lula": 50.1,
+   "flavio": 49.9,
+   "outros": null,
+   "validos": {
+    "lula": 50.1,
+    "flavio": 49.9
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-09-30",
+   "fim": "2026-10-01",
+   "amostra": 5000,
+   "margem": 4,
+   "lula": 44,
+   "flavio": 49,
+   "outros": 7,
+   "validos": {
+    "lula": 47.31,
+    "flavio": 52.69
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox",
+   "inicio": "2026-09-29",
+   "fim": "2026-10-01",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 45.2,
+   "flavio": 48.2,
+   "outros": 6.6,
+   "validos": {
+    "lula": 48.39,
+    "flavio": 51.61
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-09-28",
+   "fim": "2026-10-01",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 48,
+   "flavio": 45,
+   "outros": 7,
+   "validos": {
+    "lula": 51.61,
+    "flavio": 48.39
+   }
+  },
+  {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-09-28",
+   "fim": "2026-09-30",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 45,
+   "outros": 10,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-09-26",
+   "fim": "2026-09-30",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-09-27",
+   "fim": "2026-09-29",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 43,
+   "flavio": 42,
+   "outros": 15,
+   "validos": {
+    "lula": 50.59,
+    "flavio": 49.41
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-09-25",
+   "fim": "2026-09-29",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 43.5,
+   "flavio": 49,
+   "outros": 7.5,
+   "validos": {
+    "lula": 47.03,
+    "flavio": 52.97
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-09-26",
+   "fim": "2026-09-28",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 44.7,
+   "flavio": 45.2,
+   "outros": 10.1,
+   "validos": {
+    "lula": 49.72,
+    "flavio": 50.28
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-09-25",
+   "fim": "2026-09-28",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 48.5,
+   "flavio": 48,
+   "outros": 3.6,
+   "validos": {
+    "lula": 50.26,
+    "flavio": 49.74
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-09-24",
+   "fim": "2026-09-28",
+   "amostra": 5000,
+   "margem": 2.4,
+   "lula": 45,
+   "flavio": 47,
+   "outros": 8,
+   "validos": {
+    "lula": 48.91,
+    "flavio": 51.09
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-09-24",
+   "fim": "2026-09-28",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 50,
+   "outros": 6,
+   "validos": {
+    "lula": 46.24,
+    "flavio": 53.76
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-09-23",
+   "fim": "2026-09-28",
+   "amostra": 5005,
+   "margem": 1,
+   "lula": 47.6,
+   "flavio": 47.7,
+   "outros": 4.8,
+   "validos": {
+    "lula": 49.95,
+    "flavio": 50.05
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-09-25",
+   "fim": "2026-09-27",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.11,
+    "flavio": 48.89
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-09-24",
+   "fim": "2026-09-27",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 42,
+   "outros": 16,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-09-22",
+   "fim": "2026-09-24",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 45,
+   "outros": 8,
+   "validos": {
+    "lula": 51.09,
+    "flavio": 48.91
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-09-20",
+   "fim": "2026-09-23",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 45,
+   "flavio": 48,
+   "outros": 7,
+   "validos": {
+    "lula": 48.39,
+    "flavio": 51.61
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-09-20",
+   "fim": "2026-09-23",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-09-19",
+   "fim": "2026-09-23",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 43.7,
+   "flavio": 49.4,
+   "outros": 11.2,
+   "validos": {
+    "lula": 46.94,
+    "flavio": 53.06
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-09-19",
+   "fim": "2026-09-23",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 45,
+   "outros": 11,
+   "validos": {
+    "lula": 49.44,
+    "flavio": 50.56
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa Inteligência",
+   "inicio": "2026-09-18",
+   "fim": "2026-09-23",
+   "amostra": 2700,
+   "margem": 1.8,
+   "lula": 43,
+   "flavio": 43,
+   "outros": 14,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-09-17",
+   "fim": "2026-09-22",
+   "amostra": 5015,
+   "margem": 1,
+   "lula": 47.7,
+   "flavio": 47.4,
+   "outros": 4.9,
+   "validos": {
+    "lula": 50.16,
+    "flavio": 49.84
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-09-18",
+   "fim": "2026-09-20",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 8,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-09-17",
+   "fim": "2026-09-20",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 41,
+   "flavio": 42,
+   "outros": 17,
+   "validos": {
+    "lula": 49.4,
+    "flavio": 50.6
+   }
+  },
+  {
+   "instituto": "American Analytics",
+   "contratante": "American Analytics",
+   "inicio": "2026-09-15",
+   "fim": "2026-09-20",
+   "amostra": 2000,
+   "margem": 2.5,
+   "lula": 43,
+   "flavio": 43,
+   "outros": 14,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-09-15",
+   "fim": "2026-09-18",
+   "amostra": 5000,
+   "margem": 2.8,
+   "lula": 43,
+   "flavio": 47,
+   "outros": 10,
+   "validos": {
+    "lula": 47.78,
+    "flavio": 52.22
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-09-15",
+   "fim": "2026-09-16",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.11,
+    "flavio": 48.89
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-09-14",
+   "fim": "2026-09-16",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 50,
+   "outros": 7,
+   "validos": {
+    "lula": 46.24,
+    "flavio": 53.76
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-09-13",
+   "fim": "2026-09-16",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 44,
+   "flavio": 46,
+   "outros": 10,
+   "validos": {
+    "lula": 48.89,
+    "flavio": 51.11
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-09-11",
+   "fim": "2026-09-16",
+   "amostra": 5018,
+   "margem": 1,
+   "lula": 46.8,
+   "flavio": 47.2,
+   "outros": 6,
+   "validos": {
+    "lula": 49.79,
+    "flavio": 50.21
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura/Apex",
+   "inicio": "2026-09-11",
+   "fim": "2026-09-15",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 43.7,
+   "flavio": 48.1,
+   "outros": 8.2,
+   "validos": {
+    "lula": 47.6,
+    "flavio": 52.4
+   }
+  },
+  {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-09-12",
+   "fim": "2026-09-14",
+   "amostra": 2000,
+   "margem": 2.19,
+   "lula": 44,
+   "flavio": 45,
+   "outros": 11,
+   "validos": {
+    "lula": 49.44,
+    "flavio": 50.56
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-09-11",
+   "fim": "2026-09-13",
+   "amostra": 2003,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 46,
+   "outros": 7,
+   "validos": {
+    "lula": 50.54,
+    "flavio": 49.46
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-09-10",
+   "fim": "2026-09-13",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 43,
+   "flavio": 42,
+   "outros": 15,
+   "validos": {
+    "lula": 50.59,
+    "flavio": 49.41
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-09-10",
+   "fim": "2026-09-13",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 40,
+   "flavio": 42,
+   "outros": 18,
+   "validos": {
+    "lula": 48.78,
+    "flavio": 51.22
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-09-09",
+   "fim": "2026-09-13",
+   "amostra": 2002,
+   "margem": 2.2,
+   "lula": 47.3,
+   "flavio": 40,
+   "outros": 12.7,
+   "validos": {
+    "lula": 54.18,
+    "flavio": 45.82
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-09-08",
+   "fim": "2026-09-11",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 44,
+   "outros": 10,
+   "validos": {
+    "lula": 51.11,
+    "flavio": 48.89
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-09-04",
+   "fim": "2026-09-10",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45,
+   "flavio": 45.4,
+   "outros": 9.6,
+   "validos": {
+    "lula": 49.78,
+    "flavio": 50.22
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-09-06",
+   "fim": "2026-09-09",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 45,
+   "flavio": 47,
+   "outros": 8,
+   "validos": {
+    "lula": 48.91,
+    "flavio": 51.09
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-09-04",
+   "fim": "2026-09-09",
+   "amostra": 5000,
+   "margem": 1,
+   "lula": 46.2,
+   "flavio": 46.4,
+   "outros": 7.4,
+   "validos": {
+    "lula": 49.89,
+    "flavio": 50.11
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-09-03",
+   "fim": "2026-09-08",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 40,
+   "flavio": 47,
+   "outros": 14,
+   "validos": {
+    "lula": 45.98,
+    "flavio": 54.02
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-09-04",
+   "fim": "2026-09-07",
+   "amostra": 5000,
+   "margem": 3,
+   "lula": 44,
+   "flavio": 46,
+   "outros": 10,
+   "validos": {
+    "lula": 48.89,
+    "flavio": 51.11
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-09-04",
+   "fim": "2026-09-07",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 46,
+   "flavio": 46,
+   "outros": 8,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-09-04",
+   "fim": "2026-09-07",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-09-03",
+   "fim": "2026-09-06",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 41,
+   "flavio": 41,
+   "outros": 18,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-09-01",
+   "fim": "2026-09-04",
+   "amostra": 3804,
+   "margem": 2,
+   "lula": 43.1,
+   "flavio": 48.5,
+   "outros": 8.5,
+   "validos": {
+    "lula": 47.05,
+    "flavio": 52.95
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-09-01",
+   "fim": "2026-09-02",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 44,
+   "outros": 10,
+   "validos": {
+    "lula": 51.11,
+    "flavio": 48.89
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-08-30",
+   "fim": "2026-09-02",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 11,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-08-30",
+   "fim": "2026-09-01",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 41,
+   "outros": 17,
+   "validos": {
+    "lula": 50.6,
+    "flavio": 49.4
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-08-27",
+   "fim": "2026-09-01",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45.6,
+   "flavio": 45.2,
+   "outros": 9.2,
+   "validos": {
+    "lula": 50.22,
+    "flavio": 49.78
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-08-27",
+   "fim": "2026-08-31",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 44,
+   "outros": 12,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-08-28",
+   "fim": "2026-08-30",
+   "amostra": 2005,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 9,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-08-25",
+   "fim": "2026-08-30",
+   "amostra": 5014,
+   "margem": 2,
+   "lula": 47.1,
+   "flavio": 42.6,
+   "outros": 10.3,
+   "validos": {
+    "lula": 52.51,
+    "flavio": 47.49
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-08-25",
+   "fim": "2026-08-27",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 44.5,
+   "flavio": 45.1,
+   "outros": 10.4,
+   "validos": {
+    "lula": 49.67,
+    "flavio": 50.33
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-08-23",
+   "fim": "2026-08-26",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 44,
+   "outros": 11,
+   "validos": {
+    "lula": 50.56,
+    "flavio": 49.44
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-08-21",
+   "fim": "2026-08-25",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 47,
+   "outros": 11,
+   "validos": {
+    "lula": 47.19,
+    "flavio": 52.81
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-08-21",
+   "fim": "2026-08-23",
+   "amostra": 2006,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 9,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa/Broadcast",
+   "inicio": "2026-08-20",
+   "fim": "2026-08-23",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46,
+   "flavio": 41,
+   "outros": 13,
+   "validos": {
+    "lula": 52.87,
+    "flavio": 47.13
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-08-18",
+   "fim": "2026-08-20",
+   "amostra": 2058,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 43,
+   "outros": 11,
+   "validos": {
+    "lula": 52.22,
+    "flavio": 47.78
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-08-16",
+   "fim": "2026-08-20",
+   "amostra": 3840,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 47.3,
+   "outros": 10.7,
+   "validos": {
+    "lula": 47.03,
+    "flavio": 52.97
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-08-14",
+   "fim": "2026-08-16",
+   "amostra": 2003,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.65,
+    "flavio": 48.35
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-08-10",
+   "fim": "2026-08-13",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 40,
+   "outros": 17,
+   "validos": {
+    "lula": 51.81,
+    "flavio": 48.19
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-08-09",
+   "fim": "2026-08-12",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 9,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-08-06",
+   "fim": "2026-08-10",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 45,
+   "outros": 12,
+   "validos": {
+    "lula": 48.86,
+    "flavio": 51.14
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-08-07",
+   "fim": "2026-08-09",
+   "amostra": 2001,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.65,
+    "flavio": 48.35
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-08-05",
+   "fim": "2026-08-09",
+   "amostra": 2002,
+   "margem": 2.2,
+   "lula": 48,
+   "flavio": 39.1,
+   "outros": 12.9,
+   "validos": {
+    "lula": 55.11,
+    "flavio": 44.89
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-08-03",
+   "fim": "2026-08-07",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46.5,
+   "flavio": 44,
+   "outros": 9.5,
+   "validos": {
+    "lula": 51.38,
+    "flavio": 48.62
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-08-03",
+   "fim": "2026-08-07",
+   "amostra": 5000,
+   "margem": 3,
+   "lula": 46,
+   "flavio": 46,
+   "outros": 8,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-07-31",
+   "fim": "2026-08-03",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 48.5,
+   "flavio": 43,
+   "outros": 8.5,
+   "validos": {
+    "lula": 53.01,
+    "flavio": 46.99
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-07-31",
+   "fim": "2026-08-03",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 39,
+   "outros": 17,
+   "validos": {
+    "lula": 53.01,
+    "flavio": 46.99
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-07-31",
+   "fim": "2026-08-02",
+   "amostra": 2002,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 10,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-07-26",
+   "fim": "2026-07-28",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 47.5,
+   "flavio": 41.1,
+   "outros": 11.4,
+   "validos": {
+    "lula": 53.61,
+    "flavio": 46.39
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-07-26",
+   "fim": "2026-07-28",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 43,
+   "outros": 11,
+   "validos": {
+    "lula": 51.69,
+    "flavio": 48.31
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa/TMC",
+   "inicio": "2026-07-23",
+   "fim": "2026-07-28",
+   "amostra": 2700,
+   "margem": 1.8,
+   "lula": 48,
+   "flavio": 41,
+   "outros": 11,
+   "validos": {
+    "lula": 53.93,
+    "flavio": 46.07
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-07-22",
+   "fim": "2026-07-27",
+   "amostra": 5021,
+   "margem": 1,
+   "lula": 49.2,
+   "flavio": 42.9,
+   "outros": 7.9,
+   "validos": {
+    "lula": 53.42,
+    "flavio": 46.58
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-07-24",
+   "fim": "2026-07-26",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 43,
+   "outros": 10,
+   "validos": {
+    "lula": 52.22,
+    "flavio": 47.78
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-07-22",
+   "fim": "2026-07-24",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 48,
+   "flavio": 43,
+   "outros": 10,
+   "validos": {
+    "lula": 52.75,
+    "flavio": 47.25
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-07-18",
+   "fim": "2026-07-20",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 42,
+   "outros": 13,
+   "validos": {
+    "lula": 51.72,
+    "flavio": 48.28
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-07-16",
+   "fim": "2026-07-19",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46,
+   "flavio": 39,
+   "outros": 15,
+   "validos": {
+    "lula": 54.12,
+    "flavio": 45.88
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-07-15",
+   "fim": "2026-07-17",
+   "amostra": 2000,
+   "margem": 2.19,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-07-12",
+   "fim": "2026-07-15",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 43,
+   "outros": 12,
+   "validos": {
+    "lula": 51.14,
+    "flavio": 48.86
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-07-10",
+   "fim": "2026-07-13",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 37,
+   "outros": 18,
+   "validos": {
+    "lula": 54.88,
+    "flavio": 45.12
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG Pactual",
+   "inicio": "2026-07-10",
+   "fim": "2026-07-12",
+   "amostra": 2003,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.65,
+    "flavio": 48.35
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-07-07",
+   "fim": "2026-07-11",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46.3,
+   "flavio": 46.1,
+   "outros": 7.6,
+   "validos": {
+    "lula": 50.11,
+    "flavio": 49.89
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-07-03",
+   "fim": "2026-07-07",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 42,
+   "flavio": 45,
+   "outros": 13,
+   "validos": {
+    "lula": 48.28,
+    "flavio": 51.72
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-07-03",
+   "fim": "2026-07-06",
+   "amostra": 2000,
+   "margem": 2.5,
+   "lula": 45,
+   "flavio": 40,
+   "outros": 15,
+   "validos": {
+    "lula": 52.94,
+    "flavio": 47.06
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlasinstel",
+   "inicio": "2026-06-26",
+   "fim": "2026-06-30",
+   "amostra": 4999,
+   "margem": 1,
+   "lula": 48.8,
+   "flavio": 42.3,
+   "outros": 8.9,
+   "validos": {
+    "lula": 53.57,
+    "flavio": 46.43
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-06-26",
+   "fim": "2026-06-28",
+   "amostra": 2009,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 44,
+   "outros": 9,
+   "validos": {
+    "lula": 51.65,
+    "flavio": 48.35
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-06-23",
+   "fim": "2026-06-25",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 45.3,
+   "flavio": 42.8,
+   "outros": 11.9,
+   "validos": {
+    "lula": 51.42,
+    "flavio": 48.58
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-06-21",
+   "fim": "2026-06-24",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 43,
+   "outros": 11,
+   "validos": {
+    "lula": 51.69,
+    "flavio": 48.31
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-06-15",
+   "fim": "2026-06-20",
+   "amostra": 2000,
+   "margem": 2.19,
+   "lula": 40,
+   "flavio": 42,
+   "outros": 18.3,
+   "validos": {
+    "lula": 48.78,
+    "flavio": 51.22
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-06-18",
+   "fim": "2026-06-20",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 47,
+   "flavio": 40,
+   "outros": 13,
+   "validos": {
+    "lula": 54.02,
+    "flavio": 45.98
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-06-17",
+   "fim": "2026-06-19",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 43,
+   "outros": 9,
+   "validos": {
+    "lula": 52.22,
+    "flavio": 47.78
+   }
+  },
+  {
+   "instituto": "American Analytics",
+   "contratante": "American Analytics",
+   "inicio": "2026-06-11",
+   "fim": "2026-06-15",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45,
+   "flavio": 40,
+   "outros": 15,
+   "validos": {
+    "lula": 52.94,
+    "flavio": 47.06
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-06-10",
+   "fim": "2026-06-14",
+   "amostra": 2002,
+   "margem": 2.2,
+   "lula": 49.3,
+   "flavio": 36.8,
+   "outros": 13.9,
+   "validos": {
+    "lula": 57.26,
+    "flavio": 42.74
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-06-12",
+   "fim": "2026-06-14",
+   "amostra": 2017,
+   "margem": 2,
+   "lula": 49,
+   "flavio": 43,
+   "outros": 9,
+   "validos": {
+    "lula": 53.26,
+    "flavio": 46.74
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-06-08",
+   "fim": "2026-06-12",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 48.1,
+   "flavio": 42.9,
+   "outros": 10,
+   "validos": {
+    "lula": 52.86,
+    "flavio": 47.14
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa Inteligência",
+   "inicio": "2026-06-05",
+   "fim": "2026-06-10",
+   "amostra": 1400,
+   "margem": 2.6,
+   "lula": 44,
+   "flavio": 41,
+   "outros": 15,
+   "validos": {
+    "lula": 51.76,
+    "flavio": 48.24
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-06-05",
+   "fim": "2026-06-08",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 38,
+   "outros": 18,
+   "validos": {
+    "lula": 53.66,
+    "flavio": 46.34
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-06-01",
+   "fim": "2026-06-06",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 47.8,
+   "flavio": 41.3,
+   "outros": 10.9,
+   "validos": {
+    "lula": 53.65,
+    "flavio": 46.35
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-06-02",
+   "fim": "2026-06-05",
+   "amostra": 2000,
+   "margem": 2.24,
+   "lula": 39.1,
+   "flavio": 44.7,
+   "outros": 16.2,
+   "validos": {
+    "lula": 46.66,
+    "flavio": 53.34
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-05-29",
+   "fim": "2026-05-30",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 40,
+   "outros": 15,
+   "validos": {
+    "lula": 52.94,
+    "flavio": 47.06
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-05-25",
+   "fim": "2026-05-28",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 42,
+   "outros": 12,
+   "validos": {
+    "lula": 52.27,
+    "flavio": 47.73
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-05-23",
+   "fim": "2026-05-27",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 46.5,
+   "flavio": 41.4,
+   "outros": 12.2,
+   "validos": {
+    "lula": 52.9,
+    "flavio": 47.1
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-05-22",
+   "fim": "2026-05-26",
+   "amostra": 3330,
+   "margem": 2,
+   "lula": 46.8,
+   "flavio": 53.2,
+   "outros": null,
+   "validos": {
+    "lula": 46.8,
+    "flavio": 53.2
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-05-22",
+   "fim": "2026-05-24",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46,
+   "flavio": 41,
+   "outros": 10,
+   "validos": {
+    "lula": 52.87,
+    "flavio": 47.13
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-05-22",
+   "fim": "2026-05-24",
+   "amostra": 2045,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 43,
+   "outros": 10,
+   "validos": {
+    "lula": 52.22,
+    "flavio": 47.78
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-05-20",
+   "fim": "2026-05-21",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 43,
+   "outros": 11,
+   "validos": {
+    "lula": 52.22,
+    "flavio": 47.78
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-05-18",
+   "fim": "2026-05-21",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 44,
+   "flavio": 47,
+   "outros": 9,
+   "validos": {
+    "lula": 48.35,
+    "flavio": 51.65
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-05-15",
+   "fim": "2026-05-20",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 47.7,
+   "flavio": 42.2,
+   "outros": 10.2,
+   "validos": {
+    "lula": 53.06,
+    "flavio": 46.94
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Brasil",
+   "inicio": "2026-05-17",
+   "fim": "2026-05-19",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 46.8,
+   "flavio": 38.1,
+   "outros": 15.1,
+   "validos": {
+    "lula": 55.12,
+    "flavio": 44.88
+   }
+  },
+  {
+   "instituto": "Vetor",
+   "contratante": "Vetor/Arrow",
+   "inicio": "2026-05-15",
+   "fim": "2026-05-18",
+   "amostra": 9000,
+   "margem": 1,
+   "lula": 50.7,
+   "flavio": 38.3,
+   "outros": 11,
+   "validos": {
+    "lula": 56.97,
+    "flavio": 43.03
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-05-13",
+   "fim": "2026-05-18",
+   "amostra": 5032,
+   "margem": 1,
+   "lula": 48.9,
+   "flavio": 41.8,
+   "outros": 9.3,
+   "validos": {
+    "lula": 53.91,
+    "flavio": 46.09
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-05-12",
+   "fim": "2026-05-14",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 45,
+   "outros": 10,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox",
+   "inicio": "2026-05-09",
+   "fim": "2026-05-12",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 40.2,
+   "flavio": 43.8,
+   "outros": 16,
+   "validos": {
+    "lula": 47.86,
+    "flavio": 52.14
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-05-08",
+   "fim": "2026-05-12",
+   "amostra": 2000,
+   "margem": 2.24,
+   "lula": 43,
+   "flavio": 50,
+   "outros": 7,
+   "validos": {
+    "lula": 46.24,
+    "flavio": 53.76
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-05-08",
+   "fim": "2026-05-11",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 41,
+   "outros": 17,
+   "validos": {
+    "lula": 50.6,
+    "flavio": 49.4
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-05-04",
+   "fim": "2026-05-08",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 44.4,
+   "flavio": 46.9,
+   "outros": 8.6,
+   "validos": {
+    "lula": 48.63,
+    "flavio": 51.37
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-05-01",
+   "fim": "2026-05-05",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 44.7,
+   "flavio": 45.3,
+   "outros": 10,
+   "validos": {
+    "lula": 49.67,
+    "flavio": 50.33
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-05-02",
+   "fim": "2026-05-04",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 44,
+   "outros": 13,
+   "validos": {
+    "lula": 49.43,
+    "flavio": 50.57
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-04-22",
+   "fim": "2026-04-27",
+   "amostra": 5008,
+   "margem": 1,
+   "lula": 47.5,
+   "flavio": 47.8,
+   "outros": 4.7,
+   "validos": {
+    "lula": 49.84,
+    "flavio": 50.16
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-04-24",
+   "fim": "2026-04-26",
+   "amostra": 2028,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 45,
+   "outros": 9,
+   "validos": {
+    "lula": 50.55,
+    "flavio": 49.45
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-04-09",
+   "fim": "2026-04-13",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 40,
+   "flavio": 42,
+   "outros": 18,
+   "validos": {
+    "lula": 48.78,
+    "flavio": 51.22
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-04-08",
+   "fim": "2026-04-12",
+   "amostra": 2002,
+   "margem": 2.2,
+   "lula": 44.9,
+   "flavio": 40.2,
+   "outros": 14.9,
+   "validos": {
+    "lula": 52.76,
+    "flavio": 47.24
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-04-07",
+   "fim": "2026-04-11",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 42.6,
+   "flavio": 48,
+   "outros": 9.4,
+   "validos": {
+    "lula": 47.02,
+    "flavio": 52.98
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-04-07",
+   "fim": "2026-04-09",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9,
+   "validos": {
+    "lula": 49.45,
+    "flavio": 50.55
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-03-03",
+   "fim": "2026-04-07",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 45.5,
+   "flavio": 45.8,
+   "outros": 8.7,
+   "validos": {
+    "lula": 49.84,
+    "flavio": 50.16
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-03-13",
+   "fim": "2026-04-04",
+   "amostra": 40500,
+   "margem": 1,
+   "lula": 38.4,
+   "flavio": 42.8,
+   "outros": 23.2,
+   "validos": {
+    "lula": 47.29,
+    "flavio": 52.71
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-03-27",
+   "fim": "2026-03-29",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 46,
+   "outros": 7,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2026-03-25",
+   "fim": "2026-03-28",
+   "amostra": 2080,
+   "margem": 2.2,
+   "lula": 44.1,
+   "flavio": 45.2,
+   "outros": 10.7,
+   "validos": {
+    "lula": 49.38,
+    "flavio": 50.62
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-03-20",
+   "fim": "2026-03-25",
+   "amostra": 2000,
+   "margem": 2.24,
+   "lula": 45,
+   "flavio": 48,
+   "outros": 8,
+   "validos": {
+    "lula": 48.39,
+    "flavio": 51.61
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-03-18",
+   "fim": "2026-03-23",
+   "amostra": 5028,
+   "margem": 1,
+   "lula": 46.6,
+   "flavio": 47.6,
+   "outros": 5.8,
+   "validos": {
+    "lula": 49.47,
+    "flavio": 50.53
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa Inteligência",
+   "inicio": "2026-03-06",
+   "fim": "2026-03-11",
+   "amostra": 1000,
+   "margem": 3.1,
+   "lula": 41,
+   "flavio": 38,
+   "outros": 21,
+   "validos": {
+    "lula": 51.9,
+    "flavio": 48.1
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-03-06",
+   "fim": "2026-03-10",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 47,
+   "flavio": 45,
+   "outros": 7,
+   "validos": {
+    "lula": 51.09,
+    "flavio": 48.91
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-03-06",
+   "fim": "2026-03-09",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 41,
+   "flavio": 41,
+   "outros": 18,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-03-02",
+   "fim": "2026-03-06",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 40.5,
+   "flavio": 48.8,
+   "outros": 10.7,
+   "validos": {
+    "lula": 45.35,
+    "flavio": 54.65
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2026-03-03",
+   "fim": "2026-03-05",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 43,
+   "outros": 11,
+   "validos": {
+    "lula": 51.69,
+    "flavio": 48.31
+   }
+  },
+  {
+   "instituto": "Vetor",
+   "contratante": "Vetor/Arrow",
+   "inicio": "2026-02-27",
+   "fim": "2026-03-02",
+   "amostra": 9000,
+   "margem": 1.3,
+   "lula": 40.4,
+   "flavio": 49,
+   "outros": 10.5,
+   "validos": {
+    "lula": 45.19,
+    "flavio": 54.81
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-02-28",
+   "fim": "2026-03-02",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 42,
+   "flavio": 41,
+   "outros": 17,
+   "validos": {
+    "lula": 50.6,
+    "flavio": 49.4
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2026-02-22",
+   "fim": "2026-02-25",
+   "amostra": 2080,
+   "margem": 2.2,
+   "lula": 43.8,
+   "flavio": 44.4,
+   "outros": 11.9,
+   "validos": {
+    "lula": 49.66,
+    "flavio": 50.34
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-02-19",
+   "fim": "2026-02-24",
+   "amostra": 4986,
+   "margem": 1,
+   "lula": 46.2,
+   "flavio": 46.3,
+   "outros": 7.5,
+   "validos": {
+    "lula": 49.95,
+    "flavio": 50.05
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-02-05",
+   "fim": "2026-02-09",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 43,
+   "flavio": 38,
+   "outros": 19,
+   "validos": {
+    "lula": 53.09,
+    "flavio": 46.91
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-02-03",
+   "fim": "2026-02-07",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 42.4,
+   "flavio": 48.2,
+   "outros": 9.4,
+   "validos": {
+    "lula": 46.8,
+    "flavio": 53.2
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-01-28",
+   "fim": "2026-02-02",
+   "amostra": 2000,
+   "margem": 2.24,
+   "lula": 45,
+   "flavio": 45,
+   "outros": 10,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-01-30",
+   "fim": "2026-02-02",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 45.8,
+   "flavio": 41.1,
+   "outros": 13.1,
+   "validos": {
+    "lula": 52.7,
+    "flavio": 47.3
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2026-01-25",
+   "fim": "2026-01-28",
+   "amostra": 2080,
+   "margem": 2.2,
+   "lula": 44.8,
+   "flavio": 42.2,
+   "outros": 13,
+   "validos": {
+    "lula": 51.49,
+    "flavio": 48.51
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-01-15",
+   "fim": "2026-01-20",
+   "amostra": 5418,
+   "margem": 1,
+   "lula": 49,
+   "flavio": 45,
+   "outros": 6,
+   "validos": {
+    "lula": 52.13,
+    "flavio": 47.87
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Apex/Futura",
+   "inicio": "2026-01-15",
+   "fim": "2026-01-19",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 41.9,
+   "flavio": 48.1,
+   "outros": 10,
+   "validos": {
+    "lula": 46.56,
+    "flavio": 53.44
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-01-08",
+   "fim": "2026-01-12",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46.2,
+   "flavio": 36,
+   "outros": 17.8,
+   "validos": {
+    "lula": 56.2,
+    "flavio": 43.8
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2026-01-08",
+   "fim": "2026-01-11",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 38,
+   "outros": 17,
+   "validos": {
+    "lula": 54.22,
+    "flavio": 45.78
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2025-11-06",
+   "fim": "2025-11-10",
+   "amostra": 2020,
+   "margem": 2.2,
+   "lula": 45.4,
+   "flavio": 38.6,
+   "outros": 16,
+   "validos": {
+    "lula": 54.05,
+    "flavio": 45.95
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2025-10-21",
+   "fim": "2025-10-24",
+   "amostra": 2020,
+   "margem": 2.2,
+   "lula": 46.7,
+   "flavio": 37,
+   "outros": 16.2,
+   "validos": {
+    "lula": 55.79,
+    "flavio": 44.21
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2025-08-13",
+   "fim": "2025-08-17",
+   "amostra": 2150,
+   "margem": 2,
+   "lula": 48,
+   "flavio": 32,
+   "outros": 20,
+   "validos": {
+    "lula": 60,
+    "flavio": 40
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2025-07-29",
+   "fim": "2025-07-30",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 48,
+   "flavio": 37,
+   "outros": 14,
+   "validos": {
+    "lula": 56.47,
+    "flavio": 43.53
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2025-06-18",
+   "fim": "2025-06-22",
+   "amostra": 2020,
+   "margem": 2.2,
+   "lula": 42.1,
+   "flavio": 38.4,
+   "outros": 19.4,
+   "validos": {
+    "lula": 52.3,
+    "flavio": 47.7
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2025-06-10",
+   "fim": "2025-06-11",
+   "amostra": 2004,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 38,
+   "outros": 15,
+   "validos": {
+    "lula": 55.29,
+    "flavio": 44.71
+   }
+  }
+ ],
+ "eventos": [
+  {
+   "data": "2026-10-04",
+   "texto": "Confirmado o segundo turno entre Flávio e Lula."
+  },
+  {
+   "data": "2026-05-13",
+   "texto": "Gravações de áudio vazadas ligam Flávio Bolsonaro (PL) a Daniel Vorcaro, figura central do Escândalo do Banco Master."
+  }
+ ],
+ "agregadores": [
+  {
+   "agregador": "UOL",
+   "data": "2026-10-06",
+   "lula": 45.2,
+   "flavio": 44.8,
+   "outros": 10
+  },
+  {
+   "agregador": "PollingData",
+   "data": "2026-10-02",
+   "lula": 45.3,
+   "flavio": 46.1,
+   "outros": 8.7
+  },
+  {
+   "agregador": "BBC",
+   "data": "2026-10-04",
+   "lula": 45,
+   "flavio": 46,
+   "outros": 9
+  },
+  {
+   "agregador": "CartaCapital",
+   "data": "2026-10-03",
+   "lula": 45.4,
+   "flavio": 46.3,
+   "outros": 8.3
+  },
+  {
+   "agregador": "Poll+Trend",
+   "data": "2026-09-18",
+   "lula": 50,
+   "flavio": 50,
+   "outros": null
+  },
+  {
+   "agregador": "Plano Político",
+   "data": "2026-10-05",
+   "lula": 49.8,
+   "flavio": 50.2,
+   "outros": null
+  },
+  {
+   "agregador": "ABC Dados",
+   "data": "2026-10-05",
+   "lula": 46,
+   "flavio": 45,
+   "outros": 9
+  },
+  {
+   "agregador": "Agregador presidencial",
+   "data": "2026-10-06",
+   "lula": 45.6,
+   "flavio": 45.8,
+   "outros": 9.1
+  }
+ ]
+}

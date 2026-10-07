@@ -1,0 +1,3733 @@
+{
+ "disputa": "Lula (PT) × Jair Bolsonaro (PL)",
+ "eleicao": "2022-10-30",
+ "primeiroTurno": "2022-10-02",
+ "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2022",
+ "coletadoEm": "2026-10-07T00:52:58.894Z",
+ "resultado": {
+  "segundoTurno": {
+   "lula": 50.9,
+   "bolsonaro": 49.1,
+   "votosLula": 60345999,
+   "votosBolsonaro": 58206354
+  },
+  "primeiroTurno": {
+   "lula": 48.43,
+   "bolsonaro": 43.2
+  }
+ },
+ "polls": [
+  {
+   "instituto": "Veritá",
+   "contratante": "Instituto Veritá",
+   "inicio": "2022-10-28",
+   "fim": "2022-10-29",
+   "amostra": 17552,
+   "lula": 45.9,
+   "bolsonaro": 47.8,
+   "outros": 6.3,
+   "validos": {
+    "lula": 48.99,
+    "bolsonaro": 51.01
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-10-28",
+   "fim": "2022-10-29",
+   "amostra": 2000,
+   "lula": 46,
+   "bolsonaro": 43,
+   "outros": 14,
+   "validos": {
+    "lula": 51.69,
+    "bolsonaro": 48.31
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-10-28",
+   "fim": "2022-10-29",
+   "amostra": 8308,
+   "lula": 49,
+   "bolsonaro": 45,
+   "outros": 6,
+   "validos": {
+    "lula": 52.13,
+    "bolsonaro": 47.87
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-10-27",
+   "fim": "2022-10-29",
+   "amostra": 4272,
+   "lula": 50,
+   "bolsonaro": 43,
+   "outros": 7,
+   "validos": {
+    "lula": 53.76,
+    "bolsonaro": 46.24
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2022-10-26",
+   "fim": "2022-10-29",
+   "amostra": 7500,
+   "lula": 52.4,
+   "bolsonaro": 45.7,
+   "outros": 1.9,
+   "validos": {
+    "lula": 53.41,
+    "bolsonaro": 46.59
+   }
+  },
+  {
+   "instituto": "IFP",
+   "contratante": "IFP",
+   "inicio": "2022-10-24",
+   "fim": "2022-10-29",
+   "amostra": 2000,
+   "lula": 45.6,
+   "bolsonaro": 45.3,
+   "outros": 9.1,
+   "validos": {
+    "lula": 50.17,
+    "bolsonaro": 49.83
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-10-26",
+   "fim": "2022-10-28",
+   "amostra": 2002,
+   "lula": 46.9,
+   "bolsonaro": 44.9,
+   "outros": 8.2,
+   "validos": {
+    "lula": 51.09,
+    "bolsonaro": 48.91
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-10-26",
+   "fim": "2022-10-28",
+   "amostra": 2020,
+   "lula": 47.1,
+   "bolsonaro": 46.3,
+   "outros": 6.6,
+   "validos": {
+    "lula": 50.43,
+    "bolsonaro": 49.57
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Instituto Veritá",
+   "inicio": "2022-10-25",
+   "fim": "2022-10-27",
+   "amostra": 30180,
+   "lula": 46.1,
+   "bolsonaro": 49,
+   "outros": 4.9,
+   "validos": {
+    "lula": 48.48,
+    "bolsonaro": 51.52
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-10-25",
+   "fim": "2022-10-27",
+   "amostra": 4592,
+   "lula": 49,
+   "bolsonaro": 44,
+   "outros": 7,
+   "validos": {
+    "lula": 52.69,
+    "bolsonaro": 47.31
+   }
+  },
+  {
+   "instituto": "Brasmarket",
+   "contratante": "Brasmarket",
+   "inicio": "2022-10-23",
+   "fim": "2022-10-27",
+   "amostra": 2400,
+   "lula": 42.7,
+   "bolsonaro": 48.2,
+   "outros": 9.1,
+   "validos": {
+    "lula": 46.97,
+    "bolsonaro": 53.03
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-10-24",
+   "fim": "2022-10-26",
+   "amostra": 2000,
+   "lula": 46.6,
+   "bolsonaro": 47.2,
+   "outros": 6.1,
+   "validos": {
+    "lula": 49.68,
+    "bolsonaro": 50.32
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2022-10-21",
+   "fim": "2022-10-26",
+   "amostra": 2095,
+   "lula": 43,
+   "bolsonaro": 47,
+   "outros": 10,
+   "validos": {
+    "lula": 47.78,
+    "bolsonaro": 52.22
+   }
+  },
+  {
+   "instituto": "Brasmarket",
+   "contratante": "Brasmarket",
+   "inicio": "2022-10-21",
+   "fim": "2022-10-25",
+   "amostra": 2400,
+   "lula": 41.9,
+   "bolsonaro": 48,
+   "outros": 7.4,
+   "validos": {
+    "lula": 46.61,
+    "bolsonaro": 53.39
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2022-10-21",
+   "fim": "2022-10-25",
+   "amostra": 7500,
+   "lula": 52.4,
+   "bolsonaro": 46,
+   "outros": 1.6,
+   "validos": {
+    "lula": 53.25,
+    "bolsonaro": 46.75
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-10-23",
+   "fim": "2022-10-25",
+   "amostra": 5000,
+   "lula": 49,
+   "bolsonaro": 44,
+   "outros": 7,
+   "validos": {
+    "lula": 52.69,
+    "bolsonaro": 47.31
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-10-23",
+   "fim": "2022-10-25",
+   "amostra": 2000,
+   "lula": 48,
+   "bolsonaro": 42,
+   "outros": 10,
+   "validos": {
+    "lula": 53.33,
+    "bolsonaro": 46.67
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-10-22",
+   "fim": "2022-10-24",
+   "amostra": 1100,
+   "lula": 50,
+   "bolsonaro": 44,
+   "outros": 6,
+   "validos": {
+    "lula": 53.19,
+    "bolsonaro": 46.81
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-10-22",
+   "fim": "2022-10-24",
+   "amostra": 3008,
+   "lula": 50,
+   "bolsonaro": 43,
+   "outros": 7,
+   "validos": {
+    "lula": 53.76,
+    "bolsonaro": 46.24
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-10-20",
+   "fim": "2022-10-24",
+   "amostra": 2020,
+   "lula": 46.3,
+   "bolsonaro": 45.9,
+   "outros": 7.8,
+   "validos": {
+    "lula": 50.22,
+    "bolsonaro": 49.78
+   }
+  },
+  {
+   "instituto": "Brasmarket",
+   "contratante": "Brasmarket",
+   "inicio": "2022-10-19",
+   "fim": "2022-10-23",
+   "amostra": 2400,
+   "lula": 41.8,
+   "bolsonaro": 47.7,
+   "outros": 10.6,
+   "validos": {
+    "lula": 46.7,
+    "bolsonaro": 53.3
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2022-10-18",
+   "fim": "2022-10-22",
+   "amostra": 4500,
+   "lula": 52,
+   "bolsonaro": 46.2,
+   "outros": 1.8,
+   "validos": {
+    "lula": 52.95,
+    "bolsonaro": 47.05
+   }
+  },
+  {
+   "instituto": "IFP",
+   "contratante": "IFP",
+   "inicio": "2022-10-17",
+   "fim": "2022-10-21",
+   "amostra": 1500,
+   "lula": 43.6,
+   "bolsonaro": 46.5,
+   "outros": 9.9,
+   "validos": {
+    "lula": 48.39,
+    "bolsonaro": 51.61
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Instituto Veritá",
+   "inicio": "2022-10-17",
+   "fim": "2022-10-20",
+   "amostra": 20220,
+   "lula": 46.7,
+   "bolsonaro": 49.4,
+   "outros": 3.9,
+   "validos": {
+    "lula": 48.6,
+    "bolsonaro": 51.4
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-10-17",
+   "fim": "2022-10-19",
+   "amostra": 2000,
+   "lula": 45.9,
+   "bolsonaro": 46.9,
+   "outros": 7.1,
+   "validos": {
+    "lula": 49.46,
+    "bolsonaro": 50.54
+   }
+  },
+  {
+   "instituto": "Brasmarket",
+   "contratante": "Brasmarket",
+   "inicio": "2022-10-15",
+   "fim": "2022-10-19",
+   "amostra": 2400,
+   "lula": 40.8,
+   "bolsonaro": 45.5,
+   "outros": 13.7,
+   "validos": {
+    "lula": 47.28,
+    "bolsonaro": 52.72
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-10-15",
+   "fim": "2022-10-19",
+   "amostra": 2020,
+   "lula": 46.9,
+   "bolsonaro": 44.5,
+   "outros": 8.6,
+   "validos": {
+    "lula": 51.31,
+    "bolsonaro": 48.69
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Ideia",
+   "inicio": "2022-10-14",
+   "fim": "2022-10-19",
+   "amostra": 1500,
+   "lula": 50,
+   "bolsonaro": 46,
+   "outros": 4,
+   "validos": {
+    "lula": 52.08,
+    "bolsonaro": 47.92
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-10-17",
+   "fim": "2022-10-18",
+   "amostra": 2912,
+   "lula": 49,
+   "bolsonaro": 45,
+   "outros": 5,
+   "validos": {
+    "lula": 52.13,
+    "bolsonaro": 47.87
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-10-17",
+   "fim": "2022-10-18",
+   "amostra": 1100,
+   "lula": 49,
+   "bolsonaro": 43,
+   "outros": 8,
+   "validos": {
+    "lula": 53.26,
+    "bolsonaro": 46.74
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-10-16",
+   "fim": "2022-10-18",
+   "amostra": 2000,
+   "lula": 47,
+   "bolsonaro": 42,
+   "outros": 11,
+   "validos": {
+    "lula": 52.81,
+    "bolsonaro": 47.19
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-10-16",
+   "fim": "2022-10-18",
+   "amostra": 5000,
+   "lula": 48,
+   "bolsonaro": 44,
+   "outros": 8,
+   "validos": {
+    "lula": 52.17,
+    "bolsonaro": 47.83
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-10-15",
+   "fim": "2022-10-17",
+   "amostra": 3008,
+   "lula": 50,
+   "bolsonaro": 43,
+   "outros": 7,
+   "validos": {
+    "lula": 53.76,
+    "bolsonaro": 46.24
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-10-14",
+   "fim": "2022-10-16",
+   "amostra": 2002,
+   "lula": 48.1,
+   "bolsonaro": 41.8,
+   "outros": 10.1,
+   "validos": {
+    "lula": 53.5,
+    "bolsonaro": 46.5
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Instituto Veritá",
+   "inicio": "2022-10-11",
+   "fim": "2022-10-15",
+   "amostra": 5528,
+   "lula": 46.4,
+   "bolsonaro": 48.7,
+   "outros": 4.9,
+   "validos": {
+    "lula": 48.79,
+    "bolsonaro": 51.21
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-10-13",
+   "fim": "2022-10-14",
+   "amostra": 2898,
+   "lula": 49,
+   "bolsonaro": 44,
+   "outros": 6,
+   "validos": {
+    "lula": 52.69,
+    "bolsonaro": 47.31
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-10-10",
+   "fim": "2022-10-12",
+   "amostra": 2000,
+   "lula": 46.9,
+   "bolsonaro": 46.5,
+   "outros": 6.6,
+   "validos": {
+    "lula": 50.21,
+    "bolsonaro": 49.79
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-10-10",
+   "fim": "2022-10-12",
+   "amostra": 2000,
+   "lula": 49,
+   "bolsonaro": 43,
+   "outros": 8,
+   "validos": {
+    "lula": 53.26,
+    "bolsonaro": 46.74
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-10-10",
+   "fim": "2022-10-12",
+   "amostra": 2000,
+   "lula": 49,
+   "bolsonaro": 41,
+   "outros": 10,
+   "validos": {
+    "lula": 54.44,
+    "bolsonaro": 45.56
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Progressistas/Paraná Pesquisas",
+   "inicio": "2022-10-08",
+   "fim": "2022-10-12",
+   "amostra": 2020,
+   "lula": 47.6,
+   "bolsonaro": 44.1,
+   "outros": 8.4,
+   "validos": {
+    "lula": 51.91,
+    "bolsonaro": 48.09
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas",
+   "inicio": "2022-10-08",
+   "fim": "2022-10-12",
+   "amostra": 4500,
+   "lula": 51.1,
+   "bolsonaro": 46.5,
+   "outros": 2.4,
+   "validos": {
+    "lula": 52.36,
+    "bolsonaro": 47.64
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-10-09",
+   "fim": "2022-10-11",
+   "amostra": 5000,
+   "lula": 48,
+   "bolsonaro": 44,
+   "outros": 8,
+   "validos": {
+    "lula": 52.17,
+    "bolsonaro": 47.83
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2022-10-06",
+   "fim": "2022-10-11",
+   "amostra": 2095,
+   "lula": 48,
+   "bolsonaro": 46,
+   "outros": 6,
+   "validos": {
+    "lula": 51.06,
+    "bolsonaro": 48.94
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-10-08",
+   "fim": "2022-10-10",
+   "amostra": 1100,
+   "lula": 50,
+   "bolsonaro": 43,
+   "outros": 6,
+   "validos": {
+    "lula": 53.76,
+    "bolsonaro": 46.24
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-10-07",
+   "fim": "2022-10-10",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 42,
+   "outros": 7,
+   "validos": {
+    "lula": 54.84,
+    "bolsonaro": 45.16
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-10-05",
+   "fim": "2022-10-07",
+   "amostra": 2884,
+   "lula": 49,
+   "bolsonaro": 44,
+   "outros": 8,
+   "validos": {
+    "lula": 52.69,
+    "bolsonaro": 47.31
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-10-03",
+   "fim": "2022-10-05",
+   "amostra": 2000,
+   "lula": 48,
+   "bolsonaro": 41,
+   "outros": 11,
+   "validos": {
+    "lula": 53.93,
+    "bolsonaro": 46.07
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-10-03",
+   "fim": "2022-10-05",
+   "amostra": 3500,
+   "lula": 48,
+   "bolsonaro": 44,
+   "outros": 8,
+   "validos": {
+    "lula": 52.17,
+    "bolsonaro": 47.83
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-10-03",
+   "fim": "2022-10-05",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 43,
+   "outros": 6,
+   "validos": {
+    "lula": 54.26,
+    "bolsonaro": 45.74
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-10-03",
+   "fim": "2022-10-04",
+   "amostra": 2000,
+   "lula": 49.3,
+   "bolsonaro": 46,
+   "outros": 4.7,
+   "validos": {
+    "lula": 51.73,
+    "bolsonaro": 48.27
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-09-29",
+   "fim": "2022-10-01",
+   "amostra": 3008,
+   "lula": 52,
+   "bolsonaro": 37,
+   "outros": 11,
+   "validos": {
+    "lula": 58.43,
+    "bolsonaro": 41.57
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Globo/Datafolha",
+   "inicio": "2022-09-30",
+   "fim": "2022-10-01",
+   "amostra": 12800,
+   "lula": 54,
+   "bolsonaro": 38,
+   "outros": 8,
+   "validos": {
+    "lula": 58.7,
+    "bolsonaro": 41.3
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-09-30",
+   "fim": "2022-09-30",
+   "amostra": 1100,
+   "lula": 55,
+   "bolsonaro": 38,
+   "outros": 7,
+   "validos": {
+    "lula": 59.14,
+    "bolsonaro": 40.86
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Arko Advice/AtlasIntel",
+   "inicio": "2022-09-28",
+   "fim": "2022-09-30",
+   "amostra": 4500,
+   "lula": 53.1,
+   "bolsonaro": 42.8,
+   "outros": 4.1,
+   "validos": {
+    "lula": 55.37,
+    "bolsonaro": 44.63
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-09-28",
+   "fim": "2022-09-30",
+   "amostra": 2002,
+   "lula": 50.4,
+   "bolsonaro": 41.2,
+   "outros": 8.4,
+   "validos": {
+    "lula": 55.02,
+    "bolsonaro": 44.98
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Globo/Datafolha",
+   "inicio": "2022-09-27",
+   "fim": "2022-09-29",
+   "amostra": 6800,
+   "lula": 54,
+   "bolsonaro": 39,
+   "outros": 7,
+   "validos": {
+    "lula": 58.06,
+    "bolsonaro": 41.94
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-09-26",
+   "fim": "2022-09-28",
+   "amostra": 2000,
+   "lula": 47.7,
+   "bolsonaro": 42.9,
+   "outros": 9.4,
+   "validos": {
+    "lula": 52.65,
+    "bolsonaro": 47.35
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Arko Advice/AtlasIntel",
+   "inicio": "2022-09-24",
+   "fim": "2022-09-28",
+   "amostra": 4500,
+   "lula": 51.8,
+   "bolsonaro": 42.4,
+   "outros": 5.8,
+   "validos": {
+    "lula": 54.99,
+    "bolsonaro": 45.01
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-09-23",
+   "fim": "2022-09-28",
+   "amostra": 1500,
+   "lula": 52,
+   "bolsonaro": 41,
+   "outros": 7,
+   "validos": {
+    "lula": 55.91,
+    "bolsonaro": 44.09
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-09-25",
+   "fim": "2022-09-27",
+   "amostra": 4500,
+   "lula": 51,
+   "bolsonaro": 39,
+   "outros": 9,
+   "validos": {
+    "lula": 56.67,
+    "bolsonaro": 43.33
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-09-24",
+   "fim": "2022-09-27",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 38,
+   "outros": 10,
+   "validos": {
+    "lula": 57.78,
+    "bolsonaro": 42.22
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-09-25",
+   "fim": "2022-09-26",
+   "amostra": 3008,
+   "lula": 54,
+   "bolsonaro": 35,
+   "outros": 11,
+   "validos": {
+    "lula": 60.67,
+    "bolsonaro": 39.33
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-09-22",
+   "fim": "2022-09-26",
+   "amostra": 2020,
+   "lula": 48,
+   "bolsonaro": 40.4,
+   "outros": 11.6,
+   "validos": {
+    "lula": 54.3,
+    "bolsonaro": 45.7
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Arko Advice/AtlasIntel",
+   "inicio": "2022-09-22",
+   "fim": "2022-09-26",
+   "amostra": 4500,
+   "lula": 51.3,
+   "bolsonaro": 43.7,
+   "outros": 5,
+   "validos": {
+    "lula": 54,
+    "bolsonaro": 46
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-09-23",
+   "fim": "2022-09-25",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 40,
+   "outros": 8,
+   "validos": {
+    "lula": 56.52,
+    "bolsonaro": 43.48
+   }
+  },
+  {
+   "instituto": "Equilíbrio Brasil",
+   "contratante": "Equilíbrio Brasil",
+   "inicio": "2022-09-20",
+   "fim": "2022-09-22",
+   "amostra": 11500,
+   "lula": 43,
+   "bolsonaro": 47,
+   "outros": 10,
+   "validos": {
+    "lula": 47.78,
+    "bolsonaro": 52.22
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Globo/Datafolha",
+   "inicio": "2022-09-20",
+   "fim": "2022-09-22",
+   "amostra": 6754,
+   "lula": 54,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.7,
+    "bolsonaro": 41.3
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-09-19",
+   "fim": "2022-09-21",
+   "amostra": 2000,
+   "lula": 47,
+   "bolsonaro": 44.4,
+   "outros": 8.5,
+   "validos": {
+    "lula": 51.42,
+    "bolsonaro": 48.58
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-09-19",
+   "fim": "2022-09-21",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 37,
+   "outros": 9,
+   "validos": {
+    "lula": 59.34,
+    "bolsonaro": 40.66
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-09-18",
+   "fim": "2022-09-20",
+   "amostra": 3500,
+   "lula": 50,
+   "bolsonaro": 42,
+   "outros": 8,
+   "validos": {
+    "lula": 54.35,
+    "bolsonaro": 45.65
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-09-17",
+   "fim": "2022-09-20",
+   "amostra": 2000,
+   "lula": 50,
+   "bolsonaro": 40,
+   "outros": 10,
+   "validos": {
+    "lula": 55.56,
+    "bolsonaro": 44.44
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Arko Advice/AtlasIntel",
+   "inicio": "2022-09-16",
+   "fim": "2022-09-20",
+   "amostra": 7514,
+   "lula": 53.1,
+   "bolsonaro": 41.4,
+   "outros": 5.5,
+   "validos": {
+    "lula": 56.19,
+    "bolsonaro": 43.81
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-09-15",
+   "fim": "2022-09-19",
+   "amostra": 2020,
+   "lula": 47.3,
+   "bolsonaro": 40.7,
+   "outros": 11.9,
+   "validos": {
+    "lula": 53.75,
+    "bolsonaro": 46.25
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-09-17",
+   "fim": "2022-09-18",
+   "amostra": 3008,
+   "lula": 54,
+   "bolsonaro": 35,
+   "outros": 11,
+   "validos": {
+    "lula": 60.67,
+    "bolsonaro": 39.33
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-09-16",
+   "fim": "2022-09-18",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 39,
+   "outros": 9,
+   "validos": {
+    "lula": 57.14,
+    "bolsonaro": 42.86
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-09-14",
+   "fim": "2022-09-16",
+   "amostra": 1100,
+   "lula": 53,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.24,
+    "bolsonaro": 41.76
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Globo/Datafolha",
+   "inicio": "2022-09-13",
+   "fim": "2022-09-15",
+   "amostra": 5926,
+   "lula": 54,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.7,
+    "bolsonaro": 41.3
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-09-12",
+   "fim": "2022-09-14",
+   "amostra": 2000,
+   "lula": 44.5,
+   "bolsonaro": 46.4,
+   "outros": 9.1,
+   "validos": {
+    "lula": 48.95,
+    "bolsonaro": 51.05
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-09-12",
+   "fim": "2022-09-14",
+   "amostra": 2002,
+   "lula": 49.4,
+   "bolsonaro": 39.3,
+   "outros": 11.3,
+   "validos": {
+    "lula": 55.69,
+    "bolsonaro": 44.31
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-09-11",
+   "fim": "2022-09-13",
+   "amostra": 3500,
+   "lula": 51,
+   "bolsonaro": 42,
+   "outros": 7,
+   "validos": {
+    "lula": 54.84,
+    "bolsonaro": 45.16
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-09-10",
+   "fim": "2022-09-13",
+   "amostra": 2000,
+   "lula": 48,
+   "bolsonaro": 40,
+   "outros": 12,
+   "validos": {
+    "lula": 54.55,
+    "bolsonaro": 45.45
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-09-08",
+   "fim": "2022-09-12",
+   "amostra": 2020,
+   "lula": 47.4,
+   "bolsonaro": 41.2,
+   "outros": 11.5,
+   "validos": {
+    "lula": 53.5,
+    "bolsonaro": 46.5
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-09-09",
+   "fim": "2022-09-11",
+   "amostra": 2512,
+   "lula": 53,
+   "bolsonaro": 36,
+   "outros": 11,
+   "validos": {
+    "lula": 59.55,
+    "bolsonaro": 40.45
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-09-09",
+   "fim": "2022-09-11",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 38,
+   "outros": 11,
+   "validos": {
+    "lula": 57.3,
+    "bolsonaro": 42.7
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Globo/Datafolha",
+   "inicio": "2022-09-08",
+   "fim": "2022-09-09",
+   "amostra": 1100,
+   "lula": 52,
+   "bolsonaro": 39,
+   "outros": 9,
+   "validos": {
+    "lula": 57.14,
+    "bolsonaro": 42.86
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Abrapel/Ipespe",
+   "inicio": "2022-09-07",
+   "fim": "2022-09-09",
+   "amostra": 2676,
+   "lula": 53,
+   "bolsonaro": 39,
+   "outros": 8,
+   "validos": {
+    "lula": 57.61,
+    "bolsonaro": 42.39
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-09-05",
+   "fim": "2022-09-06",
+   "amostra": 2000,
+   "lula": 44.7,
+   "bolsonaro": 45.9,
+   "outros": 9.4,
+   "validos": {
+    "lula": 49.34,
+    "bolsonaro": 50.66
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-09-04",
+   "fim": "2022-09-06",
+   "amostra": 3500,
+   "lula": 52,
+   "bolsonaro": 40,
+   "outros": 8,
+   "validos": {
+    "lula": 56.52,
+    "bolsonaro": 43.48
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-08-31",
+   "fim": "2022-09-05",
+   "amostra": 2020,
+   "lula": 47.8,
+   "bolsonaro": 40.3,
+   "outros": 12.4,
+   "validos": {
+    "lula": 54.26,
+    "bolsonaro": 45.74
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Globo/Ipec",
+   "inicio": "2022-09-02",
+   "fim": "2022-09-04",
+   "amostra": 2512,
+   "lula": 52,
+   "bolsonaro": 36,
+   "outros": 12,
+   "validos": {
+    "lula": 59.09,
+    "bolsonaro": 40.91
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG/FSB",
+   "inicio": "2022-09-02",
+   "fim": "2022-09-04",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 40,
+   "outros": 7,
+   "validos": {
+    "lula": 56.99,
+    "bolsonaro": 43.01
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2022-09-01",
+   "fim": "2022-09-04",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 39,
+   "outros": 10,
+   "validos": {
+    "lula": 56.67,
+    "bolsonaro": 43.33
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-08-31",
+   "fim": "2022-09-01",
+   "amostra": 1100,
+   "lula": 53,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.24,
+    "bolsonaro": 41.76
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-08-30",
+   "fim": "2022-09-01",
+   "amostra": 5734,
+   "lula": 53,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.24,
+    "bolsonaro": 41.76
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-08-28",
+   "fim": "2022-08-30",
+   "amostra": 3500,
+   "lula": 50,
+   "bolsonaro": 41,
+   "outros": 9,
+   "validos": {
+    "lula": 54.95,
+    "bolsonaro": 45.05
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-08-26",
+   "fim": "2022-08-30",
+   "amostra": 2020,
+   "lula": 47.8,
+   "bolsonaro": 40.8,
+   "outros": 11.4,
+   "validos": {
+    "lula": 53.95,
+    "bolsonaro": 46.05
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-08-26",
+   "fim": "2022-08-29",
+   "amostra": 3500,
+   "lula": 53,
+   "bolsonaro": 38,
+   "outros": 9,
+   "validos": {
+    "lula": 58.24,
+    "bolsonaro": 41.76
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-08-26",
+   "fim": "2022-08-28",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 39,
+   "outros": 9,
+   "validos": {
+    "lula": 57.14,
+    "bolsonaro": 42.86
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "IPEC",
+   "inicio": "2022-08-26",
+   "fim": "2022-08-28",
+   "amostra": 2000,
+   "lula": 50,
+   "bolsonaro": 37,
+   "outros": 13,
+   "validos": {
+    "lula": 57.47,
+    "bolsonaro": 42.53
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-08-25",
+   "fim": "2022-08-28",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 37,
+   "outros": 13,
+   "validos": {
+    "lula": 57.95,
+    "bolsonaro": 42.05
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-08-25",
+   "fim": "2022-08-28",
+   "amostra": 2002,
+   "lula": 50.1,
+   "bolsonaro": 38.8,
+   "outros": 11.1,
+   "validos": {
+    "lula": 56.36,
+    "bolsonaro": 43.64
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-08-24",
+   "fim": "2022-08-25",
+   "amostra": 2000,
+   "lula": 45.3,
+   "bolsonaro": 43.8,
+   "outros": 10.9,
+   "validos": {
+    "lula": 50.84,
+    "bolsonaro": 49.16
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Arko Advice/AtlasIntel",
+   "inicio": "2022-08-20",
+   "fim": "2022-08-24",
+   "amostra": 7475,
+   "lula": 51.8,
+   "bolsonaro": 40.8,
+   "outros": 7.4,
+   "validos": {
+    "lula": 55.94,
+    "bolsonaro": 44.06
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-08-19",
+   "fim": "2022-08-24",
+   "amostra": 1500,
+   "lula": 49,
+   "bolsonaro": 40,
+   "outros": 13,
+   "validos": {
+    "lula": 55.06,
+    "bolsonaro": 44.94
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-08-19",
+   "fim": "2022-08-23",
+   "amostra": 2020,
+   "lula": 47.8,
+   "bolsonaro": 40.4,
+   "outros": 11.8,
+   "validos": {
+    "lula": 54.2,
+    "bolsonaro": 45.8
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-08-20",
+   "fim": "2022-08-22",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 36,
+   "outros": 11,
+   "validos": {
+    "lula": 59.55,
+    "bolsonaro": 40.45
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Instituto Veritá",
+   "inicio": "2022-08-17",
+   "fim": "2022-08-22",
+   "amostra": 5050,
+   "lula": 45.6,
+   "bolsonaro": 45.5,
+   "outros": 9,
+   "validos": {
+    "lula": 50.05,
+    "bolsonaro": 49.95
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-08-19",
+   "fim": "2022-08-21",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 39,
+   "outros": 9,
+   "validos": {
+    "lula": 57.14,
+    "bolsonaro": 42.86
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-08-16",
+   "fim": "2022-08-18",
+   "amostra": 5744,
+   "lula": 54,
+   "bolsonaro": 37,
+   "outros": 9,
+   "validos": {
+    "lula": 59.34,
+    "bolsonaro": 40.66
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-08-14",
+   "fim": "2022-08-16",
+   "amostra": 3500,
+   "lula": 52,
+   "bolsonaro": 38,
+   "outros": 10,
+   "validos": {
+    "lula": 57.78,
+    "bolsonaro": 42.22
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-08-12",
+   "fim": "2022-08-14",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 38,
+   "outros": 10,
+   "validos": {
+    "lula": 58.24,
+    "bolsonaro": 41.76
+   }
+  },
+  {
+   "instituto": "Ipec",
+   "contratante": "Ipec",
+   "inicio": "2022-08-12",
+   "fim": "2022-08-14",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 35,
+   "outros": 14,
+   "validos": {
+    "lula": 59.3,
+    "bolsonaro": 40.7
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-08-11",
+   "fim": "2022-08-14",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 38,
+   "outros": 11,
+   "validos": {
+    "lula": 57.3,
+    "bolsonaro": 42.7
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-08-05",
+   "fim": "2022-08-07",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 39,
+   "outros": 10,
+   "validos": {
+    "lula": 56.67,
+    "bolsonaro": 43.33
+   }
+  },
+  {
+   "instituto": "Grupo 6Sigma{{carece de fontes}}",
+   "contratante": "Grupo 6Sigma{{carece de fontes}}",
+   "inicio": "2022-08-01",
+   "fim": "2022-08-05",
+   "amostra": 1000,
+   "lula": 37.9,
+   "bolsonaro": 45.4,
+   "outros": 16.7,
+   "validos": {
+    "lula": 45.5,
+    "bolsonaro": 54.5
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-07-31",
+   "fim": "2022-08-02",
+   "amostra": 3550,
+   "lula": 50,
+   "bolsonaro": 40,
+   "outros": 9,
+   "validos": {
+    "lula": 55.56,
+    "bolsonaro": 44.44
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "BGC Liquidez/Paraná Pesquisas",
+   "inicio": "2022-07-28",
+   "fim": "2022-08-01",
+   "amostra": 2020,
+   "lula": 48.6,
+   "bolsonaro": 38.9,
+   "outros": 12.5,
+   "validos": {
+    "lula": 55.54,
+    "bolsonaro": 44.46
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-07-28",
+   "fim": "2022-07-31",
+   "amostra": 2000,
+   "lula": 51,
+   "bolsonaro": 37,
+   "outros": 12,
+   "validos": {
+    "lula": 57.95,
+    "bolsonaro": 42.05
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-07-27",
+   "fim": "2022-07-28",
+   "amostra": 2256,
+   "lula": 55,
+   "bolsonaro": 35,
+   "outros": 9,
+   "validos": {
+    "lula": 61.11,
+    "bolsonaro": 38.89
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-07-21",
+   "fim": "2022-07-25",
+   "amostra": 2000,
+   "lula": 46.2,
+   "bolsonaro": 41.6,
+   "outros": 12.2,
+   "validos": {
+    "lula": 52.62,
+    "bolsonaro": 47.38
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-07-22",
+   "fim": "2022-07-24",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 36,
+   "outros": 9,
+   "validos": {
+    "lula": 60,
+    "bolsonaro": 40
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-07-20",
+   "fim": "2022-07-22",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 36,
+   "outros": 11,
+   "validos": {
+    "lula": 59.55,
+    "bolsonaro": 40.45
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-07-15",
+   "fim": "2022-07-20",
+   "amostra": 1500,
+   "lula": 47,
+   "bolsonaro": 37,
+   "outros": 16,
+   "validos": {
+    "lula": 55.95,
+    "bolsonaro": 44.05
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-07-17",
+   "fim": "2022-07-19",
+   "amostra": 3000,
+   "lula": 51,
+   "bolsonaro": 38,
+   "outros": 12,
+   "validos": {
+    "lula": 57.3,
+    "bolsonaro": 42.7
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-07-08",
+   "fim": "2022-07-10",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 37,
+   "outros": 10,
+   "validos": {
+    "lula": 58.89,
+    "bolsonaro": 41.11
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-07-03",
+   "fim": "2022-07-05",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 38,
+   "outros": 12,
+   "validos": {
+    "lula": 56.82,
+    "bolsonaro": 43.18
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "BGC Liquidez/Paraná Pesquisas",
+   "inicio": "2022-06-30",
+   "fim": "2022-07-05",
+   "amostra": 2020,
+   "lula": 48,
+   "bolsonaro": 39.3,
+   "outros": 12.8,
+   "validos": {
+    "lula": 54.98,
+    "bolsonaro": 45.02
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-06-29",
+   "fim": "2022-07-02",
+   "amostra": 2000,
+   "lula": 53,
+   "bolsonaro": 34,
+   "outros": 13,
+   "validos": {
+    "lula": 60.92,
+    "bolsonaro": 39.08
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-06-24",
+   "fim": "2022-06-26",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 37,
+   "outros": 10,
+   "validos": {
+    "lula": 58.43,
+    "bolsonaro": 41.57
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-06-20",
+   "fim": "2022-06-24",
+   "amostra": 2000,
+   "lula": 49,
+   "bolsonaro": 41.7,
+   "outros": 9.3,
+   "validos": {
+    "lula": 54.02,
+    "bolsonaro": 45.98
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-06-22",
+   "fim": "2022-06-23",
+   "amostra": 2556,
+   "lula": 57,
+   "bolsonaro": 34,
+   "outros": 9,
+   "validos": {
+    "lula": 62.64,
+    "bolsonaro": 37.36
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-06-17",
+   "fim": "2022-06-22",
+   "amostra": 1500,
+   "lula": 48,
+   "bolsonaro": 41,
+   "outros": 10,
+   "validos": {
+    "lula": 53.93,
+    "bolsonaro": 46.07
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-06-19",
+   "fim": "2022-06-21",
+   "amostra": 3000,
+   "lula": 54,
+   "bolsonaro": 36,
+   "outros": 9,
+   "validos": {
+    "lula": 60,
+    "bolsonaro": 40
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-06-10",
+   "fim": "2022-06-12",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 35,
+   "outros": 13,
+   "validos": {
+    "lula": 59.77,
+    "bolsonaro": 40.23
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-06-05",
+   "fim": "2022-06-07",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 40,
+   "outros": 10,
+   "validos": {
+    "lula": 55.56,
+    "bolsonaro": 44.44
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-06-02",
+   "fim": "2022-06-05",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 32,
+   "outros": 12,
+   "validos": {
+    "lula": 62.79,
+    "bolsonaro": 37.21
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-05-30",
+   "fim": "2022-06-01",
+   "amostra": 1000,
+   "lula": 53,
+   "bolsonaro": 35,
+   "outros": 12,
+   "validos": {
+    "lula": 60.23,
+    "bolsonaro": 39.77
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-05-26",
+   "fim": "2022-05-30",
+   "amostra": 2020,
+   "lula": 47.3,
+   "bolsonaro": 39.2,
+   "outros": 13.5,
+   "validos": {
+    "lula": 54.68,
+    "bolsonaro": 45.32
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-05-27",
+   "fim": "2022-05-29",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 35,
+   "outros": 11,
+   "validos": {
+    "lula": 60.67,
+    "bolsonaro": 39.33
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-05-25",
+   "fim": "2022-05-26",
+   "amostra": 2556,
+   "lula": 58,
+   "bolsonaro": 33,
+   "outros": 9,
+   "validos": {
+    "lula": 63.74,
+    "bolsonaro": 36.26
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-05-23",
+   "fim": "2022-05-25",
+   "amostra": 1000,
+   "lula": 53,
+   "bolsonaro": 35,
+   "outros": 12,
+   "validos": {
+    "lula": 60.23,
+    "bolsonaro": 39.77
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-05-22",
+   "fim": "2022-05-24",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 39,
+   "outros": 11,
+   "validos": {
+    "lula": 56.18,
+    "bolsonaro": 43.82
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-05-16",
+   "fim": "2022-05-19",
+   "amostra": 2000,
+   "lula": 49,
+   "bolsonaro": 40.8,
+   "outros": 10.2,
+   "validos": {
+    "lula": 54.57,
+    "bolsonaro": 45.43
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-05-14",
+   "fim": "2022-05-19",
+   "amostra": 1500,
+   "lula": 46,
+   "bolsonaro": 39,
+   "outros": 15,
+   "validos": {
+    "lula": 54.12,
+    "bolsonaro": 45.88
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-05-16",
+   "fim": "2022-05-18",
+   "amostra": 1000,
+   "lula": 53,
+   "bolsonaro": 34,
+   "outros": 13,
+   "validos": {
+    "lula": 60.92,
+    "bolsonaro": 39.08
+   }
+  },
+  {
+   "instituto": "Ranking Brasil",
+   "contratante": "Ranking Brasil",
+   "inicio": "2022-05-10",
+   "fim": "2022-05-14",
+   "amostra": 3000,
+   "lula": 45,
+   "bolsonaro": 40,
+   "outros": 15,
+   "validos": {
+    "lula": 52.94,
+    "bolsonaro": 47.06
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-05-09",
+   "fim": "2022-05-11",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 35,
+   "outros": 10,
+   "validos": {
+    "lula": 60.67,
+    "bolsonaro": 39.33
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-05-08",
+   "fim": "2022-05-10",
+   "amostra": 3000,
+   "lula": 49,
+   "bolsonaro": 38,
+   "outros": 13,
+   "validos": {
+    "lula": 56.32,
+    "bolsonaro": 43.68
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-05-05",
+   "fim": "2022-05-08",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 34,
+   "outros": 11,
+   "validos": {
+    "lula": 61.36,
+    "bolsonaro": 38.64
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-05-04",
+   "fim": "2022-05-07",
+   "amostra": 2002,
+   "lula": 50.8,
+   "bolsonaro": 36.8,
+   "outros": 12.4,
+   "validos": {
+    "lula": 57.99,
+    "bolsonaro": 42.01
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-05-02",
+   "fim": "2022-05-04",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 34,
+   "outros": 12,
+   "validos": {
+    "lula": 61.36,
+    "bolsonaro": 38.64
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas'",
+   "inicio": "2022-04-28",
+   "fim": "2022-05-03",
+   "amostra": 2020,
+   "lula": 46.4,
+   "bolsonaro": 38.7,
+   "outros": 15,
+   "validos": {
+    "lula": 54.52,
+    "bolsonaro": 45.48
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-04-24",
+   "fim": "2022-04-26",
+   "amostra": 3000,
+   "lula": 48,
+   "bolsonaro": 39,
+   "outros": 13,
+   "validos": {
+    "lula": 55.17,
+    "bolsonaro": 44.83
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-04-20",
+   "fim": "2022-04-25",
+   "amostra": 2000,
+   "lula": 50.2,
+   "bolsonaro": 39.7,
+   "outros": 10.1,
+   "validos": {
+    "lula": 55.84,
+    "bolsonaro": 44.16
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-04-22",
+   "fim": "2022-04-24",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 37,
+   "outros": 10,
+   "validos": {
+    "lula": 58.43,
+    "bolsonaro": 41.57
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-04-18",
+   "fim": "2022-04-20",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 34,
+   "outros": 12,
+   "validos": {
+    "lula": 61.36,
+    "bolsonaro": 38.64
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-04-15",
+   "fim": "2022-04-20",
+   "amostra": 1500,
+   "lula": 48,
+   "bolsonaro": 39,
+   "outros": 13,
+   "validos": {
+    "lula": 55.17,
+    "bolsonaro": 44.83
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-04-10",
+   "fim": "2022-04-12",
+   "amostra": 3000,
+   "lula": 47,
+   "bolsonaro": 38,
+   "outros": 15,
+   "validos": {
+    "lula": 55.29,
+    "bolsonaro": 44.71
+   }
+  },
+  {
+   "instituto": "IstoÉ/Sensus",
+   "contratante": "IstoÉ/Sensus",
+   "inicio": "2022-04-08",
+   "fim": "2022-04-11",
+   "amostra": 2000,
+   "lula": 53.1,
+   "bolsonaro": 34.1,
+   "outros": 12.8,
+   "validos": {
+    "lula": 60.89,
+    "bolsonaro": 39.11
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2022-04-02",
+   "fim": "2022-04-05",
+   "amostra": 1000,
+   "lula": 53,
+   "bolsonaro": 33,
+   "outros": 14,
+   "validos": {
+    "lula": 61.63,
+    "bolsonaro": 38.37
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-03-31",
+   "fim": "2022-04-05",
+   "amostra": 2020,
+   "lula": 47.1,
+   "bolsonaro": 38.5,
+   "outros": 14.4,
+   "validos": {
+    "lula": 55.02,
+    "bolsonaro": 44.98
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-04-01",
+   "fim": "2022-04-03",
+   "amostra": 2000,
+   "lula": 55,
+   "bolsonaro": 34,
+   "outros": 11,
+   "validos": {
+    "lula": 61.8,
+    "bolsonaro": 38.2
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-03-27",
+   "fim": "2022-03-29",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 38,
+   "outros": 12,
+   "validos": {
+    "lula": 56.82,
+    "bolsonaro": 43.18
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-03-21",
+   "fim": "2022-03-25",
+   "amostra": 2000,
+   "lula": 48.6,
+   "bolsonaro": 41.6,
+   "outros": 9.8,
+   "validos": {
+    "lula": 53.88,
+    "bolsonaro": 46.12
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2022-03-22",
+   "fim": "2022-03-23",
+   "amostra": 2556,
+   "lula": 55,
+   "bolsonaro": 34,
+   "outros": 11,
+   "validos": {
+    "lula": 61.8,
+    "bolsonaro": 38.2
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-03-21",
+   "fim": "2022-03-23",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 31,
+   "outros": 15,
+   "validos": {
+    "lula": 63.53,
+    "bolsonaro": 36.47
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-03-18",
+   "fim": "2022-03-23",
+   "amostra": 1500,
+   "lula": 50,
+   "bolsonaro": 37,
+   "outros": 13,
+   "validos": {
+    "lula": 57.47,
+    "bolsonaro": 42.53
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "BTG Pactual/FSB",
+   "inicio": "2022-03-18",
+   "fim": "2022-03-20",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 35,
+   "outros": 11,
+   "validos": {
+    "lula": 60.67,
+    "bolsonaro": 39.33
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-03-13",
+   "fim": "2022-03-15",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 36,
+   "outros": 14,
+   "validos": {
+    "lula": 58.14,
+    "bolsonaro": 41.86
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-03-10",
+   "fim": "2022-03-13",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 32,
+   "outros": 13,
+   "validos": {
+    "lula": 62.79,
+    "bolsonaro": 37.21
+   }
+  },
+  {
+   "instituto": "Ranking Brasil",
+   "contratante": "Ranking Brasil",
+   "inicio": "2022-03-07",
+   "fim": "2022-03-12",
+   "amostra": 3000,
+   "lula": 45,
+   "bolsonaro": 38.3,
+   "outros": 16.7,
+   "validos": {
+    "lula": 54.02,
+    "bolsonaro": 45.98
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-03-07",
+   "fim": "2022-03-09",
+   "amostra": 1000,
+   "lula": 53,
+   "bolsonaro": 33,
+   "outros": 14,
+   "validos": {
+    "lula": 61.63,
+    "bolsonaro": 38.37
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-03-03",
+   "fim": "2022-03-08",
+   "amostra": 2020,
+   "lula": 46,
+   "bolsonaro": 37.3,
+   "outros": 16.7,
+   "validos": {
+    "lula": 55.22,
+    "bolsonaro": 44.78
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-02-27",
+   "fim": "2022-03-01",
+   "amostra": 3000,
+   "lula": 51,
+   "bolsonaro": 37,
+   "outros": 11,
+   "validos": {
+    "lula": 57.95,
+    "bolsonaro": 42.05
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-02-21",
+   "fim": "2022-02-23",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 32,
+   "outros": 14,
+   "validos": {
+    "lula": 62.79,
+    "bolsonaro": 37.21
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/Ideia",
+   "inicio": "2022-02-18",
+   "fim": "2022-02-22",
+   "amostra": 1500,
+   "lula": 49,
+   "bolsonaro": 35,
+   "outros": 16,
+   "validos": {
+    "lula": 58.33,
+    "bolsonaro": 41.67
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2022-02-16",
+   "fim": "2022-02-19",
+   "amostra": 2002,
+   "lula": 53.2,
+   "bolsonaro": 35.3,
+   "outros": 11.3,
+   "validos": {
+    "lula": 60.11,
+    "bolsonaro": 39.89
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-02-14",
+   "fim": "2022-02-17",
+   "amostra": 2000,
+   "lula": 48,
+   "bolsonaro": 40.1,
+   "outros": 11.9,
+   "validos": {
+    "lula": 54.48,
+    "bolsonaro": 45.52
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-02-13",
+   "fim": "2022-02-15",
+   "amostra": 3000,
+   "lula": 50,
+   "bolsonaro": 35,
+   "outros": 15,
+   "validos": {
+    "lula": 58.82,
+    "bolsonaro": 41.18
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-02-07",
+   "fim": "2022-02-09",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 31,
+   "outros": 15,
+   "validos": {
+    "lula": 63.53,
+    "bolsonaro": 36.47
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-02-03",
+   "fim": "2022-02-06",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 30,
+   "outros": 16,
+   "validos": {
+    "lula": 64.29,
+    "bolsonaro": 35.71
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-01-31",
+   "fim": "2022-02-01",
+   "amostra": 3000,
+   "lula": 54,
+   "bolsonaro": 37,
+   "outros": 9,
+   "validos": {
+    "lula": 59.34,
+    "bolsonaro": 40.66
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2022-01-27",
+   "fim": "2022-02-01",
+   "amostra": 2020,
+   "lula": 48.8,
+   "bolsonaro": 34.4,
+   "outros": 16.9,
+   "validos": {
+    "lula": 58.65,
+    "bolsonaro": 41.35
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-01-24",
+   "fim": "2022-01-25",
+   "amostra": 1000,
+   "lula": 54,
+   "bolsonaro": 30,
+   "outros": 16,
+   "validos": {
+    "lula": 64.29,
+    "bolsonaro": 35.71
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2022-01-17",
+   "fim": "2022-01-21",
+   "amostra": 2000,
+   "lula": 50.4,
+   "bolsonaro": 37.8,
+   "outros": 11.8,
+   "validos": {
+    "lula": 57.14,
+    "bolsonaro": 42.86
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2022-01-16",
+   "fim": "2022-01-18",
+   "amostra": 3000,
+   "lula": 54,
+   "bolsonaro": 32,
+   "outros": 14,
+   "validos": {
+    "lula": 62.79,
+    "bolsonaro": 37.21
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2022-01-09",
+   "fim": "2022-01-13",
+   "amostra": 1500,
+   "lula": 49,
+   "bolsonaro": 33,
+   "outros": 18,
+   "validos": {
+    "lula": 59.76,
+    "bolsonaro": 40.24
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2022-01-10",
+   "fim": "2022-01-12",
+   "amostra": 1000,
+   "lula": 56,
+   "bolsonaro": 31,
+   "outros": 13,
+   "validos": {
+    "lula": 64.37,
+    "bolsonaro": 35.63
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2022-01-06",
+   "fim": "2022-01-09",
+   "amostra": 2000,
+   "lula": 54,
+   "bolsonaro": 30,
+   "outros": 16,
+   "validos": {
+    "lula": 64.29,
+    "bolsonaro": 35.71
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-11-27",
+   "fim": "2021-11-29",
+   "amostra": 4401,
+   "lula": 50.5,
+   "bolsonaro": 36,
+   "outros": 13.5,
+   "validos": {
+    "lula": 58.38,
+    "bolsonaro": 41.62
+   }
+  },
+  {
+   "instituto": "ISTOÉ/Sensus",
+   "contratante": "ISTOÉ/Sensus",
+   "inicio": "2021-11-24",
+   "fim": "2021-11-28",
+   "amostra": 2000,
+   "lula": 55.1,
+   "bolsonaro": 31.6,
+   "outros": 13.3,
+   "validos": {
+    "lula": 63.55,
+    "bolsonaro": 36.45
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2021-11-22",
+   "fim": "2021-11-24",
+   "amostra": 1000,
+   "lula": 52,
+   "bolsonaro": 32,
+   "outros": 16,
+   "validos": {
+    "lula": 61.9,
+    "bolsonaro": 38.1
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-11-22",
+   "fim": "2021-11-24",
+   "amostra": 2500,
+   "lula": 54,
+   "bolsonaro": 31,
+   "outros": 15,
+   "validos": {
+    "lula": 63.53,
+    "bolsonaro": 36.47
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2021-11-16",
+   "fim": "2021-11-20",
+   "amostra": 2000,
+   "lula": 49.7,
+   "bolsonaro": 38.4,
+   "outros": 11.9,
+   "validos": {
+    "lula": 56.41,
+    "bolsonaro": 43.59
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2021-11-16",
+   "fim": "2021-11-19",
+   "amostra": 2020,
+   "lula": 42.5,
+   "bolsonaro": 35.6,
+   "outros": 21.9,
+   "validos": {
+    "lula": 54.42,
+    "bolsonaro": 45.58
+   }
+  },
+  {
+   "instituto": "Ponteio Política",
+   "contratante": "Ponteio Política",
+   "inicio": "2021-11-16",
+   "fim": "2021-11-18",
+   "amostra": 1000,
+   "lula": 50,
+   "bolsonaro": 32,
+   "outros": 18,
+   "validos": {
+    "lula": 60.98,
+    "bolsonaro": 39.02
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-11-09",
+   "fim": "2021-11-11",
+   "amostra": 1200,
+   "lula": 48,
+   "bolsonaro": 31,
+   "outros": 21,
+   "validos": {
+    "lula": 60.76,
+    "bolsonaro": 39.24
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2021-11-03",
+   "fim": "2021-11-06",
+   "amostra": 2063,
+   "lula": 57,
+   "bolsonaro": 27,
+   "outros": 16,
+   "validos": {
+    "lula": 67.86,
+    "bolsonaro": 32.14
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Populi",
+   "inicio": "2021-10-30",
+   "fim": "2021-11-04",
+   "amostra": 2000,
+   "lula": 52,
+   "bolsonaro": 24,
+   "outros": 244,
+   "validos": {
+    "lula": 68.42,
+    "bolsonaro": 31.58
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2021-10-25",
+   "fim": "2021-10-28",
+   "amostra": 1000,
+   "lula": 50,
+   "bolsonaro": 32,
+   "outros": 17,
+   "validos": {
+    "lula": 60.98,
+    "bolsonaro": 39.02
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-10-25",
+   "fim": "2021-10-27",
+   "amostra": 2500,
+   "lula": 52,
+   "bolsonaro": 37,
+   "outros": 11,
+   "validos": {
+    "lula": 58.43,
+    "bolsonaro": 41.57
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2021-10-19",
+   "fim": "2021-10-22",
+   "amostra": 2000,
+   "lula": 49.2,
+   "bolsonaro": 37.4,
+   "outros": 13.5,
+   "validos": {
+    "lula": 56.81,
+    "bolsonaro": 43.19
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2021-09-30",
+   "fim": "2021-10-03",
+   "amostra": 2048,
+   "lula": 53,
+   "bolsonaro": 29,
+   "outros": 17,
+   "validos": {
+    "lula": 64.63,
+    "bolsonaro": 35.37
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-09-27",
+   "fim": "2021-09-29",
+   "amostra": 2500,
+   "lula": 56,
+   "bolsonaro": 33,
+   "outros": 11,
+   "validos": {
+    "lula": 62.92,
+    "bolsonaro": 37.08
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-09-22",
+   "fim": "2021-09-24",
+   "amostra": 1000,
+   "lula": 50,
+   "bolsonaro": 31,
+   "outros": 18,
+   "validos": {
+    "lula": 61.73,
+    "bolsonaro": 38.27
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2021-09-21",
+   "fim": "2021-09-24",
+   "amostra": 2000,
+   "lula": 49.7,
+   "bolsonaro": 35.3,
+   "outros": 15,
+   "validos": {
+    "lula": 58.47,
+    "bolsonaro": 41.53
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2021-09-13",
+   "fim": "2021-09-15",
+   "amostra": 3667,
+   "lula": 56,
+   "bolsonaro": 31,
+   "outros": 14,
+   "validos": {
+    "lula": 64.37,
+    "bolsonaro": 35.63
+   }
+  },
+  {
+   "instituto": "DataTempo",
+   "contratante": "DataTempo",
+   "inicio": "2021-09-09",
+   "fim": "2021-09-15",
+   "amostra": 2025,
+   "lula": 53.1,
+   "bolsonaro": 30.1,
+   "outros": 16.8,
+   "validos": {
+    "lula": 63.82,
+    "bolsonaro": 36.18
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-08-30",
+   "fim": "2021-09-04",
+   "amostra": 3146,
+   "lula": 52.5,
+   "bolsonaro": 35.9,
+   "outros": 11.6,
+   "validos": {
+    "lula": 59.39,
+    "bolsonaro": 40.61
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-08-30",
+   "fim": "2021-09-01",
+   "amostra": 2500,
+   "lula": 55,
+   "bolsonaro": 30,
+   "outros": 15,
+   "validos": {
+    "lula": 64.71,
+    "bolsonaro": 35.29
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2021-08-26",
+   "fim": "2021-08-29",
+   "amostra": 2000,
+   "lula": 55,
+   "bolsonaro": 30,
+   "outros": 14,
+   "validos": {
+    "lula": 64.71,
+    "bolsonaro": 35.29
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2021-08-17",
+   "fim": "2021-08-20",
+   "amostra": 2000,
+   "lula": 46.9,
+   "bolsonaro": 38.8,
+   "outros": 14.3,
+   "validos": {
+    "lula": 54.73,
+    "bolsonaro": 45.27
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-08-11",
+   "fim": "2021-08-14",
+   "amostra": 1000,
+   "lula": 51,
+   "bolsonaro": 32,
+   "outros": 17,
+   "validos": {
+    "lula": 61.45,
+    "bolsonaro": 38.55
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-08-02",
+   "fim": "2021-08-04",
+   "amostra": 2500,
+   "lula": 52,
+   "bolsonaro": 32,
+   "outros": 16,
+   "validos": {
+    "lula": 61.9,
+    "bolsonaro": 38.1
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2021-07-29",
+   "fim": "2021-08-01",
+   "amostra": 1500,
+   "lula": 54,
+   "bolsonaro": 33,
+   "outros": 12,
+   "validos": {
+    "lula": 62.07,
+    "bolsonaro": 37.93
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-07-26",
+   "fim": "2021-07-29",
+   "amostra": 2884,
+   "lula": 49.2,
+   "bolsonaro": 38.1,
+   "outros": 12.7,
+   "validos": {
+    "lula": 56.36,
+    "bolsonaro": 43.64
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2021-07-24",
+   "fim": "2021-07-28",
+   "amostra": 2010,
+   "lula": 43.3,
+   "bolsonaro": 38.2,
+   "outros": 18.4,
+   "validos": {
+    "lula": 53.13,
+    "bolsonaro": 46.87
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Modalmais/Futura",
+   "inicio": "2021-07-23",
+   "fim": "2021-07-26",
+   "amostra": 2006,
+   "lula": 51.3,
+   "bolsonaro": 32.9,
+   "outros": 15.8,
+   "validos": {
+    "lula": 60.93,
+    "bolsonaro": 39.07
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2021-07-07",
+   "fim": "2021-07-08",
+   "amostra": 2074,
+   "lula": 58,
+   "bolsonaro": 31,
+   "outros": 11,
+   "validos": {
+    "lula": 65.17,
+    "bolsonaro": 34.83
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-07-05",
+   "fim": "2021-07-08",
+   "amostra": 1200,
+   "lula": 46,
+   "bolsonaro": 34,
+   "outros": 20,
+   "validos": {
+    "lula": 57.5,
+    "bolsonaro": 42.5
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-07-05",
+   "fim": "2021-07-07",
+   "amostra": 1000,
+   "lula": 49,
+   "bolsonaro": 35,
+   "outros": 17,
+   "validos": {
+    "lula": 58.33,
+    "bolsonaro": 41.67
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-07-05",
+   "fim": "2021-07-07",
+   "amostra": 2500,
+   "lula": 55,
+   "bolsonaro": 32,
+   "outros": 13,
+   "validos": {
+    "lula": 63.22,
+    "bolsonaro": 36.78
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Genial/Quaest",
+   "inicio": "2021-07-01",
+   "fim": "2021-07-04",
+   "amostra": 1500,
+   "lula": 54,
+   "bolsonaro": 33,
+   "outros": 13,
+   "validos": {
+    "lula": 62.07,
+    "bolsonaro": 37.93
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2021-07-01",
+   "fim": "2021-07-03",
+   "amostra": 2002,
+   "lula": 52.6,
+   "bolsonaro": 33.3,
+   "outros": 14.1,
+   "validos": {
+    "lula": 61.23,
+    "bolsonaro": 38.77
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-06-22",
+   "fim": "2021-06-24",
+   "amostra": 1200,
+   "lula": 44,
+   "bolsonaro": 39,
+   "outros": 17,
+   "validos": {
+    "lula": 53.01,
+    "bolsonaro": 46.99
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2021-06-11",
+   "fim": "2021-06-15",
+   "amostra": 2040,
+   "lula": 40.2,
+   "bolsonaro": 40,
+   "outros": 19.7,
+   "validos": {
+    "lula": 50.12,
+    "bolsonaro": 49.88
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-06-07",
+   "fim": "2021-06-10",
+   "amostra": 1000,
+   "lula": 45,
+   "bolsonaro": 36,
+   "outros": 19,
+   "validos": {
+    "lula": 55.56,
+    "bolsonaro": 44.44
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-06-07",
+   "fim": "2021-06-09",
+   "amostra": 2500,
+   "lula": 48,
+   "bolsonaro": 37,
+   "outros": 15,
+   "validos": {
+    "lula": 56.47,
+    "bolsonaro": 43.53
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-05-19",
+   "fim": "2021-05-20",
+   "amostra": 1200,
+   "lula": 45,
+   "bolsonaro": 37,
+   "outros": 18,
+   "validos": {
+    "lula": 54.88,
+    "bolsonaro": 45.12
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox Populi",
+   "inicio": "2021-05-12",
+   "fim": "2021-05-16",
+   "amostra": 2000,
+   "lula": 55,
+   "bolsonaro": 28,
+   "outros": 17,
+   "validos": {
+    "lula": 66.27,
+    "bolsonaro": 33.73
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "Datafolha",
+   "inicio": "2021-05-11",
+   "fim": "2021-05-12",
+   "amostra": 2071,
+   "lula": 55,
+   "bolsonaro": 32,
+   "outros": 23,
+   "validos": {
+    "lula": 63.22,
+    "bolsonaro": 36.78
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-05-10",
+   "fim": "2021-05-12",
+   "amostra": 2500,
+   "lula": 50,
+   "bolsonaro": 35,
+   "outros": 15,
+   "validos": {
+    "lula": 58.82,
+    "bolsonaro": 41.18
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-05-06",
+   "fim": "2021-05-09",
+   "amostra": 3828,
+   "lula": 45.7,
+   "bolsonaro": 41,
+   "outros": 13.3,
+   "validos": {
+    "lula": 52.71,
+    "bolsonaro": 47.29
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-05-04",
+   "fim": "2021-05-07",
+   "amostra": 1000,
+   "lula": 42,
+   "bolsonaro": 40,
+   "outros": 18,
+   "validos": {
+    "lula": 51.22,
+    "bolsonaro": 48.78
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-04-19",
+   "fim": "2021-04-22",
+   "amostra": 1200,
+   "lula": 40,
+   "bolsonaro": 38,
+   "outros": 23,
+   "validos": {
+    "lula": 51.28,
+    "bolsonaro": 48.72
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-04-12",
+   "fim": "2021-04-14",
+   "amostra": 3500,
+   "lula": 52,
+   "bolsonaro": 34,
+   "outros": 14,
+   "validos": {
+    "lula": 60.47,
+    "bolsonaro": 39.53
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-03-29",
+   "fim": "2021-03-31",
+   "amostra": 1000,
+   "lula": 42,
+   "bolsonaro": 38,
+   "outros": 20,
+   "validos": {
+    "lula": 52.5,
+    "bolsonaro": 47.5
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2021-03-15",
+   "fim": "2021-03-17",
+   "amostra": 3500,
+   "lula": 41,
+   "bolsonaro": 36,
+   "outros": 23,
+   "validos": {
+    "lula": 53.25,
+    "bolsonaro": 46.75
+   }
+  },
+  {
+   "instituto": "Revista Fórum/Offerwise",
+   "contratante": "Revista Fórum/Offerwise",
+   "inicio": "2021-03-12",
+   "fim": "2021-03-16",
+   "amostra": 1000,
+   "lula": 38,
+   "bolsonaro": 33.8,
+   "outros": 28.3,
+   "validos": {
+    "lula": 52.92,
+    "bolsonaro": 47.08
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-03-10",
+   "fim": "2021-03-11",
+   "amostra": 1000,
+   "lula": 37,
+   "bolsonaro": 44,
+   "outros": 19,
+   "validos": {
+    "lula": 45.68,
+    "bolsonaro": 54.32
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2021-03-09",
+   "fim": "2021-03-11",
+   "amostra": 1000,
+   "lula": 40,
+   "bolsonaro": 41,
+   "outros": 19,
+   "validos": {
+    "lula": 49.38,
+    "bolsonaro": 50.62
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-03-08",
+   "fim": "2021-03-10",
+   "amostra": 3721,
+   "lula": 44.9,
+   "bolsonaro": 38.8,
+   "outros": 16.3,
+   "validos": {
+    "lula": 53.64,
+    "bolsonaro": 46.36
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2021-03-08",
+   "fim": "2021-03-09",
+   "amostra": 1200,
+   "lula": 39,
+   "bolsonaro": 43,
+   "outros": 18,
+   "validos": {
+    "lula": 47.56,
+    "bolsonaro": 52.44
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "Atlas Político",
+   "inicio": "2021-01-26",
+   "fim": "2021-01-28",
+   "amostra": 2184,
+   "lula": 40.9,
+   "bolsonaro": 37.8,
+   "outros": 21.3,
+   "validos": {
+    "lula": 51.97,
+    "bolsonaro": 48.03
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2021-01-25",
+   "fim": "2021-01-28",
+   "amostra": 1200,
+   "lula": 28,
+   "bolsonaro": 45,
+   "outros": 26,
+   "validos": {
+    "lula": 38.36,
+    "bolsonaro": 61.64
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2021-01-22",
+   "fim": "2021-01-26",
+   "amostra": 2002,
+   "lula": 35.7,
+   "bolsonaro": 42.4,
+   "outros": 21.9,
+   "validos": {
+    "lula": 45.71,
+    "bolsonaro": 54.29
+   }
+  },
+  {
+   "instituto": "Revista Fórum/Offerwise",
+   "contratante": "Revista Fórum/Offerwise",
+   "inicio": "2020-11-04",
+   "fim": "2020-11-09",
+   "amostra": 1000,
+   "lula": 29.5,
+   "bolsonaro": 38.9,
+   "outros": 31.6,
+   "validos": {
+    "lula": 43.13,
+    "bolsonaro": 56.87
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2020-10-05",
+   "fim": "2020-10-08",
+   "amostra": 1200,
+   "lula": 33,
+   "bolsonaro": 43,
+   "outros": 25,
+   "validos": {
+    "lula": 43.42,
+    "bolsonaro": 56.58
+   }
+  },
+  {
+   "instituto": "Revista Fórum/Offerwise",
+   "contratante": "Revista Fórum/Offerwise",
+   "inicio": "2020-09-30",
+   "fim": "2020-10-05",
+   "amostra": 1000,
+   "lula": 25.2,
+   "bolsonaro": 43,
+   "outros": 31.8,
+   "validos": {
+    "lula": 36.95,
+    "bolsonaro": 63.05
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData",
+   "inicio": "2020-09-14",
+   "fim": "2020-09-16",
+   "amostra": 2500,
+   "lula": 41,
+   "bolsonaro": 41,
+   "outros": 18,
+   "validos": {
+    "lula": 50,
+    "bolsonaro": 50
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Exame/IDEIA",
+   "inicio": "2020-08-24",
+   "fim": "2020-08-31",
+   "amostra": 1235,
+   "lula": 31,
+   "bolsonaro": 42,
+   "outros": 27,
+   "validos": {
+    "lula": 42.47,
+    "bolsonaro": 57.53
+   }
+  },
+  {
+   "instituto": "Paraná Pesquisas",
+   "contratante": "Paraná Pesquisas",
+   "inicio": "2020-07-18",
+   "fim": "2020-07-21",
+   "amostra": 2030,
+   "lula": 36.4,
+   "bolsonaro": 45.6,
+   "outros": 18,
+   "validos": {
+    "lula": 44.39,
+    "bolsonaro": 55.61
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2020-04-28",
+   "fim": "2020-04-30",
+   "amostra": 1000,
+   "lula": 39,
+   "bolsonaro": 40,
+   "outros": 21,
+   "validos": {
+    "lula": 49.37,
+    "bolsonaro": 50.63
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2020-03-16",
+   "fim": "2020-03-18",
+   "amostra": 1000,
+   "lula": 39,
+   "bolsonaro": 42,
+   "outros": 20,
+   "validos": {
+    "lula": 48.15,
+    "bolsonaro": 51.85
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2020-02-17",
+   "fim": "2020-02-19",
+   "amostra": 1000,
+   "lula": 40,
+   "bolsonaro": 43,
+   "outros": 17,
+   "validos": {
+    "lula": 48.19,
+    "bolsonaro": 51.81
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "Veja/FSB",
+   "inicio": "2020-02-07",
+   "fim": "2020-02-10",
+   "amostra": 2000,
+   "lula": 40,
+   "bolsonaro": 48,
+   "outros": 11,
+   "validos": {
+    "lula": 45.45,
+    "bolsonaro": 54.55
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "XP/Ipespe",
+   "inicio": "2020-01-13",
+   "fim": "2020-01-15",
+   "amostra": 1000,
+   "lula": 40,
+   "bolsonaro": 43,
+   "outros": 17,
+   "validos": {
+    "lula": 48.19,
+    "bolsonaro": 51.81
+   }
+  },
+  {
+   "instituto": "FSB",
+   "contratante": "Veja/FSB",
+   "inicio": "2019-10-11",
+   "fim": "2019-10-14",
+   "amostra": 2000,
+   "lula": 38,
+   "bolsonaro": 46,
+   "outros": 17,
+   "validos": {
+    "lula": 45.24,
+    "bolsonaro": 54.76
+   }
+  }
+ ],
+ "agregadores": [
+  {
+   "agregador": "Globe Elections UN (FINAL)",
+   "data": "2022-10-30",
+   "bolsonaro": 49.5,
+   "lula": 50.5,
+   "outros": null
+  },
+  {
+   "agregador": "Globe Elections UN (Diário)",
+   "data": "2022-10-29",
+   "bolsonaro": 48.69,
+   "lula": 51.31,
+   "outros": null
+  },
+  {
+   "agregador": "The Economist",
+   "data": "2022-10-29",
+   "bolsonaro": 48,
+   "lula": 52,
+   "outros": null
+  },
+  {
+   "agregador": "Veja",
+   "data": "2022-10-29",
+   "bolsonaro": 43.52,
+   "lula": 48.42,
+   "outros": 8.06
+  },
+  {
+   "agregador": "CNN Brasil",
+   "data": "2022-10-29",
+   "bolsonaro": 46.8,
+   "lula": 53.2,
+   "outros": null
+  },
+  {
+   "agregador": "Estadão",
+   "data": "2022-10-29",
+   "bolsonaro": 47,
+   "lula": 53,
+   "outros": null
+  },
+  {
+   "agregador": "PollingData",
+   "data": "2022-10-29",
+   "bolsonaro": 45.3,
+   "lula": 46.1,
+   "outros": 8.6
+  },
+  {
+   "agregador": "Pollstergraph",
+   "data": "2022-10-29",
+   "bolsonaro": 48.8,
+   "lula": 51.2,
+   "outros": null
+  },
+  {
+   "agregador": "Lagom Data",
+   "data": "2022-10-29",
+   "bolsonaro": 47.2,
+   "lula": 52.8,
+   "outros": null
+  },
+  {
+   "agregador": "El País",
+   "data": "2022-10-23",
+   "bolsonaro": 44.7,
+   "lula": 47.7,
+   "outros": 7.6
+  },
+  {
+   "agregador": "El Electoral",
+   "data": "2022-10-26",
+   "bolsonaro": 45,
+   "lula": 49,
+   "outros": 6
+  },
+  {
+   "agregador": "JOTA",
+   "data": "2022-10-25",
+   "bolsonaro": 43,
+   "lula": 47,
+   "outros": 10
+  },
+  {
+   "agregador": "O POVO",
+   "data": "2022-10-23",
+   "bolsonaro": 44,
+   "lula": 49,
+   "outros": 7
+  },
+  {
+   "agregador": "CELAG",
+   "data": "2022-10-24",
+   "bolsonaro": 47.7,
+   "lula": 52.3,
+   "outros": null
+  }
+ ]
+}
