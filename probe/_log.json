@@ -1,0 +1,224 @@
+[
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/config/ac/ac-p003220-cs.json",
+  "status": 200,
+  "bytes": 146065,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/ac/01066/0004/0077/p003220-ac-m01066-z0004-s0077-aux.json",
+  "status": 200,
+  "bytes": 524,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/ac/01066/0004/0077/4a6b704a7350756e6a5a496433337049453538516932486a676159553779785542752d6d765749354f41343d/o03220ac0106600040077-bu.dat",
+  "status": 200,
+  "bytes": 9019,
+  "acao": "https://example.github.io",
+  "ct": "application/octet-stream"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/ac/01066/0004/0078/p003220-ac-m01066-z0004-s0078-aux.json",
+  "status": 200,
+  "bytes": 524,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/ac/01066/0004/0078/6c484a6f6446465570324d5a516c75416441536d545549307a545644334171742d655a38584d6b733361303d/o03220ac0106600040078-bu.dat",
+  "status": 200,
+  "bytes": 7821,
+  "acao": "https://example.github.io",
+  "ct": "application/octet-stream"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac01066z0004-c0001-e006257-u.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac01066-z0004-c0001-e006257-u.json",
+  "status": 200,
+  "bytes": 9143,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/acz0004-c0001-e006257-u.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-m.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-mu.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-r.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-v.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/config/df/df-p003220-cs.json",
+  "status": 200,
+  "bytes": 423458,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/df/97012/0001/0001/p003220-df-m97012-z0001-s0001-aux.json",
+  "status": 200,
+  "bytes": 524,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/df/97012/0001/0001/7a2d6771636d634f2b6337612d2b2b316c36754437736c6f6c6f6163557359743164657453546b595a396f3d/o03220df9701200010001-bu.dat",
+  "status": 200,
+  "bytes": 16511,
+  "acao": "https://example.github.io",
+  "ct": "application/octet-stream"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/df/97012/0001/0002/p003220-df-m97012-z0001-s0002-aux.json",
+  "status": 200,
+  "bytes": 524,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/arquivo-urna/3220/dados/df/97012/0001/0002/587a506d6e61714e4344497a762b63786f724f59563147722d4c38472d4b7279456e6f715a6a37384c48343d/o03220df9701200010002-bu.dat",
+  "status": 200,
+  "bytes": 15751,
+  "acao": "https://example.github.io",
+  "ct": "application/octet-stream"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df97012z0001-c0001-e006257-u.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df97012-z0001-c0001-e006257-u.json",
+  "status": 200,
+  "bytes": 9255,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/dfz0001-c0001-e006257-u.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-m.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-mu.json",
+  "status": 404,
+  "bytes": 246,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-r.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-v.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/fotos/br/280002551544.jpeg",
+  "status": 200,
+  "bytes": 6753,
+  "acao": "https://example.github.io",
+  "ct": "image/jpeg"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/fotos/br/280002551544.jpg",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/xml"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/fotos/br/280002542548.jpeg",
+  "status": 200,
+  "bytes": 6969,
+  "acao": "https://example.github.io",
+  "ct": "image/jpeg"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6258/config/mun-e006258-cm.json",
+  "status": 404,
+  "bytes": 246,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/br/br-c0001-e006258-u.json",
+  "status": 404,
+  "bytes": 248,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/comum/config/ele-c.json",
+  "status": 200,
+  "bytes": 22749,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6257/config/mun-e006257-cm.json",
+  "status": 200,
+  "bytes": 534025,
+  "acao": "https://example.github.io",
+  "ct": "application/json"
+ },
+ {
+  "pb": 223,
+  "ok": 223,
+  "ms": 1941
+ }
+]
