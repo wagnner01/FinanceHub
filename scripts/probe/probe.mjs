@@ -1,4 +1,4 @@
-// Sonda temporária 2: estrutura dos arquivos TSE 2026.
+// Sonda temporária 3: boletins de urna (bu.dat), fotos e padrões de arquivos por zona.
 import { writeFile, mkdir } from 'node:fs/promises';
 const OUT = 'probe';
 await mkdir(OUT, { recursive: true });
@@ -9,53 +9,33 @@ async function get(url, name) {
     const buf = Buffer.from(await r.arrayBuffer());
     log.push({ url, status: r.status, bytes: buf.length, acao: r.headers.get('access-control-allow-origin'), ct: r.headers.get('content-type') });
     console.log(r.status, buf.length, url);
-    if (r.ok && name) await writeFile(`${OUT}/${name}`, buf.subarray(0, 4_000_000));
+    if (r.ok && name) await writeFile(`${OUT}/${name}`, buf);
     return r.ok ? buf : null;
   } catch (e) { log.push({ url, error: String(e) }); return null; }
 }
 const T = 'https://resultados.tse.jus.br/oficial/ele2026';
-const F = '6257', E = '6259';
-const p6 = s => s.padStart(6, '0');
-for (const [ele, cargos] of [[F, ['0001']], [E, ['0003', '0005', '0006', '0007', '0008']]]) {
-  const ee = p6(ele);
-  await get(`${T}/${ele}/config/mun-e${ee}-cm.json`, `mun-e${ee}-cm.json`);
-  for (const c of cargos) {
-    for (const abr of ['br', 'sp', 'df', 'ac']) {
-      await get(`${T}/${ele}/dados-simplificados/${abr}/${abr}-c${c}-e${ee}-r.json`, `s-${abr}-c${c}-e${ele}-r.json`);
-      await get(`${T}/${ele}/dados/${abr}/${abr}-c${c}-e${ee}-v.json`, `d-${abr}-c${c}-e${ele}-v.json`);
-      await get(`${T}/${ele}/dados/${abr}/${abr}-c${c}-e${ee}-u.json`, `d-${abr}-c${c}-e${ele}-u.json`);
-    }
-    // município: Rio Branco/AC = 01392 ; São Paulo = 71072
-    for (const [uf, mu] of [['ac', '01392'], ['sp', '71072']]) {
-      await get(`${T}/${ele}/dados-simplificados/${uf}/${uf}${mu}-c${c}-e${ee}-r.json`, `s-${uf}${mu}-c${c}-e${ele}-r.json`);
-      await get(`${T}/${ele}/dados/${uf}/${uf}${mu}-c${c}-e${ee}-v.json`, `d-${uf}${mu}-c${c}-e${ele}-v.json`);
-      await get(`${T}/${ele}/dados/${uf}/${uf}${mu}-c${c}-e${ee}-u.json`, `d-${uf}${mu}-c${c}-e${ele}-u.json`);
-    }
+for (const uf of ['ac', 'df']) {
+  const cs = JSON.parse(await get(`${T}/arquivo-urna/3220/config/${uf}/${uf}-p003220-cs.json`, `cs-${uf}.json`));
+  const mu = cs.abr[0].mu[0]; const zon = mu.zon[0];
+  for (const sec of zon.sec.slice(0, 2)) {
+    const base = `${T}/arquivo-urna/3220/dados/${uf}/${mu.cd}/${zon.cd}/${sec.ns}`;
+    const aux = JSON.parse(await get(`${base}/p003220-${uf}-m${mu.cd}-z${zon.cd}-s${sec.ns}-aux.json`, `aux-${uf}-${sec.ns}.json`));
+    for (const h of aux.hashes) for (const a of h.arq) if (a.tp === 'bu') await get(`${base}/${h.hash}/${a.nm}`, a.nm);
   }
-  for (const uf of ['br', 'sp', 'ac']) {
-    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-ab.json`, `ab-${uf}-e${ele}.json`);
-    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-u.json`, `u-${uf}-e${ele}.json`);
-    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-i.json`, `i-${uf}-e${ele}.json`);
-    await get(`${T}/${ele}/dados/${uf}/${uf}-p003220-cs.json`, `cs2-${uf}-e${ele}.json`);
-  }
+  // padrões por zona / municipais agregados
+  for (const p of [`${uf}${mu.cd}z${zon.cd}-c0001-e006257-u.json`, `${uf}${mu.cd}-z${zon.cd}-c0001-e006257-u.json`, `${uf}z${zon.cd}-c0001-e006257-u.json`, `${uf}-c0001-e006257-m.json`, `${uf}-c0001-e006257-mu.json`, `${uf}-c0001-e006257-r.json`, `${uf}-c0001-e006257-v.json`]) await get(`${T}/6257/dados/${uf}/${p}`, null);
 }
-// arquivo-urna
-const csb = await get(`${T}/arquivo-urna/3220/config/ac/ac-p003220-cs.json`, 'au-ac-cs.json');
-if (csb) {
-  const cs = JSON.parse(csb);
-  const s = JSON.stringify(cs);
-  console.log(s.slice(0, 1500));
-  const ab = (cs.abr || [])[0];
-  const mu = ab?.mu?.[0]; const zon = mu?.zon?.[0]; const sec = zon?.sec?.[0];
-  if (sec) {
-    const base = `${T}/arquivo-urna/3220/dados/ac/${mu.cd}/${zon.cd}/${sec.ns}`;
-    const auxb = await get(`${base}/p003220-ac-m${mu.cd}-z${zon.cd}-s${sec.ns}-aux.json`, 'au-aux.json');
-    if (auxb) {
-      const aux = JSON.parse(auxb);
-      console.log(JSON.stringify(aux));
-      for (const h of aux.hashes || []) for (const n of h.nmarq || []) await get(`${base}/${h.hash}/${n}`, 'au-file-' + n);
-    }
-  }
-}
-await get(`${T}/${F}/fotos/sp/`, null);
+for (const p of ['br/280002551544.jpeg', 'br/280002551544.jpg', 'br/280002542548.jpeg']) await get(`${T}/6257/fotos/${p}`, null);
+await get(`${T}/6258/config/mun-e006258-cm.json`, null);
+await get(`${T}/6258/dados/br/br-c0001-e006258-u.json`, null);
+await get(`https://resultados.tse.jus.br/oficial/comum/config/ele-c.json`, 'ele-c.json');
+// tempo para baixar todos os municípios de um UF médio (PB) — presidente
+const t0 = Date.now();
+const cm = JSON.parse(await get(`${T}/6257/config/mun-e006257-cm.json`, null));
+const pb = cm.abr.find(a => a.cd === 'pb').mu;
+let ok = 0;
+const q = [...pb];
+await Promise.all(Array.from({ length: 16 }, async () => { while (q.length) { const m = q.shift(); const r = await fetch(`${T}/6257/dados/pb/pb${m.cd}-c0001-e006257-u.json`); if (r.ok) { await r.arrayBuffer(); ok++; } } }));
+console.log('PB', pb.length, 'ok', ok, 'ms', Date.now() - t0);
+log.push({ pb: pb.length, ok, ms: Date.now() - t0 });
 await writeFile(`${OUT}/_log.json`, JSON.stringify(log, null, 1));
