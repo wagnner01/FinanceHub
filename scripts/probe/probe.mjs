@@ -1,61 +1,61 @@
-// Sonda temporária: descobre a estrutura real dos endpoints do TSE/Wikipedia/IBGE.
+// Sonda temporária 2: estrutura dos arquivos TSE 2026.
 import { writeFile, mkdir } from 'node:fs/promises';
 const OUT = 'probe';
 await mkdir(OUT, { recursive: true });
 const log = [];
-async function get(url, name, { save = true, maxSave = 3_000_000 } = {}) {
+async function get(url, name) {
   try {
-    const r = await fetch(url, { headers: { 'User-Agent': 'FinanceHub-probe/1.0 (github action)', Origin: 'https://example.github.io' } });
+    const r = await fetch(url, { headers: { 'User-Agent': 'FinanceHub-probe/1.0', Origin: 'https://example.github.io' } });
     const buf = Buffer.from(await r.arrayBuffer());
-    const h = Object.fromEntries([...r.headers].filter(([k]) => /access-control|content-type|last-modified|cache|etag/i.test(k)));
-    log.push({ url, status: r.status, bytes: buf.length, headers: h });
-    console.log(r.status, buf.length, url, JSON.stringify(h));
-    if (save && r.ok && name) await writeFile(`${OUT}/${name}`, buf.length > maxSave ? buf.subarray(0, maxSave) : buf);
+    log.push({ url, status: r.status, bytes: buf.length, acao: r.headers.get('access-control-allow-origin'), ct: r.headers.get('content-type') });
+    console.log(r.status, buf.length, url);
+    if (r.ok && name) await writeFile(`${OUT}/${name}`, buf.subarray(0, 4_000_000));
     return r.ok ? buf : null;
-  } catch (e) { log.push({ url, error: String(e) }); console.log('ERR', url, e.message); return null; }
+  } catch (e) { log.push({ url, error: String(e) }); return null; }
 }
-const T = 'https://resultados.tse.jus.br/oficial';
-const cfgBuf = await get(`${T}/comum/config/ele-c.json`, 'ele-c.json');
-let elections = [];
-if (cfgBuf) {
-  const cfg = JSON.parse(cfgBuf);
-  const ciclo = (cfg.c ? [cfg] : cfg.ciclos || []).concat(cfg.c || []);
-  console.log(JSON.stringify(cfg).slice(0, 3000));
-  const s = JSON.stringify(cfg);
-  elections = [...new Set([...s.matchAll(/"cd":"?(\d{3,6})"?/g)].map(m => m[1]))];
-}
-console.log('elections', elections);
-const cycles = ['ele2026', 'ele2022'];
-for (const cyc of cycles) {
-  for (const e of elections.slice(0, 20)) {
-    const ee = e.padStart(6, '0');
-    for (const c of ['0001', '0003', '0005', '0006', '0007']) {
-      for (const abr of ['br', 'sp']) {
-        await get(`${T}/${cyc}/${Number(e)}/dados-simplificados/${abr}/${abr}-c${c}-e${ee}-r.json`, `${cyc}-${e}-${abr}-c${c}-r.json`);
-      }
+const T = 'https://resultados.tse.jus.br/oficial/ele2026';
+const F = '6257', E = '6259';
+const p6 = s => s.padStart(6, '0');
+for (const [ele, cargos] of [[F, ['0001']], [E, ['0003', '0005', '0006', '0007', '0008']]]) {
+  const ee = p6(ele);
+  await get(`${T}/${ele}/config/mun-e${ee}-cm.json`, `mun-e${ee}-cm.json`);
+  for (const c of cargos) {
+    for (const abr of ['br', 'sp', 'df', 'ac']) {
+      await get(`${T}/${ele}/dados-simplificados/${abr}/${abr}-c${c}-e${ee}-r.json`, `s-${abr}-c${c}-e${ele}-r.json`);
+      await get(`${T}/${ele}/dados/${abr}/${abr}-c${c}-e${ee}-v.json`, `d-${abr}-c${c}-e${ele}-v.json`);
+      await get(`${T}/${ele}/dados/${abr}/${abr}-c${c}-e${ee}-u.json`, `d-${abr}-c${c}-e${ele}-u.json`);
     }
-    await get(`${T}/${cyc}/${Number(e)}/config/mun-e${ee}-cm.json`, `${cyc}-${e}-mun-cm.json`);
-    await get(`${T}/${cyc}/${Number(e)}/dados/sp/sp71072-c0001-e${ee}-v.json`, `${cyc}-${e}-sp71072-c0001-v.json`);
-    await get(`${T}/${cyc}/${Number(e)}/dados/sp/sp71072-c0001-e${ee}-u.json`, `${cyc}-${e}-sp71072-c0001-u.json`);
-    await get(`${T}/${cyc}/${Number(e)}/dados-simplificados/sp/sp71072-c0001-e${ee}-r.json`, `${cyc}-${e}-sp71072-c0001-r.json`);
-    await get(`${T}/${cyc}/${Number(e)}/dados/sp/sp-c0001-e${ee}-v.json`, `${cyc}-${e}-sp-c0001-v.json`);
+    // município: Rio Branco/AC = 01392 ; São Paulo = 71072
+    for (const [uf, mu] of [['ac', '01392'], ['sp', '71072']]) {
+      await get(`${T}/${ele}/dados-simplificados/${uf}/${uf}${mu}-c${c}-e${ee}-r.json`, `s-${uf}${mu}-c${c}-e${ele}-r.json`);
+      await get(`${T}/${ele}/dados/${uf}/${uf}${mu}-c${c}-e${ee}-v.json`, `d-${uf}${mu}-c${c}-e${ele}-v.json`);
+      await get(`${T}/${ele}/dados/${uf}/${uf}${mu}-c${c}-e${ee}-u.json`, `d-${uf}${mu}-c${c}-e${ele}-u.json`);
+    }
+  }
+  for (const uf of ['br', 'sp', 'ac']) {
+    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-ab.json`, `ab-${uf}-e${ele}.json`);
+    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-u.json`, `u-${uf}-e${ele}.json`);
+    await get(`${T}/${ele}/dados/${uf}/${uf}-e${ee}-i.json`, `i-${uf}-e${ele}.json`);
+    await get(`${T}/${ele}/dados/${uf}/${uf}-p003220-cs.json`, `cs2-${uf}-e${ele}.json`);
   }
 }
-// arquivo-urna (seções)
-for (const cyc of cycles) for (const p of ['406', '407', '527', '528', '529', '530', '600', '601', '602', '603']) {
-  const pp = p.padStart(6, '0');
-  await get(`${T}/${cyc}/arquivo-urna/${p}/config/ac/ac-p${pp}-cs.json`, `${cyc}-au-${p}-ac-cs.json`);
+// arquivo-urna
+const csb = await get(`${T}/arquivo-urna/3220/config/ac/ac-p003220-cs.json`, 'au-ac-cs.json');
+if (csb) {
+  const cs = JSON.parse(csb);
+  const s = JSON.stringify(cs);
+  console.log(s.slice(0, 1500));
+  const ab = (cs.abr || [])[0];
+  const mu = ab?.mu?.[0]; const zon = mu?.zon?.[0]; const sec = zon?.sec?.[0];
+  if (sec) {
+    const base = `${T}/arquivo-urna/3220/dados/ac/${mu.cd}/${zon.cd}/${sec.ns}`;
+    const auxb = await get(`${base}/p003220-ac-m${mu.cd}-z${zon.cd}-s${sec.ns}-aux.json`, 'au-aux.json');
+    if (auxb) {
+      const aux = JSON.parse(auxb);
+      console.log(JSON.stringify(aux));
+      for (const h of aux.hashes || []) for (const n of h.nmarq || []) await get(`${base}/${h.hash}/${n}`, 'au-file-' + n);
+    }
+  }
 }
-// Wikipedia wikitext
-const W = (lang, page) => `https://${lang}.wikipedia.org/w/api.php?action=parse&format=json&prop=wikitext&formatversion=2&page=${encodeURIComponent(page)}`;
-await get(W('pt', 'Pesquisas de opinião para a eleição presidencial no Brasil em 2026'), 'wiki-pt-pesquisas-2026.json');
-await get(W('en', 'Opinion polling for the 2026 Brazilian presidential election'), 'wiki-en-polls-2026.json');
-await get(W('pt', 'Pesquisas de opinião para a eleição presidencial no Brasil em 2022'), 'wiki-pt-pesquisas-2022.json');
-await get(W('en', 'Opinion polling for the 2022 Brazilian presidential election'), 'wiki-en-polls-2022.json');
-await get(W('pt', 'Eleição presidencial no Brasil em 2026'), 'wiki-pt-eleicao-2026.json');
-await get(W('en', '2026 Brazilian general election'), 'wiki-en-general-2026.json');
-// IBGE malhas
-await get('https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo%2Bjson&qualidade=minima&intrarregiao=UF', 'ibge-br-uf.json');
-await get('https://servicodados.ibge.gov.br/api/v3/malhas/estados/AC?formato=application/vnd.geo%2Bjson&qualidade=minima&intrarregiao=municipio', 'ibge-ac-mun.json');
-await get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/AC/municipios', 'ibge-ac-mun-names.json');
+await get(`${T}/${F}/fotos/sp/`, null);
 await writeFile(`${OUT}/_log.json`, JSON.stringify(log, null, 1));
