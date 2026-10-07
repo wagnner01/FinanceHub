@@ -1,0 +1,47 @@
+name: Eleições — apuração TSE
+
+# Snapshot dos resultados oficiais do TSE em data/eleicoes/.
+# O painel consulta o TSE ao vivo no navegador; este snapshot é o fallback
+# (TSE fora do ar, rede bloqueada) e o histórico versionado da apuração.
+on:
+  schedule:
+    # Noite do 2º turno (25/10, 17h–23h50 BRT = 20h–02h50 UTC): a cada 10 min
+    - cron: '*/10 20-23 25 10 *'
+    - cron: '*/10 0-2 26 10 *'
+    # Demais dias: a cada 6 horas (pega retotalizações)
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      sem_municipios:
+        description: 'Pular resultados por município (mais rápido)'
+        type: boolean
+        default: false
+  push:
+    branches: [ccr-98653d89-r5ar8b]
+    paths: ['scripts/eleicoes/sync-tse.mjs', 'js/eleicoes/normalize.js', '.github/workflows/eleicoes-tse.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eleicoes-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Baixar resultados do TSE
+        run: node scripts/eleicoes/sync-tse.mjs ${{ inputs.sem_municipios && '--sem-municipios' || '' }}
+      - name: Commit do snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eleicoes
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "data: snapshot TSE $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done

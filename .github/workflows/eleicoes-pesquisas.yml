@@ -1,0 +1,37 @@
+name: Eleições — pesquisas 2º turno
+
+# Coleta diária das pesquisas de 2º turno (Lula × Flávio Bolsonaro) em data/pesquisas/.
+on:
+  schedule:
+    - cron: '43 11 * * *'   # 08h43 BRT
+    - cron: '43 23 * * *'   # 20h43 BRT (pesquisas costumam sair à noite)
+  workflow_dispatch:
+  push:
+    branches: [ccr-98653d89-r5ar8b]
+    paths: ['scripts/eleicoes/*pesquisas*.mjs', 'scripts/eleicoes/wikitext.mjs', '.github/workflows/eleicoes-pesquisas.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eleicoes-data
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Coletar pesquisas
+        run: node scripts/eleicoes/sync-pesquisas.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pesquisas
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "data: pesquisas 2º turno $(date -u +%Y-%m-%d) [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done
