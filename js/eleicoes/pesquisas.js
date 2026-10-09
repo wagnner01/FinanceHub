@@ -111,7 +111,7 @@ function draw() {
             </div>
             <div class="el-card"><h3>Como o painel calcula</h3><div class="pq-method">
                 <p><b>1. Válidos:</b> cada pesquisa vira <code>Lula ÷ (Lula + Flávio)</code>, a mesma base do resultado oficial.</p>
-                <p><b>2. Consolidado:</b> média das pesquisas dos últimos 21 dias com peso <code>√amostra × 0,5^(idade/7)</code>; só a última de cada instituto pesa 100% (as anteriores 35%) — quem publica mais não domina.</p>
+                <p><b>2. Consolidado:</b> média das pesquisas dos últimos 21 dias com peso <code>√amostra × 0,5^(idade/7)</code>; só a última de cada instituto pesa 100% (as anteriores 35%) — quem publica mais não domina. Depois de 04/10, simulações feitas antes do 1º turno pesam só 25%.</p>
                 <p><b>3. Projeção:</b> consolidado + tendência dos últimos 14 dias amortecida em 50%. Incerteza = erro real dos institutos em 2022 (${A.erroBase.toFixed(1)} pp RMS) somado à volatilidade dos dias restantes.</p>
                 <p><b>4. Comparação com 2022:</b> pesquisas pareadas por instituto e por dias até a eleição; referência final Lula 50,90% × Bolsonaro 49,10% (TSE).</p>
                 <p><b>Automação:</b> GitHub Actions coleta 2×/dia e grava o histórico da projeção (${hist.length} dia${hist.length === 1 ? '' : 's'} registrado${hist.length === 1 ? '' : 's'}) — depois de 25/10 dá para auditar o modelo.</p>

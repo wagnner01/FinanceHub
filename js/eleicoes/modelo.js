@@ -5,6 +5,7 @@
 //  1. Cada pesquisa é convertida em votos válidos: Lula / (Lula + Flávio).
 //  2. Consolidado do dia D = média ponderada das pesquisas com campo encerrado em [D-21, D]:
 //       peso = √(amostra/1000, limitada a 5000) × 0,5^(idade/7 dias) × (1 se é a última do instituto, 0,35 se não)
+//              × 0,25 para simulações feitas antes do 1º turno (quebra estrutural pós-1º turno)
 //     → pesquisas recentes e grandes pesam mais; nenhum instituto domina por publicar mais.
 //  3. Viés histórico ("house effect"): erro da última pesquisa de cada instituto em 2022
 //     contra o resultado oficial (Lula 50,90%). O cenário "ajustado" desconta metade desse erro.
@@ -36,10 +37,12 @@ export function normCdf(z) {
 }
 
 /** Peso de uma pesquisa no consolidado do dia `dia`. */
-function peso(p, dia, ultimaDoInstituto) {
+function peso(p, dia, ultimaDoInstituto, corte) {
     const idade = Math.max(0, daysBetween(p.fim, dia));
     const n = Math.min(p.amostra || 1000, 5000);
-    return Math.sqrt(n / 1000) * Math.pow(0.5, idade / 7) * (ultimaDoInstituto ? 1 : 0.35);
+    // Quebra estrutural: depois do 1º turno, simulações feitas antes dele valem 25%
+    const preCorte = corte && dia > corte && p.inicio <= corte ? 0.25 : 1;
+    return Math.sqrt(n / 1000) * Math.pow(0.5, idade / 7) * (ultimaDoInstituto ? 1 : 0.35) * preCorte;
 }
 
 /**
@@ -47,14 +50,14 @@ function peso(p, dia, ultimaDoInstituto) {
  * @param polls pesquisas (2026 ou 2022)
  * @param ajuste mapa instituto → viés (pp em válidos de Lula) para descontar (opcional)
  */
-export function consolidado(polls, dia, { janela = 21, ajuste = null, fator = 0.5 } = {}) {
+export function consolidado(polls, dia, { janela = 21, ajuste = null, fator = 0.5, corte = null } = {}) {
     const elegiveis = polls.filter(p => p.fim <= dia && daysBetween(p.fim, dia) <= janela);
     if (!elegiveis.length) return null;
     const ultima = {};
     for (const p of elegiveis) if (!ultima[p.instituto] || p.fim > ultima[p.instituto].fim) ultima[p.instituto] = p;
     let sw = 0, sl = 0, slTot = 0, soTot = 0, sOut = 0;
     for (const p of elegiveis) {
-        const w = peso(p, dia, ultima[p.instituto] === p);
+        const w = peso(p, dia, ultima[p.instituto] === p, corte);
         let lv = lulaValidos(p);
         if (ajuste && ajuste[p.instituto] != null) lv -= fator * ajuste[p.instituto];
         sw += w; sl += w * lv;
@@ -152,11 +155,11 @@ export function analisar(d26, d22, hoje, t1_2026 = { lula: 45.16, flavio: 47.03 
     const erroBase = erroHistorico(vies);
     const ajuste = Object.fromEntries(Object.entries(vies).map(([k, v]) => [k, v.erro]));
     const inicio = polls.length ? polls.map(p => p.fim).sort()[0] : hoje;
-    const s = serie(polls, inicio, hoje);
-    const sAj = serie(polls, inicio, hoje, { ajuste });
+    const s = serie(polls, inicio, hoje, { corte: PRIMEIRO_TURNO_2026 });
+    const sAj = serie(polls, inicio, hoje, { ajuste, corte: PRIMEIRO_TURNO_2026 });
     const proj = projetar(s, hoje, { erroBase });
     const projAj = projetar(sAj, hoje, { erroBase });
     // 2022 alinhado pelo nº de dias até a eleição
-    const s22 = serie(d22.polls, '2022-08-01', ELEICAO_2022).map(c => ({ ...c, diasAntes: daysBetween(c.dia, ELEICAO_2022) }));
+    const s22 = serie(d22.polls, '2022-08-01', ELEICAO_2022, { corte: PRIMEIRO_TURNO_2022 }).map(c => ({ ...c, diasAntes: daysBetween(c.dia, ELEICAO_2022) }));
     return { serie: s, serieAjustada: sAj, projecao: proj, projecaoAjustada: projAj, vies, erroBase, serie2022: s22, transferencia: cenarioTransferencia(t1_2026) };
 }
