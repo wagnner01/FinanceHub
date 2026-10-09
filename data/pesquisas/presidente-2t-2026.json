@@ -3,8 +3,69 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "coletadoEm": "2026-10-07T00:52:58.852Z",
+ "revisao": 73162040,
+ "coletadoEm": "2026-10-09T11:38:25.876Z",
  "polls": [
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-10-06",
+   "fim": "2026-10-08",
+   "amostra": 2520,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 49,
+   "outros": 6,
+   "validos": {
+    "lula": 47.87,
+    "flavio": 52.13
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-10-03",
+   "fim": "2026-10-08",
+   "amostra": 5026,
+   "margem": 1,
+   "lula": 45.7,
+   "flavio": 51.1,
+   "outros": 3.2,
+   "validos": {
+    "lula": 47.21,
+    "flavio": 52.79
+   }
+  },
+  {
+   "instituto": "Vox",
+   "contratante": "Vox",
+   "inicio": "2026-10-05",
+   "fim": "2026-10-07",
+   "amostra": 2100,
+   "margem": 2,
+   "lula": 44.2,
+   "flavio": 42.7,
+   "outros": 13.1,
+   "validos": {
+    "lula": 50.86,
+    "flavio": 49.14
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-10-05",
+   "fim": "2026-10-07",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 47,
+   "flavio": 53,
+   "outros": null,
+   "validos": {
+    "lula": 47,
+    "flavio": 53
+   }
+  },
   {
    "instituto": "Datafolha",
    "contratante": "DataFolha",
@@ -2479,17 +2540,17 @@
  "agregadores": [
   {
    "agregador": "UOL",
-   "data": "2026-10-06",
-   "lula": 45.2,
-   "flavio": 44.8,
-   "outros": 10
+   "data": "2026-10-08",
+   "lula": 47.8,
+   "flavio": 52.2,
+   "outros": 0
   },
   {
    "agregador": "PollingData",
-   "data": "2026-10-02",
-   "lula": 45.3,
-   "flavio": 46.1,
-   "outros": 8.7
+   "data": "2026-10-07",
+   "lula": 43.8,
+   "flavio": 48.1,
+   "outros": 8.1
   },
   {
    "agregador": "BBC",
@@ -2500,10 +2561,10 @@
   },
   {
    "agregador": "CartaCapital",
-   "data": "2026-10-03",
-   "lula": 45.4,
-   "flavio": 46.3,
-   "outros": 8.3
+   "data": "2026-10-06",
+   "lula": 45,
+   "flavio": 46.9,
+   "outros": 8.1
   },
   {
    "agregador": "Poll+Trend",
@@ -2528,9 +2589,9 @@
   },
   {
    "agregador": "Agregador presidencial",
-   "data": "2026-10-06",
-   "lula": 45.6,
-   "flavio": 45.8,
+   "data": "2026-10-08",
+   "lula": 45.7,
+   "flavio": 46.1,
    "outros": 9.1
   }
  ]
