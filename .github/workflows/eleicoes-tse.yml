@@ -18,7 +18,7 @@ on:
         default: false
   push:
     branches: [main, ccr-98653d89-r5ar8b]
-    paths: ['scripts/eleicoes/sync-tse.mjs', 'js/eleicoes/normalize.js', '.github/workflows/eleicoes-tse.yml']
+    paths: ['scripts/eleicoes/sync-tse.mjs', 'scripts/eleicoes/sync-geo.mjs', 'js/eleicoes/normalize.js', '.github/workflows/eleicoes-tse.yml']
 
 permissions:
   contents: write
@@ -37,11 +37,13 @@ jobs:
         with: { node-version: 20 }
       - name: Baixar resultados do TSE
         run: node scripts/eleicoes/sync-tse.mjs ${{ inputs.sem_municipios && '--sem-municipios' || '' }}
+      - name: Malhas municipais do IBGE (só as que faltam)
+        run: node scripts/eleicoes/sync-geo.mjs
       - name: Commit do snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/eleicoes
+          git add data/eleicoes data/geo
           if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
           git commit -m "data: snapshot TSE $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done

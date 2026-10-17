@@ -42,7 +42,7 @@ function readHash() {
 function writeHash() {
     const q = new URLSearchParams({ t: state.turno, c: state.cargo, uf: state.uf });
     if (state.mun) q.set('m', state.mun); if (state.zona) q.set('z', state.zona); if (state.secao) q.set('s', state.secao);
-    history.replaceState(null, '', `#apuracao?${q}`);
+    try { history.replaceState(null, '', `#apuracao?${q}`); } catch { /* ambiente sem history (sandbox) */ }
 }
 
 function build() {
@@ -289,9 +289,16 @@ async function getGeoBR() {
 }
 async function getGeoUF(uf) {
     if (geoUFs[uf]) return geoUFs[uf];
-    const r = await fetch(`${IBGE}/estados/${uf.toUpperCase()}?formato=application/vnd.geo%2Bjson&qualidade=intermediaria&intrarregiao=municipio`);
-    if (!r.ok) throw new Error('malha municipal indisponível');
-    const g = await r.json();
+    let g;
+    try {
+        const r = await fetch(`${IBGE}/estados/${uf.toUpperCase()}?formato=application/vnd.geo%2Bjson&qualidade=intermediaria&intrarregiao=municipio`);
+        if (!r.ok) throw new Error();
+        g = await r.json();
+    } catch {
+        const r = await fetch(`data/geo/${uf}-mun.json`);
+        if (!r.ok) throw new Error('malha municipal indisponível');
+        g = await r.json();
+    }
     munIndex ??= await tse.getMunicipios();
     const byIbge = Object.fromEntries((munIndex[uf] || []).map(m => [m[1], m]));
     for (const f of g.features) {

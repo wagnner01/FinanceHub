@@ -44,7 +44,7 @@
             document.querySelectorAll('#shell-tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
             document.querySelectorAll('.tab-content').forEach(s => s.classList.toggle('active', s.id === 'tab-' + id));
             document.getElementById('shell-sub').textContent = TABS[id].sub;
-            if (id === 'pesquisas') history.replaceState(null, '', '#pesquisas');
+            try { if (id === 'pesquisas') history.replaceState(null, '', '#pesquisas'); } catch { /* sandbox */ }
             TABS[id].m.render();
         }
         document.getElementById('shell-tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) show(b.dataset.tab); });

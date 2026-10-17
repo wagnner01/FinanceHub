@@ -3,7 +3,7 @@
 
 const ML_VER = '4.7.1';
 const ML_JS = `https://unpkg.com/maplibre-gl@${ML_VER}/dist/maplibre-gl.js`;
-const ML_CSS = `https://unpkg.com/maplibre-gl@${ML_VER}/dist/maplibre-gl.css`;
+const ML_CSS = new URL('../../vendor/maplibre-gl.css', import.meta.url).href; // local: CSS externo é bloqueado em alguns hosts
 
 const BASES = {
     satelite: {
