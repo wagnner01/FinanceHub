@@ -3,9 +3,249 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73162040,
- "coletadoEm": "2026-10-09T11:38:25.876Z",
+ "revisao": 73233732,
+ "coletadoEm": "2026-10-17T17:04:53.411Z",
  "polls": [
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-10-14",
+   "fim": "2026-10-16",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 50,
+   "outros": 5,
+   "validos": {
+    "lula": 47.37,
+    "flavio": 52.63
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-10-12",
+   "fim": "2026-10-16",
+   "amostra": 15554,
+   "margem": 1,
+   "lula": 48.9,
+   "flavio": 51.1,
+   "outros": null,
+   "validos": {
+    "lula": 48.9,
+    "flavio": 51.1
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-10-14",
+   "fim": "2026-10-15",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 47.5,
+   "flavio": 49,
+   "outros": 3.6,
+   "validos": {
+    "lula": 49.22,
+    "flavio": 50.78
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-15",
+   "amostra": 1500,
+   "margem": 2.6,
+   "lula": 46,
+   "flavio": 48,
+   "outros": 6,
+   "validos": {
+    "lula": 48.94,
+    "flavio": 51.06
+   }
+  },
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-15",
+   "amostra": 2014,
+   "margem": 2.2,
+   "lula": 45.9,
+   "flavio": 46.8,
+   "outros": 7.3,
+   "validos": {
+    "lula": 49.51,
+    "flavio": 50.49
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-15",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 50,
+   "flavio": 50,
+   "outros": null,
+   "validos": {
+    "lula": 50,
+    "flavio": 50
+   }
+  },
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-15",
+   "amostra": 2520,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 47,
+   "outros": 8,
+   "validos": {
+    "lula": 48.91,
+    "flavio": 51.09
+   }
+  },
+  {
+   "instituto": "Indexa",
+   "contratante": "Indexa",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-14",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 42,
+   "flavio": 44,
+   "outros": 14,
+   "validos": {
+    "lula": 48.84,
+    "flavio": 51.16
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-10-10",
+   "fim": "2026-10-13",
+   "amostra": 5000,
+   "margem": 2.3,
+   "lula": 49,
+   "flavio": 50,
+   "outros": 1,
+   "validos": {
+    "lula": 49.49,
+    "flavio": 50.51
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-10-10",
+   "fim": "2026-10-13",
+   "amostra": 2154,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 46,
+   "outros": 10,
+   "validos": {
+    "lula": 48.89,
+    "flavio": 51.11
+   }
+  },
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-10-10",
+   "fim": "2026-10-12",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 49,
+   "flavio": 51,
+   "outros": null,
+   "validos": {
+    "lula": 49,
+    "flavio": 51
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "BTG/Nexus",
+   "inicio": "2026-10-10",
+   "fim": "2026-10-12",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 48,
+   "outros": 7,
+   "validos": {
+    "lula": 48.39,
+    "flavio": 51.61
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-10-08",
+   "fim": "2026-10-12",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 53,
+   "outros": 4,
+   "validos": {
+    "lula": 45.36,
+    "flavio": 54.64
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-10-07",
+   "fim": "2026-10-10",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46.6,
+   "flavio": 50,
+   "outros": 3.4,
+   "validos": {
+    "lula": 48.24,
+    "flavio": 51.76
+   }
+  },
+  {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-10-07",
+   "fim": "2026-10-09",
+   "amostra": 2000,
+   "margem": 2.19,
+   "lula": 46.9,
+   "flavio": 53.1,
+   "outros": null,
+   "validos": {
+    "lula": 46.9,
+    "flavio": 53.1
+   }
+  },
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2026-10-06",
+   "fim": "2026-10-08",
+   "amostra": 1500,
+   "margem": 2.6,
+   "lula": 47.3,
+   "flavio": 52.7,
+   "outros": null,
+   "validos": {
+    "lula": 47.3,
+    "flavio": 52.7
+   }
+  },
   {
    "instituto": "Datafolha",
    "contratante": "DataFolha",
@@ -199,6 +439,21 @@
    "validos": {
     "lula": 50.1,
     "flavio": 49.9
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-09-26",
+   "fim": "2026-10-02",
+   "amostra": 40500,
+   "margem": 1,
+   "lula": 48.44,
+   "flavio": 51.56,
+   "outros": null,
+   "validos": {
+    "lula": 48.44,
+    "flavio": 51.56
    }
   },
   {
@@ -2540,59 +2795,52 @@
  "agregadores": [
   {
    "agregador": "UOL",
-   "data": "2026-10-08",
-   "lula": 47.8,
-   "flavio": 52.2,
+   "data": "2026-10-17",
+   "lula": 48.5,
+   "flavio": 51.5,
    "outros": 0
   },
   {
    "agregador": "PollingData",
-   "data": "2026-10-07",
-   "lula": 43.8,
-   "flavio": 48.1,
-   "outros": 8.1
+   "data": "2026-10-17",
+   "lula": 46.2,
+   "flavio": 47.2,
+   "outros": 7
   },
   {
    "agregador": "BBC",
-   "data": "2026-10-04",
+   "data": "2026-10-15",
    "lula": 45,
-   "flavio": 46,
-   "outros": 9
+   "flavio": 47,
+   "outros": 8
   },
   {
    "agregador": "CartaCapital",
-   "data": "2026-10-06",
-   "lula": 45,
-   "flavio": 46.9,
-   "outros": 8.1
+   "data": "2026-10-15",
+   "lula": 45.4,
+   "flavio": 47.8,
+   "outros": 6.8
   },
   {
    "agregador": "Poll+Trend",
-   "data": "2026-09-18",
-   "lula": 50,
-   "flavio": 50,
+   "data": "2026-10-16",
+   "lula": 46.03,
+   "flavio": 48.71,
    "outros": null
   },
   {
    "agregador": "Plano Político",
-   "data": "2026-10-05",
-   "lula": 49.8,
-   "flavio": 50.2,
+   "data": "2026-10-16",
+   "lula": 48.7,
+   "flavio": 51.3,
    "outros": null
   },
   {
-   "agregador": "ABC Dados",
-   "data": "2026-10-05",
-   "lula": 46,
-   "flavio": 45,
-   "outros": 9
-  },
-  {
    "agregador": "Agregador presidencial",
-   "data": "2026-10-08",
-   "lula": 45.7,
-   "flavio": 46.1,
-   "outros": 9.1
+   "data": "2026-10-17",
+   "lula": 46.2,
+   "flavio": 47.7,
+   "outros": 7.6
   }
  ]
 }
