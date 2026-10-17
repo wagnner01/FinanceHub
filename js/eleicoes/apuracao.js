@@ -162,7 +162,7 @@ async function update({ force = false, mapOnly = false, silent = false } = {}) {
         const cargo = cargoReal(state.cargo, state.uf);
         const t2 = state.turno === 2 ? await tse.getResultado({ cargo: 1, turno: 2, uf: 'br' }).catch(() => null) : true;
         if (v !== version) return;
-        if (!t2) { renderAguardando(panel, drill); setLive(null); await paintMap(v, null); scheduleRefresh(60000); return; }
+        if (!t2 || t2.secoes?.totalizadas === 0) { renderAguardando(panel, drill); setLive(null); await paintMap(v, null); scheduleRefresh(60000); return; } // TSE pré-publica a estrutura do 2º turno zerada
 
         if (state.uf === 'br' && state.cargo !== 1) {
             const lista = await carregarUFs(state.cargo);
