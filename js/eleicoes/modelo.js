@@ -112,10 +112,11 @@ export function mesmoMomento2022(p2026, polls2022, tolerancia = 6) {
 }
 
 /** Projeção para o dia da eleição a partir da série consolidada. */
-export function projetar(serieDiaria, hoje, { eleicao = ELEICAO_2026, erroBase = 2.5 } = {}) {
+export function projetar(serieDiaria, hoje, { eleicao = ELEICAO_2026, erroBase = 2.5, corte = null } = {}) {
     if (!serieDiaria.length) return null;
     const atual = serieDiaria[serieDiaria.length - 1];
-    const recentes = serieDiaria.filter(s => daysBetween(s.dia, atual.dia) <= 14);
+    // Tendência só dentro do mesmo regime: não mistura o salto do 1º turno com a evolução da campanha
+    const recentes = serieDiaria.filter(s => daysBetween(s.dia, atual.dia) <= 14 && (!corte || atual.dia <= corte || s.dia > addDays(corte, 2)));
     // Regressão linear simples (lula ~ dia)
     let slope = 0;
     if (recentes.length >= 5) {
@@ -157,8 +158,8 @@ export function analisar(d26, d22, hoje, t1_2026 = { lula: 45.16, flavio: 47.03 
     const inicio = polls.length ? polls.map(p => p.fim).sort()[0] : hoje;
     const s = serie(polls, inicio, hoje, { corte: PRIMEIRO_TURNO_2026 });
     const sAj = serie(polls, inicio, hoje, { ajuste, corte: PRIMEIRO_TURNO_2026 });
-    const proj = projetar(s, hoje, { erroBase });
-    const projAj = projetar(sAj, hoje, { erroBase });
+    const proj = projetar(s, hoje, { erroBase, corte: PRIMEIRO_TURNO_2026 });
+    const projAj = projetar(sAj, hoje, { erroBase, corte: PRIMEIRO_TURNO_2026 });
     // 2022 alinhado pelo nº de dias até a eleição
     const s22 = serie(d22.polls, '2022-08-01', ELEICAO_2022, { corte: PRIMEIRO_TURNO_2022 }).map(c => ({ ...c, diasAntes: daysBetween(c.dia, ELEICAO_2022) }));
     return { serie: s, serieAjustada: sAj, projecao: proj, projecaoAjustada: projAj, vies, erroBase, serie2022: s22, transferencia: cenarioTransferencia(t1_2026) };
