@@ -3,9 +3,24 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73233732,
- "coletadoEm": "2026-10-17T17:04:53.411Z",
+ "revisao": 73240835,
+ "coletadoEm": "2026-10-18T21:18:16.054Z",
  "polls": [
+  {
+   "instituto": "Vox",
+   "contratante": "Vox",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-17",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 46.4,
+   "flavio": 44.6,
+   "outros": 8.9,
+   "validos": {
+    "lula": 50.99,
+    "flavio": 49.01
+   }
+  },
   {
    "instituto": "Gerp",
    "contratante": "Gerp",
@@ -2795,52 +2810,52 @@
  "agregadores": [
   {
    "agregador": "UOL",
-   "data": "2026-10-17",
-   "lula": 48.5,
-   "flavio": 51.5,
-   "outros": 0
+   "data": "2026-10-18",
+   "lula": 48.6,
+   "flavio": 51.4,
+   "outros": null
   },
   {
    "agregador": "PollingData",
-   "data": "2026-10-17",
-   "lula": 46.2,
-   "flavio": 47.2,
-   "outros": 7
+   "data": "2026-10-18",
+   "lula": 46.6,
+   "flavio": 46.6,
+   "outros": 6.8
   },
   {
    "agregador": "BBC",
-   "data": "2026-10-15",
-   "lula": 45,
+   "data": "2026-10-18",
+   "lula": 47,
    "flavio": 47,
-   "outros": 8
+   "outros": 6
   },
   {
    "agregador": "CartaCapital",
-   "data": "2026-10-15",
+   "data": "2026-10-18",
    "lula": 45.4,
    "flavio": 47.8,
    "outros": 6.8
   },
   {
    "agregador": "Poll+Trend",
-   "data": "2026-10-16",
-   "lula": 46.03,
-   "flavio": 48.71,
-   "outros": null
+   "data": "2026-10-18",
+   "lula": 46.71,
+   "flavio": 48.6,
+   "outros": 4.69
   },
   {
    "agregador": "Plano Político",
-   "data": "2026-10-16",
-   "lula": 48.7,
-   "flavio": 51.3,
-   "outros": null
+   "data": "2026-10-18",
+   "lula": 45.5,
+   "flavio": 48,
+   "outros": 6.5
   },
   {
    "agregador": "Agregador presidencial",
-   "data": "2026-10-17",
-   "lula": 46.2,
-   "flavio": 47.7,
-   "outros": 7.6
+   "data": "2026-10-18",
+   "lula": 46.3,
+   "flavio": 47.8,
+   "outros": 5.9
   }
  ]
 }
