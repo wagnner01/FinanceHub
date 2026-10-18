@@ -208,3 +208,24 @@
     .map-legend{bottom:28px;font-size:.7rem}
     .dumb{grid-template-columns:90px 1fr 54px}
 }
+
+/* Índice composto */
+.sc-card{display:flex;flex-direction:column;gap:14px;border-color:rgba(255,209,102,.3)}
+.sc-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:end}
+.sc-big{display:flex;align-items:baseline;gap:10px;margin-top:6px;font-variant-numeric:tabular-nums}
+.sc-big span{font-size:3.2rem;font-weight:800;line-height:1}
+.sc-big small{font-size:.8rem;color:var(--t3);font-weight:600}
+.sc-big .sc-x{font-size:1.6rem;color:var(--t3);font-weight:400}
+.sc-note{font-size:.78rem;color:var(--t2);line-height:1.55}
+.sc-rows{display:flex;flex-direction:column}
+.sc-row{display:grid;grid-template-columns:minmax(0,1.6fr) 48px minmax(120px,1.2fr) 110px;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:.82rem}
+.sc-row:last-child{border-bottom:0}
+.sc-th{font-size:.66rem;text-transform:uppercase;letter-spacing:.5px;color:var(--t3);font-weight:700}
+.sc-name{display:flex;flex-direction:column;gap:2px;min-width:0}
+.sc-name span{font-size:.72rem;color:var(--t3)}
+.sc-peso{text-align:right;font-variant-numeric:tabular-nums;color:var(--t2)}
+.sc-track{position:relative;height:10px;background:var(--input);border-radius:5px}
+.sc-track .mid{position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--t3)}
+.sc-track .bar{position:absolute;top:0;bottom:0;border-radius:5px}
+.sc-val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+@media (max-width:760px){.sc-head{grid-template-columns:1fr}.sc-row{grid-template-columns:minmax(0,1fr) 40px;}.sc-row .sc-track{grid-column:1/-1}.sc-row .sc-val{grid-column:1/-1;text-align:left}.sc-th{display:none}}

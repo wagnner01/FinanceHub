@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main, ccr-98653d89-r5ar8b]
-    paths: ['scripts/eleicoes/*pesquisas*.mjs', 'scripts/eleicoes/wikitext.mjs', '.github/workflows/eleicoes-pesquisas.yml']
+    paths: ['scripts/eleicoes/*pesquisas*.mjs', 'scripts/eleicoes/sync-mercados.mjs', 'scripts/eleicoes/wikitext.mjs', '.github/workflows/eleicoes-pesquisas.yml']
 
 permissions:
   contents: write
@@ -27,11 +27,14 @@ jobs:
         with: { node-version: 20 }
       - name: Coletar pesquisas
         run: node scripts/eleicoes/sync-pesquisas.mjs
+      - name: Mercados de previsão (Polymarket)
+        continue-on-error: true
+        run: node scripts/eleicoes/sync-mercados.mjs
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/pesquisas
+          git add data/pesquisas data/score
           if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
           git commit -m "data: pesquisas 2º turno $(date -u +%Y-%m-%d) [skip ci]"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done

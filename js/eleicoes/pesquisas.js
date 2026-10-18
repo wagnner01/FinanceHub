@@ -1,6 +1,7 @@
 // pesquisas.js — aba "Pesquisas 2º turno": cada pesquisa, consolidado, tendência, projeção e comparação com 2022.
 import * as M from './modelo.js';
 import * as tse from './tse.js';
+import { calcularScore } from './score.js';
 
 const C_LULA = '#e0393e', C_FLAVIO = '#2f6fe4', C_2022 = '#f08a8d';
 const fP = (v, d = 1) => (v == null || Number.isNaN(v) ? '—' : `${v.toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })}%`);
@@ -9,7 +10,7 @@ const fD = iso => { const [y, m, d] = iso.split('-'); return `${d}/${m}${y !== '
 const sgn = v => (v > 0 ? '+' : v < 0 ? '−' : '±') + Math.abs(v).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-let root, d26, d22, hist = [], A = null, t1 = { lula: 45.16, flavio: 47.03 };
+let root, d26, d22, hist = [], A = null, sinais = null, SC = null, t1 = { lula: 45.16, flavio: 47.03 };
 const ui = { periodo: 'campanha', metrica: 'validos', inst: '', mostrar2022: true };
 let loaded = false;
 
@@ -30,6 +31,7 @@ async function load() {
     const get = async u => { const r = await fetch(u, { cache: 'no-cache' }); if (!r.ok) throw new Error(`${u}: HTTP ${r.status}`); return r.json(); };
     [d26, d22] = await Promise.all([get('data/pesquisas/presidente-2t-2026.json'), get('data/pesquisas/presidente-2t-2022.json')]);
     hist = await get('data/pesquisas/projecoes.json').catch(() => []);
+    sinais = await get('data/score/sinais.json').catch(() => null);
     // 1º turno oficial direto do TSE (fallback: valores oficiais conhecidos)
     const br = await tse.getResultado({ cargo: 1, turno: 1, uf: 'br' }).catch(() => null);
     if (br) {
@@ -38,6 +40,7 @@ async function load() {
     }
     const hoje = M.isoOf(Date.now());
     A = M.analisar(d26, d22, hoje > d26.eleicao ? d26.eleicao : hoje, t1);
+    SC = sinais ? calcularScore(A, sinais) : null;
 }
 
 function filtradas() {
@@ -68,6 +71,8 @@ function draw() {
         </div>
 
         ${pos1t.length === 0 ? `<div class="el-banner info"><span class="ico">🗓️</span><div><b>Nenhuma pesquisa pós-1º turno publicada ainda.</b> O consolidado abaixo usa as simulações de 2º turno feitas até 03/10 — que, atenção, davam Lula ${fP(vesp1t?.lula)} na véspera, enquanto as urnas do 1º turno colocaram Flávio à frente (${fP(t1.flavio, 2)} × ${fP(t1.lula, 2)}). As primeiras pesquisas do 2º turno (Datafolha, PoderData, AtlasIntel…) entram aqui automaticamente na coleta de 2×/dia.</div></div>` : ''}
+
+        ${SC ? blocoScore() : ''}
 
         <div class="pq-kpis">
             ${kpi('Consolidado hoje (válidos)', atual.lula, atual.adversario, `${atual.n} pesquisas de ${atual.institutos} institutos nos últimos 21 dias.`)}
@@ -255,4 +260,40 @@ function drawDumbbell() {
             <span class="pt" style="left:${X(r.b)};background:transparent;border-color:${C_2022}"></span><span class="pt" style="left:${X(r.a)};background:${C_LULA}"></span></div>
         <div class="d ${r.a - r.b >= 0 ? 'pos' : 'neg'}">${sgn(r.a - r.b)}</div></div>`).join('') +
         `<div class="el-area-sub" style="display:flex;justify-content:space-between;margin-top:6px;padding-left:130px"><span>40%</span><span>50%</span><span>60%</span></div>`;
+}
+
+// ───────────────────────── índice composto ─────────────────────────
+function blocoScore() {
+    const f = SC.flavio, l = SC.lula;
+    const lider = f >= l ? 'Flávio Bolsonaro' : 'Lula';
+    const forca = Math.max(f, l) >= 75 ? 'favorito claro' : Math.max(f, l) >= 60 ? 'favorito' : 'leve vantagem';
+    const linhas = SC.componentes.map(c => {
+        const pf = c.p * 100;
+        const dir = pf >= 50 ? C_FLAVIO : C_LULA;
+        const w = Math.abs(pf - 50);
+        return `<div class="sc-row">
+            <div class="sc-name"><b>${esc(c.nome)}</b><span>${esc(c.leitura)}</span></div>
+            <div class="sc-peso">${Math.round(c.peso * 100)}%</div>
+            <div class="sc-track" title="Flávio ${fP(pf, 0)} · Lula ${fP(100 - pf, 0)}"><span class="mid"></span>
+                <span class="bar" style="${pf >= 50 ? 'left:50%' : `right:50%`};width:${w}%;background:${dir}"></span></div>
+            <div class="sc-val" style="color:${dir}">${pf >= 50 ? 'Flávio' : 'Lula'} ${fP(Math.max(pf, 100 - pf), 0)}</div>
+        </div>`;
+    }).join('');
+    const s = sinais;
+    return `<div class="el-card sc-card">
+        <div class="sc-head">
+            <div>
+                <div class="pq-kpi" style="border:0;padding:0;background:none"><div class="k">Índice FinanceHub · chance de vencer em 25/10</div></div>
+                <div class="sc-big"><span class="pq-c-f">${Math.round(f)}</span><small>Flávio</small><span class="sc-x">×</span><span class="pq-c-l">${Math.round(l)}</span><small>Lula</small></div>
+                <div class="split" style="display:flex;height:10px;border-radius:5px;overflow:hidden;gap:2px;margin:10px 0 8px;max-width:520px"><span style="flex:${f};background:${C_FLAVIO}"></span><span style="flex:${l};background:${C_LULA}"></span></div>
+                <div class="el-area-sub"><b>${lider}</b> é ${forca}. Sem os mercados de apostas, o índice fica em Flávio ${Math.round(SC.semMercados)} × Lula ${Math.round(100 - SC.semMercados)}.</div>
+            </div>
+            <div class="sc-note">Seis sinais viram probabilidade de vitória e são somados em log-odds com pesos fixos pelo histórico de acerto: pesquisas pesam mais; engajamento digital, menos — volume de interação não é voto (46% das menções a Lula são negativas, segundo a Bites). Sinais não-pesquisa revisados em ${fD(s.atualizado)}.</div>
+        </div>
+        <div class="sc-rows"><div class="sc-row sc-th"><div>Sinal</div><div class="sc-peso">Peso</div><div style="display:flex;justify-content:space-between"><span>← Lula</span><span>Flávio →</span></div><div></div></div>${linhas}</div>
+        <div class="el-foot" style="margin-top:10px">Fontes: <a href="${esc(s.mercados.polymarket.fonte)}" target="_blank" rel="noopener">mercados</a> ·
+            <a href="${esc(s.digital.quaestIPD.fonte)}" target="_blank" rel="noopener">Quaest IPD</a> · <a href="${esc(s.digital.bites.fonte)}" target="_blank" rel="noopener">Bites</a> ·
+            <a href="${esc(s.opiniao.fonte)}" target="_blank" rel="noopener">aprovação/rejeição</a> · <a href="${esc(s.estrutura.governadoresApoio.fonte)}" target="_blank" rel="noopener">apoios</a>.
+            Fatos considerados: ${s.fatos.map(x => `${fD(x.data)} ${esc(x.texto)}`).join(' · ')}</div>
+    </div>`;
 }

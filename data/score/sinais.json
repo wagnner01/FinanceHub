@@ -1,0 +1,32 @@
+{
+ "atualizado": "2026-10-18",
+ "nota": "Sinais não-pesquisa, curados com fonte. Mercados são atualizados automaticamente quando a API do Polymarket responde; os demais são revisados manualmente.",
+ "mercados": {
+  "polymarket": { "flavio": 80.5, "lula": 19.5, "volumeUSD": 187000000, "data": "2026-10-18", "fonte": "https://www.riotimesonline.com/brazil-runoff-prediction-markets-polymarket-kalshi-odds/" },
+  "kalshi": { "flavio": 79, "lula": 21, "data": "2026-10-18", "fonte": "https://www.riotimesonline.com/brazil-runoff-prediction-markets-polymarket-kalshi-odds/" }
+ },
+ "digital": {
+  "quaestIPD": { "lula": 82.6, "flavio": 76.4, "lulaInicio": 70.7, "flavioInicio": 80.0, "periodo": "04–15/10", "fonte": "https://www.brasil247.com/brasil/lula-supera-flavio-bolsonaro-em-popularidade-digital-e-ganha-forca-no-segundo-turno-diz-quaest/" },
+  "bites": { "lulaInteracoesMi": 110.7, "flavioInteracoesMi": 31.3, "periodo": "05–17/10", "mencoesNegativasLula": 46, "mencoesPositivasLula": 22.8, "fonte": "https://www.poder360.com.br/poder-eleicoes-2026/eleicoes-de-2026-marcam-a-transformacao-digital-da-esquerda-diz-bites/" }
+ },
+ "opiniao": {
+  "aprovacaoGoverno": { "aprova": 48, "desaprova": 50, "instituto": "Datafolha", "data": "2026-10-15" },
+  "rejeicao": [
+   { "instituto": "Datafolha", "lula": 46, "flavio": 44, "data": "2026-10-15" },
+   { "instituto": "Quaest", "lula": 53, "flavio": 54, "data": "2026-10-13" }
+  ],
+  "fonte": "https://ofolhademinas.com.br/datafolha-e-quaest-mostram-empate-tecnico-entre-flavio-bolsonaro-e-lula-no-2o-turno/"
+ },
+ "estrutura": {
+  "primeiroTurno": { "flavio": 47.03, "lula": 45.16 },
+  "governadoresApoio": { "flavio": 12, "lula": 5, "neutros": 4, "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/flavio-avanca-segundo-turno-apoio-governadores/" },
+  "terceiraVia": "Renan Santos (2,2%) declarou neutralidade; Augusto Cury (2,9%) sem declaração confirmada."
+ },
+ "fatos": [
+  { "data": "2026-10-08", "lado": "flavio", "peso": 1, "texto": "Ato em Brasília com governadores eleitos e candidatos de 2º turno em apoio a Flávio." },
+  { "data": "2026-10-12", "lado": "lula", "peso": 1, "texto": "Reestruturação da comunicação digital de Lula (Janones e Ana Elisa); IPD da Quaest vira a favor de Lula." },
+  { "data": "2026-10-15", "lado": "lula", "peso": 1, "texto": "Datafolha: vantagem de Flávio cai de 4 para 2 pontos (49×45 → 47×45)." },
+  { "data": "2026-10-15", "lado": "flavio", "peso": 1, "texto": "Desaprovação do governo sobe para 50% (Datafolha)." },
+  { "data": "2026-10-17", "lado": "flavio", "peso": 0.5, "texto": "Flávio promete não disputar reeleição (PEC) para atrair o eleitor de centro." }
+ ]
+}
