@@ -127,22 +127,6 @@
    }
   },
   {
-   "instituto": "AtlasIntel",
-   "contratante": "AtlasIntel",
-   "inicio": "2026-10-13",
-   "fim": "2026-10-18",
-   "amostra": 4998,
-   "margem": 1,
-   "lula": 47.7,
-   "flavio": 49.8,
-   "outros": 2.6,
-   "validos": {
-    "lula": 48.92,
-    "flavio": 51.08
-   },
-   "removidaDaFonte": true
-  },
-  {
    "instituto": "Futura",
    "contratante": "Futura",
    "inicio": "2026-10-16",

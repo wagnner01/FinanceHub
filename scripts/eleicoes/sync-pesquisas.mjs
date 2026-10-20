@@ -40,7 +40,8 @@ if (!args.includes('--so-2022')) {
     // Mantém pesquisas já conhecidas que eventualmente sumam da página (edições de terceiros)
     let prev = null;
     try { prev = JSON.parse(await readFile(`${OUT}/presidente-2t-2026.json`, 'utf8')); } catch { /* novo */ }
-    const key = x => [x.instituto, x.inicio, x.fim, x.lula, x.flavio].join('|');
+    // Mesma pesquisa = mesmo instituto e mesmo campo; correções de valor na fonte substituem a versão antiga
+    const key = x => [x.instituto, x.inicio, x.fim].join('|');
     const seen = new Set(d.polls.map(key));
     for (const old of prev?.polls || []) if (!seen.has(key(old))) d.polls.push({ ...old, removidaDaFonte: true });
     d.polls.sort((a, b) => b.fim.localeCompare(a.fim));
