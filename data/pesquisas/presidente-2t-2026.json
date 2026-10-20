@@ -3,9 +3,84 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73247388,
- "coletadoEm": "2026-10-19T15:21:10.554Z",
+ "revisao": 73255693,
+ "coletadoEm": "2026-10-20T15:05:46.390Z",
  "polls": [
+  {
+   "instituto": "IFP",
+   "contratante": "IFP",
+   "inicio": "2026-10-16",
+   "fim": "2026-10-20",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 39.65,
+   "flavio": 40.95,
+   "outros": 19.4,
+   "validos": {
+    "lula": 49.19,
+    "flavio": 50.81
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa Inteligência",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-19",
+   "amostra": 2700,
+   "margem": 1.9,
+   "lula": 45.9,
+   "flavio": 48.8,
+   "outros": 5.3,
+   "validos": {
+    "lula": 48.47,
+    "flavio": 51.53
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-19",
+   "amostra": 2400,
+   "margem": 2,
+   "lula": 45,
+   "flavio": 50,
+   "outros": 5,
+   "validos": {
+    "lula": 47.37,
+    "flavio": 52.63
+   }
+  },
+  {
+   "instituto": "Real Time Big Data",
+   "contratante": "Real Time Big Data",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-19",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 47,
+   "outros": 9,
+   "validos": {
+    "lula": 48.35,
+    "flavio": 51.65
+   }
+  },
+  {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-10-16",
+   "fim": "2026-10-18",
+   "amostra": 1200,
+   "margem": 2.83,
+   "lula": 46,
+   "flavio": 49,
+   "outros": 5,
+   "validos": {
+    "lula": 48.42,
+    "flavio": 51.58
+   }
+  },
   {
    "instituto": "PoderData",
    "contratante": "PoderData/Aya",
@@ -43,13 +118,29 @@
    "fim": "2026-10-18",
    "amostra": 4998,
    "margem": 1,
+   "lula": 47.6,
+   "flavio": 49.8,
+   "outros": 2.6,
+   "validos": {
+    "lula": 48.87,
+    "flavio": 51.13
+   }
+  },
+  {
+   "instituto": "AtlasIntel",
+   "contratante": "AtlasIntel",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-18",
+   "amostra": 4998,
+   "margem": 1,
    "lula": 47.7,
    "flavio": 49.8,
    "outros": 2.6,
    "validos": {
     "lula": 48.92,
     "flavio": 51.08
-   }
+   },
+   "removidaDaFonte": true
   },
   {
    "instituto": "Futura",
@@ -79,6 +170,21 @@
    "validos": {
     "lula": 50.99,
     "flavio": 49.01
+   }
+  },
+  {
+   "instituto": "Ranking",
+   "contratante": "Ranking",
+   "inicio": "2026-10-14",
+   "fim": "2026-10-16",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 50.4,
+   "flavio": 49.6,
+   "outros": null,
+   "validos": {
+    "lula": 50.4,
+    "flavio": 49.6
    }
   },
   {
@@ -2877,38 +2983,38 @@
   },
   {
    "agregador": "PollingData",
-   "data": "2026-10-18",
-   "lula": 46.6,
-   "flavio": 46.6,
-   "outros": 6.8
+   "data": "2026-10-19",
+   "lula": 45.9,
+   "flavio": 46.8,
+   "outros": 7.3
   },
   {
    "agregador": "BBC",
-   "data": "2026-10-18",
-   "lula": 47,
+   "data": "2026-10-19",
+   "lula": 46,
    "flavio": 47,
-   "outros": 6
+   "outros": 7
   },
   {
    "agregador": "CartaCapital",
    "data": "2026-10-19",
    "lula": 46.1,
    "flavio": 48.2,
-   "outros": 5.9
+   "outros": 5.7
   },
   {
    "agregador": "Poll+Trend",
    "data": "2026-10-19",
    "lula": 46.74,
    "flavio": 48.66,
-   "outros": 4.69
+   "outros": 4.6
   },
   {
    "agregador": "Plano Político",
    "data": "2026-10-19",
-   "lula": 48.8,
-   "flavio": 51.2,
-   "outros": null
+   "lula": 45.8,
+   "flavio": 48.1,
+   "outros": 6.1
   },
   {
    "agregador": "Agregador presidencial",
