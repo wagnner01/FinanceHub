@@ -3,9 +3,54 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73255693,
- "coletadoEm": "2026-10-20T15:05:46.390Z",
+ "revisao": 73262546,
+ "coletadoEm": "2026-10-21T16:23:56.110Z",
  "polls": [
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-10-19",
+   "fim": "2026-10-20",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 46.8,
+   "flavio": 48.9,
+   "outros": 4.3,
+   "validos": {
+    "lula": 48.9,
+    "flavio": 51.1
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-10-18",
+   "fim": "2026-10-20",
+   "amostra": 5000,
+   "margem": 2.4,
+   "lula": 48,
+   "flavio": 50,
+   "outros": 2,
+   "validos": {
+    "lula": 48.98,
+    "flavio": 51.02
+   }
+  },
+  {
+   "instituto": "Quaest",
+   "contratante": "Quaest",
+   "inicio": "2026-10-17",
+   "fim": "2026-10-20",
+   "amostra": 2154,
+   "margem": 2,
+   "lula": 44,
+   "flavio": 45,
+   "outros": 9,
+   "validos": {
+    "lula": 49.44,
+    "flavio": 50.56
+   }
+  },
   {
    "instituto": "IFP",
    "contratante": "IFP",
@@ -19,6 +64,36 @@
    "validos": {
     "lula": 49.19,
     "flavio": 50.81
+   }
+  },
+  {
+   "instituto": "Ideia",
+   "contratante": "Meio/Ideia",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-19",
+   "amostra": 1500,
+   "margem": 2.5,
+   "lula": 46,
+   "flavio": 48,
+   "outros": 6,
+   "validos": {
+    "lula": 48.94,
+    "flavio": 51.06
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-19",
+   "amostra": 15554,
+   "margem": 1,
+   "lula": 49.3,
+   "flavio": 50.7,
+   "outros": null,
+   "validos": {
+    "lula": 49.3,
+    "flavio": 50.7
    }
   },
   {
@@ -58,27 +133,12 @@
    "fim": "2026-10-19",
    "amostra": 2000,
    "margem": 2,
-   "lula": 44,
-   "flavio": 47,
-   "outros": 9,
+   "lula": 45,
+   "flavio": 48,
+   "outros": 7,
    "validos": {
-    "lula": 48.35,
-    "flavio": 51.65
-   }
-  },
-  {
-   "instituto": "DataTrends",
-   "contratante": "DataTrends",
-   "inicio": "2026-10-16",
-   "fim": "2026-10-18",
-   "amostra": 1200,
-   "margem": 2.83,
-   "lula": 46,
-   "flavio": 49,
-   "outros": 5,
-   "validos": {
-    "lula": 48.42,
-    "flavio": 51.58
+    "lula": 48.39,
+    "flavio": 51.61
    }
   },
   {
@@ -127,18 +187,49 @@
    }
   },
   {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-10-16",
+   "fim": "2026-10-18",
+   "amostra": 1200,
+   "margem": 2.83,
+   "lula": 46,
+   "flavio": 49,
+   "outros": 5,
+   "validos": {
+    "lula": 48.42,
+    "flavio": 51.58
+   },
+   "removidaDaFonte": true
+  },
+  {
    "instituto": "Futura",
    "contratante": "Futura",
    "inicio": "2026-10-16",
    "fim": "2026-10-17",
    "amostra": 2000,
    "margem": 2.2,
-   "lula": 49.6,
-   "flavio": 50.4,
-   "outros": null,
+   "lula": 47.5,
+   "flavio": 48.3,
+   "outros": 4.3,
    "validos": {
-    "lula": 49.6,
-    "flavio": 50.4
+    "lula": 49.58,
+    "flavio": 50.42
+   }
+  },
+  {
+   "instituto": "DataTrends",
+   "contratante": "DataTrends",
+   "inicio": "2026-10-15",
+   "fim": "2026-10-17",
+   "amostra": 2000,
+   "margem": 2.19,
+   "lula": 46,
+   "flavio": 49,
+   "outros": 5,
+   "validos": {
+    "lula": 48.42,
+    "flavio": 51.58
    }
   },
   {
@@ -187,18 +278,33 @@
    }
   },
   {
+   "instituto": "Phoenix",
+   "contratante": "Phoenix",
+   "inicio": "2026-10-13",
+   "fim": "2026-10-16",
+   "amostra": 3999,
+   "margem": 1.55,
+   "lula": 47.59,
+   "flavio": 45.21,
+   "outros": 7.2,
+   "validos": {
+    "lula": 51.28,
+    "flavio": 48.72
+   }
+  },
+  {
    "instituto": "Veritá",
    "contratante": "Veritá",
    "inicio": "2026-10-12",
    "fim": "2026-10-16",
    "amostra": 15554,
    "margem": 1,
-   "lula": 48.9,
-   "flavio": 51.1,
-   "outros": null,
+   "lula": 47.7,
+   "flavio": 49.7,
+   "outros": 2.6,
    "validos": {
-    "lula": 48.9,
-    "flavio": 51.1
+    "lula": 48.97,
+    "flavio": 51.03
    }
   },
   {
