@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-10-18",
+ "atualizado": "2026-10-21",
  "nota": "Sinais não-pesquisa, curados com fonte. Mercados são atualizados automaticamente quando a API do Polymarket responde; os demais são revisados manualmente.",
  "mercados": {
   "polymarket": {
@@ -51,12 +51,12 @@
    },
    {
     "instituto": "Quaest",
-    "lula": 53,
-    "flavio": 54,
-    "data": "2026-10-13"
+    "lula": 47,
+    "flavio": 53,
+    "data": "2026-10-20"
    }
   ],
-  "fonte": "https://ofolhademinas.com.br/datafolha-e-quaest-mostram-empate-tecnico-entre-flavio-bolsonaro-e-lula-no-2o-turno/"
+  "fonte": "https://www.metropoles.com/brasil/quaest-flavio-bolsonaro-tem-45-e-lula-44-no-2o-turno"
  },
  "estrutura": {
   "primeiroTurno": {
@@ -101,6 +101,18 @@
    "lado": "flavio",
    "peso": 0.5,
    "texto": "Flávio promete não disputar reeleição (PEC) para atrair o eleitor de centro."
+  },
+  {
+   "data": "2026-10-18",
+   "lado": "lula",
+   "peso": 0.5,
+   "texto": "Debate na Band sem vencedor claro: Flávio mais calmo, Lula melhor nos confrontos diretos e com maior alcance dos cortes nas redes."
+  },
+  {
+   "data": "2026-10-21",
+   "lado": "lula",
+   "peso": 1,
+   "texto": "Quaest pós-debate: rejeição de Lula cai 6 pontos (53→47%); Flávio 54→52–54%. Diferença no voto total cai para 1 ponto (45×44)."
   }
  ]
 }
