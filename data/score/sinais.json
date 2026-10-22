@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-10-21",
+ "atualizado": "2026-10-22",
  "nota": "Sinais não-pesquisa, curados com fonte. Mercados são atualizados automaticamente quando a API do Polymarket responde; os demais são revisados manualmente.",
  "mercados": {
   "polymarket": {
@@ -113,6 +113,12 @@
    "lado": "lula",
    "peso": 1,
    "texto": "Quaest pós-debate: rejeição de Lula cai 6 pontos (53→47%); Flávio 54→52–54%. Diferença no voto total cai para 1 ponto (45×44)."
+  },
+  {
+   "data": "2026-10-22",
+   "lado": "lula",
+   "peso": 1,
+   "texto": "Datafolha 22/10: empate em 50% dos válidos (47×46 nos totais); Lula sobe 1 ponto e Flávio cai 1 desde 16/10."
   }
  ]
 }
