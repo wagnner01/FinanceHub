@@ -82,5 +82,17 @@
   "probLula": 33.98,
   "projecaoAjustadaLula": 49.18,
   "pesquisas": 53
+ },
+ {
+  "dia": "2026-10-22",
+  "consolidadoLula": 49.04,
+  "projecaoLula": 49.15,
+  "intervalo90": [
+   45.73,
+   52.56
+  ],
+  "probLula": 34.04,
+  "projecaoAjustadaLula": 49.19,
+  "pesquisas": 54
  }
 ]
