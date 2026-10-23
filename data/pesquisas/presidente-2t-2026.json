@@ -4,7 +4,7 @@
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
  "revisao": 73272845,
- "coletadoEm": "2026-10-23T10:26:27.315Z",
+ "coletadoEm": "2026-10-23T10:28:29.504Z",
  "polls": [
   {
    "instituto": "Datafolha",
@@ -35,23 +35,6 @@
    "validos": {
     "lula": 50.61,
     "flavio": 49.39
-   },
-   "manual": true
-  },
-  {
-   "instituto": "Real Time Big Data",
-   "contratante": "Real Time Big Data",
-   "inicio": "2026-10-20",
-   "fim": "2026-10-22",
-   "amostra": 2000,
-   "margem": 2,
-   "lula": 45,
-   "flavio": 49,
-   "outros": 6,
-   "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-outubro-2026-segundo-turno-2/",
-   "validos": {
-    "lula": 47.87,
-    "flavio": 52.13
    },
    "manual": true
   },
