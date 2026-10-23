@@ -3,9 +3,24 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73273365,
- "coletadoEm": "2026-10-23T11:53:25.730Z",
+ "revisao": 73273689,
+ "coletadoEm": "2026-10-23T14:29:46.814Z",
  "polls": [
+  {
+   "instituto": "Ipespe",
+   "contratante": "Ipespe",
+   "inicio": "2026-10-20",
+   "fim": "2026-10-22",
+   "amostra": 1500,
+   "margem": 2.6,
+   "lula": 47,
+   "flavio": 48,
+   "outros": 5,
+   "validos": {
+    "lula": 49.47,
+    "flavio": 50.53
+   }
+  },
   {
    "instituto": "Vox",
    "contratante": "Vox",
