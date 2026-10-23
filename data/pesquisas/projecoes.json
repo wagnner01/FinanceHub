@@ -97,14 +97,14 @@
  },
  {
   "dia": "2026-10-23",
-  "consolidadoLula": 48.89,
-  "projecaoLula": 48.96,
+  "consolidadoLula": 48.86,
+  "projecaoLula": 48.93,
   "intervalo90": [
-   45.58,
-   52.33
+   45.55,
+   52.3
   ],
-  "probLula": 30.56,
+  "probLula": 30.05,
   "projecaoAjustadaLula": 48.93,
-  "pesquisas": 58
+  "pesquisas": 59
  }
 ]
