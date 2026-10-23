@@ -3,9 +3,24 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73272845,
- "coletadoEm": "2026-10-23T10:28:29.504Z",
+ "revisao": 73273365,
+ "coletadoEm": "2026-10-23T11:53:25.730Z",
  "polls": [
+  {
+   "instituto": "Vox",
+   "contratante": "Vox",
+   "inicio": "2026-10-20",
+   "fim": "2026-10-22",
+   "amostra": 2100,
+   "margem": 2.15,
+   "lula": 45.4,
+   "flavio": 44.3,
+   "outros": 10.3,
+   "validos": {
+    "lula": 50.61,
+    "flavio": 49.39
+   }
+  },
   {
    "instituto": "Datafolha",
    "contratante": "DataFolha",
@@ -22,37 +37,33 @@
    }
   },
   {
-   "instituto": "Vox",
-   "contratante": "Vox Brasil",
-   "inicio": "2026-10-20",
-   "fim": "2026-10-22",
-   "amostra": 2100,
-   "margem": 2.15,
-   "lula": 45.4,
-   "flavio": 44.3,
-   "outros": 10.3,
-   "fonte": "https://www.metropoles.com/brasil/vox-lula-soma-506-dos-votos-validos-contra-494-de-flavio-bolsonaro",
-   "validos": {
-    "lula": 50.61,
-    "flavio": 49.39
-   },
-   "manual": true
-  },
-  {
    "instituto": "Real Time Big Data",
    "contratante": "Real Time Big Data",
-   "inicio": "2026-10-20",
+   "inicio": "2026-10-19",
    "fim": "2026-10-22",
    "amostra": 2000,
    "margem": 2,
    "lula": 45,
    "flavio": 49,
    "outros": 6,
-   "fonte": "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/real-time-big-data-presidente-outubro-2026-segundo-turno-2/",
-   "manual": true,
    "validos": {
     "lula": 47.87,
     "flavio": 52.13
+   }
+  },
+  {
+   "instituto": "Alfa Inteligência",
+   "contratante": "Alfa Inteligência",
+   "inicio": "2026-10-18",
+   "fim": "2026-10-22",
+   "amostra": 2700,
+   "margem": 1.9,
+   "lula": 48,
+   "flavio": 52,
+   "outros": null,
+   "validos": {
+    "lula": 48,
+    "flavio": 52
    }
   },
   {
