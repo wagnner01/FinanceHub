@@ -44,9 +44,10 @@ if (!args.includes('--so-2022')) {
     const key = x => [x.instituto, x.inicio, x.fim].join('|');
     const seen = new Set(d.polls.map(key));
     // Registros inseridos à mão (pesquisa divulgada antes de a Wikipedia registrar) saem quando a fonte
-    // passa a ter o mesmo instituto com campo encerrado até 3 dias de distância.
+    // passa a ter o mesmo instituto com campo encerrado na mesma data ou depois (até 3 dias) — ou no máximo
+    // 1 dia antes (divergência de datas entre veículos). Rodadas anteriores do instituto não contam.
     const dias = (a, b) => Math.abs((new Date(a) - new Date(b)) / 86400000);
-    const cobertoPelaFonte = old => old.manual && d.polls.some(p => p.instituto === old.instituto && dias(p.fim, old.fim) <= 3);
+    const cobertoPelaFonte = old => old.manual && d.polls.some(p => p.instituto === old.instituto && p.fim >= old.fim ? dias(p.fim, old.fim) <= 3 : p.instituto === old.instituto && dias(p.fim, old.fim) <= 1);
     for (const old of prev?.polls || []) {
         if (seen.has(key(old)) || cobertoPelaFonte(old)) continue;
         d.polls.push(old.manual ? old : { ...old, removidaDaFonte: true });
