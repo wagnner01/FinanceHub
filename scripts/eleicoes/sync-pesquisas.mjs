@@ -43,7 +43,14 @@ if (!args.includes('--so-2022')) {
     // Mesma pesquisa = mesmo instituto e mesmo campo; correções de valor na fonte substituem a versão antiga
     const key = x => [x.instituto, x.inicio, x.fim].join('|');
     const seen = new Set(d.polls.map(key));
-    for (const old of prev?.polls || []) if (!seen.has(key(old))) d.polls.push({ ...old, removidaDaFonte: true });
+    // Registros inseridos à mão (pesquisa divulgada antes de a Wikipedia registrar) saem quando a fonte
+    // passa a ter o mesmo instituto com campo encerrado até 3 dias de distância.
+    const dias = (a, b) => Math.abs((new Date(a) - new Date(b)) / 86400000);
+    const cobertoPelaFonte = old => old.manual && d.polls.some(p => p.instituto === old.instituto && dias(p.fim, old.fim) <= 3);
+    for (const old of prev?.polls || []) {
+        if (seen.has(key(old)) || cobertoPelaFonte(old)) continue;
+        d.polls.push(old.manual ? old : { ...old, removidaDaFonte: true });
+    }
     d.polls.sort((a, b) => b.fim.localeCompare(a.fim));
     const data = {
         disputa: 'Lula (PT) × Flávio Bolsonaro (PL)', eleicao: '2026-10-25', primeiroTurno: '2026-10-04',
