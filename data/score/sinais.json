@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-10-22",
+ "atualizado": "2026-10-24",
  "nota": "Sinais não-pesquisa, curados com fonte. Mercados são atualizados automaticamente quando a API do Polymarket responde; os demais são revisados manualmente.",
  "mercados": {
   "polymarket": {
@@ -119,6 +119,12 @@
    "lado": "lula",
    "peso": 1,
    "texto": "Datafolha 22/10: empate em 50% dos válidos (47×46 nos totais); Lula sobe 1 ponto e Flávio cai 1 desde 16/10."
+  },
+  {
+   "data": "2026-10-24",
+   "lado": "flavio",
+   "peso": 1,
+   "texto": "Datafolha véspera (4.050 entrevistas): Flávio 51% × Lula 49% nos válidos (48×47 totais); entre eleitores com alta propensão a votar, 52×48."
   }
  ]
 }
