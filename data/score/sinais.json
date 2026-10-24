@@ -125,6 +125,12 @@
    "lado": "flavio",
    "peso": 1,
    "texto": "Datafolha véspera (4.050 entrevistas): Flávio 51% × Lula 49% nos válidos (48×47 totais); entre eleitores com alta propensão a votar, 52×48."
+  },
+  {
+   "data": "2026-10-24",
+   "lado": "flavio",
+   "peso": 0.5,
+   "texto": "Quaest véspera (3.702 entrevistas): Flávio 51% × Lula 49% nos válidos (46×45 totais), estável em relação a 21/10."
   }
  ]
 }
