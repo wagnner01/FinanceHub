@@ -3,9 +3,84 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73282028,
- "coletadoEm": "2026-10-24T16:52:05.268Z",
+ "revisao": 73284839,
+ "coletadoEm": "2026-10-24T22:03:29.878Z",
  "polls": [
+  {
+   "instituto": "Datafolha",
+   "contratante": "DataFolha",
+   "inicio": "2026-10-23",
+   "fim": "2026-10-24",
+   "amostra": 4050,
+   "margem": 2,
+   "lula": 47,
+   "flavio": 48,
+   "outros": 5,
+   "validos": {
+    "lula": 49.47,
+    "flavio": 50.53
+   }
+  },
+  {
+   "instituto": "Nexus",
+   "contratante": "Nexus/BTG",
+   "inicio": "2026-10-23",
+   "fim": "2026-10-24",
+   "amostra": 2000,
+   "margem": 2,
+   "lula": 46,
+   "flavio": 47,
+   "outros": 7,
+   "validos": {
+    "lula": 49.46,
+    "flavio": 50.54
+   }
+  },
+  {
+   "instituto": "Palver",
+   "contratante": "Palver",
+   "inicio": "2026-10-22",
+   "fim": "2026-10-24",
+   "amostra": 5000,
+   "margem": 3,
+   "lula": 49,
+   "flavio": 50,
+   "outros": 1,
+   "validos": {
+    "lula": 49.49,
+    "flavio": 50.51
+   }
+  },
+  {
+   "instituto": "Gerp",
+   "contratante": "Gerp",
+   "inicio": "2026-10-22",
+   "fim": "2026-10-24",
+   "amostra": 2400,
+   "margem": 2.04,
+   "lula": 46,
+   "flavio": 49,
+   "outros": 4,
+   "validos": {
+    "lula": 48.42,
+    "flavio": 51.58
+   }
+  },
+  {
+   "instituto": "Colectta",
+   "contratante": "Colectta",
+   "inicio": "2026-10-23",
+   "fim": "2026-10-23",
+   "amostra": 3000,
+   "margem": 2,
+   "lula": 46.5,
+   "flavio": 46,
+   "outros": 7.5,
+   "validos": {
+    "lula": 50.27,
+    "flavio": 49.73
+   }
+  },
   {
    "instituto": "MDA",
    "contratante": "CNT/MDA",
@@ -49,6 +124,21 @@
    "validos": {
     "lula": 47.31,
     "flavio": 52.69
+   }
+  },
+  {
+   "instituto": "Veritá",
+   "contratante": "Veritá",
+   "inicio": "2026-10-19",
+   "fim": "2026-10-23",
+   "amostra": 15554,
+   "margem": 1,
+   "lula": 47.5,
+   "flavio": 50.2,
+   "outros": 2.3,
+   "validos": {
+    "lula": 48.62,
+    "flavio": 51.38
    }
   },
   {
