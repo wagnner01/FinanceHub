@@ -3,9 +3,9 @@
  "nota": "Sinais não-pesquisa, curados com fonte. Mercados são atualizados automaticamente quando a API do Polymarket responde; os demais são revisados manualmente.",
  "mercados": {
   "polymarket": {
-   "flavio": 84,
-   "lula": 16,
-   "volumeUSD": 195739615.40145,
+   "flavio": 83.5,
+   "lula": 16.5,
+   "volumeUSD": 195835298.652138,
    "data": "2026-10-24",
    "fonte": "https://polymarket.com/event/brazil-presidential-election",
    "automatico": true
