@@ -3,9 +3,39 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73275868,
- "coletadoEm": "2026-10-23T23:52:50.791Z",
+ "revisao": 73282028,
+ "coletadoEm": "2026-10-24T16:52:05.268Z",
  "polls": [
+  {
+   "instituto": "MDA",
+   "contratante": "CNT/MDA",
+   "inicio": "2026-10-21",
+   "fim": "2026-10-23",
+   "amostra": 2002,
+   "margem": 2.2,
+   "lula": 45,
+   "flavio": 46.3,
+   "outros": 8.7,
+   "validos": {
+    "lula": 49.29,
+    "flavio": 50.71
+   }
+  },
+  {
+   "instituto": "França",
+   "contratante": "França",
+   "inicio": "2026-10-21",
+   "fim": "2026-10-23",
+   "amostra": 1537,
+   "margem": 2.5,
+   "lula": 43.1,
+   "flavio": 45.6,
+   "outros": 11.3,
+   "validos": {
+    "lula": 48.59,
+    "flavio": 51.41
+   }
+  },
   {
    "instituto": "Vetor",
    "contratante": "Vetor Arrow",
@@ -217,6 +247,21 @@
    }
   },
   {
+   "instituto": "França",
+   "contratante": "França",
+   "inicio": "2026-10-16",
+   "fim": "2026-10-20",
+   "amostra": 3000,
+   "margem": 1.8,
+   "lula": 39.65,
+   "flavio": 40.95,
+   "outros": 19.4,
+   "validos": {
+    "lula": 49.19,
+    "flavio": 50.81
+   }
+  },
+  {
    "instituto": "IFP",
    "contratante": "IFP",
    "inicio": "2026-10-16",
@@ -229,7 +274,8 @@
    "validos": {
     "lula": 49.19,
     "flavio": 50.81
-   }
+   },
+   "removidaDaFonte": true
   },
   {
    "instituto": "Ideia",
@@ -848,8 +894,8 @@
    }
   },
   {
-   "instituto": "IFP",
-   "contratante": "IFP",
+   "instituto": "França",
+   "contratante": "França",
    "inicio": "2026-09-29",
    "fim": "2026-10-02",
    "amostra": 2000,
@@ -891,6 +937,22 @@
     "lula": 48.44,
     "flavio": 51.56
    }
+  },
+  {
+   "instituto": "IFP",
+   "contratante": "IFP",
+   "inicio": "2026-09-29",
+   "fim": "2026-10-02",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 45.88,
+   "flavio": 45.01,
+   "outros": 9.11,
+   "validos": {
+    "lula": 50.48,
+    "flavio": 49.52
+   },
+   "removidaDaFonte": true
   },
   {
    "instituto": "Palver",
@@ -3273,10 +3335,10 @@
   },
   {
    "agregador": "Agregador presidencial",
-   "data": "2026-10-23",
-   "lula": 46.4,
+   "data": "2026-10-24",
+   "lula": 46.2,
    "flavio": 48.4,
-   "outros": 6.9
+   "outros": 6.7
   }
  ]
 }
