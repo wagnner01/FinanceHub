@@ -48,7 +48,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           BRANCH="${GITHUB_REF_NAME}"
           FIM=$(( $(date +%s) + LOOP * 60 ))
-          node scripts/eleicoes/sync-2022-exterior.mjs || echo "2022 exterior falhou"
+          if [ ! -f data/eleicoes/2022/exterior.json ]; then
+            curl -sSfL --max-time 120 -o /tmp/zz2022.zip https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_secao/votacao_secao_2022_ZZ.zip \
+              && unzip -qo -d /tmp/zz2022 /tmp/zz2022.zip && node scripts/eleicoes/sync-2022-exterior.mjs /tmp/zz2022 || echo "2022 exterior falhou"
+          fi
           while :; do
             node scripts/eleicoes/sync-bu-exterior.mjs ${TURNO:+--turno $TURNO} || echo "exterior falhou"
             node scripts/eleicoes/sync-bu-amostra.mjs || echo "amostra falhou"

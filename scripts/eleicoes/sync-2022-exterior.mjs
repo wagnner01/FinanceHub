@@ -1,74 +1,42 @@
 #!/usr/bin/env node
-// sync-2022-exterior.mjs — resultado de Presidente 2022 (1º e 2º turno) no exterior, total e por
-// cidade, para comparar com 2026. Roda uma vez (pula se o arquivo já existe).
-// Saída: data/eleicoes/2022/exterior.json  { t1: { total, cidades: { nome: { v } } }, t2: {...} }
-import { mkdir, writeFile, readFile } from 'node:fs/promises';
+// sync-2022-exterior.mjs — Presidente 2022 (1º e 2º turno) no exterior, por cidade, a partir dos
+// dados abertos do TSE (votação por seção, UF "ZZ"), para comparar com 2026. Roda uma vez.
+// O workflow baixa e descompacta o .zip; este script lê o CSV (latin1, ";").
+// Uso: node scripts/eleicoes/sync-2022-exterior.mjs <pasta-com-o-csv>
+// Saída: data/eleicoes/2022/exterior.json  { t1: { total: { v, secoes }, cidades: { NOME: { v, secoes } } }, t2: {...} }
+import { mkdir, writeFile, readFile, readdir } from 'node:fs/promises';
 
 const OUT = 'data/eleicoes/2022/exterior.json';
-const BASE = 'https://resultados.tse.jus.br/oficial/ele2022';
-const ELE = { t1: '544', t2: '545' };
-const UA = { 'User-Agent': 'FinanceHub-eleicoes-sync/1.0 (+github actions)' };
-const p6 = s => String(s).padStart(6, '0');
+const PRESIDENTE = '1';
+const dir = process.argv[2];
 
-try { await readFile(OUT); console.log('2022 exterior: já existe'); process.exit(0); } catch { /* baixar */ }
-// Teto de tempo: não pode atrasar a coleta da noite
-setTimeout(() => { console.log('2022 exterior: tempo esgotado'); process.exit(0); }, 180000).unref();
+try { await readFile(OUT); console.log('2022 exterior: já existe'); process.exit(0); } catch { /* gerar */ }
+if (!dir) { console.log('2022 exterior: sem pasta do CSV'); process.exit(0); }
 
-async function getJSON(url) {
-    for (let i = 0; i < 2; i++) {
-        try {
-            const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(8000) });
-            if (r.status === 404 || r.status === 403) return null;
-            if (!r.ok) throw new Error(`HTTP ${r.status}`);
-            return await r.json();
-        } catch (e) { console.warn('falhou', url, e.message); await new Promise(res => setTimeout(res, 1000)); }
-    }
-    return null;
-}
-async function pool(items, size, fn) {
-    const q = [...items];
-    await Promise.all(Array.from({ length: size }, async () => { while (q.length) await fn(q.shift()); }));
-}
-
-// Extrai { número: votos } de qualquer formato de arquivo de resultado do TSE (2022 usa "vap")
-function votos(raw) {
-    const out = {};
-    const walk = o => {
-        if (Array.isArray(o)) return o.forEach(walk);
-        if (!o || typeof o !== 'object') return;
-        if (o.n != null && (o.vap != null || o.v != null) && /^\d{2}$/.test(String(o.n))) {
-            out[String(o.n)] = Number(String(o.vap ?? o.v).replace(/\D/g, '')) || 0;
-            return;
-        }
-        Object.values(o).forEach(walk);
-    };
-    walk(raw);
-    return Object.keys(out).length ? out : null;
-}
+const arqs = (await readdir(dir)).filter(f => /\.csv$/i.test(f));
+if (!arqs.length) { console.log('2022 exterior: CSV não encontrado em', dir); process.exit(0); }
+const texto = new TextDecoder('latin1').decode(await readFile(`${dir}/${arqs[0]}`));
+const linhas = texto.split(/\r?\n/).filter(Boolean);
+const campos = l => l.split(';').map(c => c.replace(/^"|"$/g, ''));
+const cab = campos(linhas[0]);
+const col = n => cab.indexOf(n);
+const [iT, iC, iM, iZ, iS, iV, iQ] = ['NR_TURNO', 'CD_CARGO', 'NM_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'NR_VOTAVEL', 'QT_VOTOS'].map(col);
+if ([iT, iC, iM, iV, iQ].some(i => i < 0)) { console.log('2022 exterior: colunas inesperadas', cab.join(',')); process.exit(0); }
 
 const res = {};
-for (const [t, ele] of Object.entries(ELE)) {
-    const e6 = p6(ele);
-    const urls = [
-        `${BASE}/${ele}/dados-simplificados/zz/zz-c0001-e${e6}-r.json`,
-        `${BASE}/${ele}/dados/zz/zz-c0001-e${e6}-v.json`,
-        `${BASE}/${ele}/dados/zz/zz-c0001-e${e6}-u.json`,
-    ];
-    let total = null;
-    for (const u of urls) { const raw = await getJSON(u); total = votos(raw); if (total) { console.log(t, 'total via', u); break; } }
-    const cm = await getJSON(`${BASE}/${ele}/config/mun-e${e6}-cm.json`);
-    const cidades = {};
-    const lista = cm?.abr?.find(a => a.cd?.toLowerCase() === 'zz')?.mu || [];
-    await pool(lista, 12, async m => {
-        for (const suf of ['v', 'u']) {
-            const raw = await getJSON(`${BASE}/${ele}/dados/zz/zz${m.cd}-c0001-e${e6}-${suf}.json`);
-            const v = votos(raw);
-            if (v) { cidades[m.nm] = { cd: m.cd, v }; return; }
-        }
-    });
-    console.log(t, 'total', JSON.stringify(total), 'cidades', Object.keys(cidades).length, 'de', lista.length);
-    res[t] = { total, cidades };
+for (let k = 1; k < linhas.length; k++) {
+    const c = campos(linhas[k]);
+    if (c[iC] !== PRESIDENTE) continue;
+    const t = `t${c[iT]}`, nm = c[iM].toUpperCase(), n = c[iV], q = Number(c[iQ]) || 0;
+    const r = res[t] ??= { total: { v: {}, secoes: new Set() }, cidades: {} };
+    const cid = r.cidades[nm] ??= { v: {}, secoes: new Set() };
+    const sec = `${c[iZ]}/${c[iS]}`;
+    for (const alvo of [r.total, cid]) { alvo.v[n] = (alvo.v[n] || 0) + q; alvo.secoes.add(`${nm}/${sec}`); }
 }
-if (!res.t1.total && !res.t2.total) { console.log('2022 exterior: não encontrado'); process.exit(0); }
+for (const r of Object.values(res)) for (const o of [r.total, ...Object.values(r.cidades)]) o.secoes = o.secoes.size;
+for (const [t, r] of Object.entries(res)) {
+    const v = r.total.v, vv = (v['13'] || 0) + (v['22'] || 0);
+    console.log(`2022 exterior ${t}: Lula ${v['13']} × Bolsonaro ${v['22']} (${(100 * v['13'] / vv).toFixed(2)}% no 2 a 2), ${Object.keys(r.cidades).length} cidades`);
+}
 await mkdir('data/eleicoes/2022', { recursive: true });
 await writeFile(OUT, JSON.stringify(res));
