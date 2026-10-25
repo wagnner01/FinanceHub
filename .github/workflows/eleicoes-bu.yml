@@ -1,9 +1,10 @@
-name: Eleições — boletins de urna (exterior + amostra nacional)
+name: Eleições — boletins de urna e projeção da apuração
 
 # Soma os Boletins de Urna de todas as seções do exterior (por cidade/país) e de uma amostra
-# nacional estratificada por UF, que estima o 2º turno antes da totalização (variação seção a seção).
+# nacional estratificada por UF, que estima o 2º turno antes da totalização (variação seção a seção),
+# e projeta o resultado final pela parcial por município (modelo de swing com encolhimento hierárquico).
 # Agendamentos só rodam no branch padrão; na noite da eleição, dispare com loop_minutos > 0:
-# o job repete a coleta a cada ~4 min e faz commit a cada volta.
+# o job repete a coleta (cada volta leva alguns minutos) e faz commit a cada volta.
 on:
   schedule:
     # Noite do 2º turno (25/10, 17h–23h40 BRT = 20h–02h40 UTC): a cada 20 min
@@ -21,7 +22,7 @@ on:
         default: '0'
   push:
     branches: [main, ccr-98653d89-r5ar8b]
-    paths: ['scripts/eleicoes/sync-bu-*.mjs', 'js/eleicoes/bu.js', 'js/eleicoes/amostra.js', '.github/workflows/eleicoes-bu.yml']
+    paths: ['scripts/eleicoes/sync-bu-*.mjs', 'scripts/eleicoes/sync-projecao.mjs', 'scripts/eleicoes/sync-2022-exterior.mjs', 'js/eleicoes/bu.js', 'js/eleicoes/amostra.js', 'js/eleicoes/modelo-apuracao.js', '.github/workflows/eleicoes-bu.yml']
 
 permissions:
   contents: write
@@ -45,15 +46,21 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME}"
           FIM=$(( $(date +%s) + LOOP * 60 ))
+          node scripts/eleicoes/sync-2022-exterior.mjs || echo "2022 exterior falhou"
           while :; do
             node scripts/eleicoes/sync-bu-exterior.mjs ${TURNO:+--turno $TURNO} || echo "exterior falhou"
             node scripts/eleicoes/sync-bu-amostra.mjs || echo "amostra falhou"
+            node scripts/eleicoes/sync-projecao.mjs || echo "projeção falhou"
             git add data/eleicoes
             if ! git diff --cached --quiet; then
               git commit -q -m "data: boletins de urna $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-              for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep $((i*5)); done
+              ok=0
+              for i in 1 2 3; do git pull --rebase -q origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && ok=1 && break; git rebase --abort 2>/dev/null; sleep $((i*5)); done
+              # Conflito persistente: descarta a volta local (os BUs voltam do repositório na próxima)
+              [ "$ok" = 1 ] || { git fetch -q origin "$BRANCH"; git reset -q --hard "origin/$BRANCH"; }
             fi
             [ "$(date +%s)" -ge "$FIM" ] && break
-            sleep 240
+            sleep 60
           done
