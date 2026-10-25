@@ -231,11 +231,16 @@
 @media (max-width:760px){.sc-head{grid-template-columns:1fr}.sc-row{grid-template-columns:minmax(0,1fr) 40px;}.sc-row .sc-track{grid-column:1/-1}.sc-row .sc-val{grid-column:1/-1;text-align:left}.sc-th{display:none}}
 
 /* Projeção do resultado final (2º turno) */
-.el-proj .el-proj-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--el-line,rgba(255,255,255,.08))}
-.el-proj .el-proj-row:first-of-type{border-top:0}
-.el-proj .el-proj-row small{display:block;opacity:.7;font-size:.76rem;margin-top:2px;font-weight:400}
-.el-proj .el-proj-num{font-weight:700;font-variant-numeric:tabular-nums}
-.el-proj .el-proj-tag{font-size:.74rem;padding:3px 8px;border-radius:999px;border:1px solid currentColor;opacity:.75;white-space:nowrap}
+.el-proj h3{display:flex;align-items:center;gap:10px}
+.el-proj .el-proj-btn{margin-left:auto;font-size:.78rem;padding:6px 12px;text-transform:none;letter-spacing:0}
+.el-proj .el-tablewrap{overflow-x:auto}
+.el-proj-tab{width:100%;min-width:480px;border-collapse:collapse;font-size:.86rem}
+.el-proj-tab th{font-size:.72rem;opacity:.6;font-weight:600;text-align:left;padding:4px 6px}
+.el-proj-tab td{padding:8px 6px;border-top:1px solid var(--el-line,rgba(255,255,255,.08));vertical-align:middle}
+.el-proj-tab td small{display:block;opacity:.65;font-size:.74rem;margin-top:2px;font-weight:400}
+.el-proj-tab .n{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.el-proj-tab tbody.el-proj-22 tr:first-child td{border-top:2px solid var(--el-line,rgba(255,255,255,.16))}
+.el-proj-tab tbody.el-proj-22 td{opacity:.85}
+.el-proj .el-proj-tag{display:inline-block;margin-top:4px;font-size:.72rem;padding:2px 8px;border-radius:999px;border:1px solid currentColor;opacity:.75;white-space:nowrap}
 .el-proj .el-proj-tag.ok{color:#22c55e;opacity:1}
-.el-proj .el-proj-nota{font-size:.78rem;opacity:.7;margin:8px 0 0;line-height:1.45}
-@media (max-width:640px){.el-proj .el-proj-row{grid-template-columns:1fr}}
+.el-proj .el-proj-nota{font-size:.76rem;opacity:.7;margin:8px 0 0;line-height:1.45}

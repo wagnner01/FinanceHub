@@ -504,30 +504,85 @@ function renderPainel(panel, res, cargo) {
 
 // Projeção do resultado final (gerada a cada ~5 min pelo GitHub Actions: modelo por município e
 // amostra de boletins de urna, ambos comparando com o 1º turno — ver js/eleicoes/modelo-apuracao.js)
+// e comparação com 2022 no mesmo momento (apuração de 2022 reconstruída pela hora de cada BU).
+const PESQUISAS_FINAL = 49.0; // média ponderada de véspera, Lula nos válidos (aba Pesquisas)
+const FINAL_2022 = 50.90;
+let curva2022 = null;
+const semCache = url => fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+
+/** Interpola um campo da curva de 2022 no ponto x (por % de seções). */
+function interp(pontos, x, campo) {
+    const ps = pontos.filter(p => p[campo] != null);
+    if (!ps.length) return null;
+    if (x <= ps[0].secoesPct) return ps[0][campo];
+    for (let i = 1; i < ps.length; i++) {
+        const a = ps[i - 1], b = ps[i];
+        if (x <= b.secoesPct) return a[campo] + (b[campo] - a[campo]) * (x - a.secoesPct) / (b.secoesPct - a.secoesPct || 1);
+    }
+    return ps[ps.length - 1][campo];
+}
+
 async function renderProjecao(el, res) {
-    let p = null;
-    try { const r = await fetch(`data/eleicoes/2026/bu/projecao.json?t=${Date.now()}`, { cache: 'no-store' }); if (r.ok) p = await r.json(); } catch { /* sem projeção */ }
-    if (!el.isConnected || !p || (!p.modelo && !p.amostra?.secoes)) return;
-    const linha = (nome, e, nota) => {
-        if (!e) return '';
-        const ic = e.intervalo || [e.lula - 1.645 * e.sigma, e.lula + 1.645 * e.sigma];
-        const lider = e.lula >= 50 ? 'Lula' : 'Flávio';
+    const [p, c22] = await Promise.all([semCache('data/eleicoes/2026/bu/projecao.json'), curva2022 ? curva2022 : semCache('data/eleicoes/2022/curva-2t.json')]);
+    if (c22) curva2022 = c22;
+    if (!el.isConnected) return;
+    const lulaReal = res.candidatos.find(c => c.n === '13')?.pv ?? null;
+    const secPct = res.secoes?.pct || 0;
+    const agoraBRT = new Date(Date.now() - 3 * 3600000);
+    const hhmm = `${String(agoraBRT.getUTCHours()).padStart(2, '0')}:${String(agoraBRT.getUTCMinutes()).padStart(2, '0')}`;
+
+    // 2022 no mesmo momento: mesmo % de seções e mesmo horário
+    let mesmo22 = null;
+    if (curva2022?.pontos?.length) {
+        const parcial = interp(curva2022.pontos, secPct, 'parcial');
+        const modeloPts = curva2022.pontos.map(x => ({ secoesPct: x.secoesPct, m: x.modelo?.lula ?? null }));
+        const modelo22 = interp(modeloPts, secPct, 'm');
+        const ph = (curva2022.porHora || []).filter(x => x.hora <= hhmm).pop();
+        mesmo22 = { parcial, modelo22, desvio: parcial != null ? parcial - FINAL_2022 : null, hora: ph };
+    }
+    const ajustado22 = lulaReal != null && mesmo22?.desvio != null ? lulaReal - mesmo22.desvio : null;
+
+    const num = (v, d = 1) => v == null ? '—' : fP(v, d);
+    const faixa = e => e ? (e.intervalo || [e.lula - 1.645 * e.sigma, e.lula + 1.645 * e.sigma]) : null;
+    const selo = e => {
+        const ic = faixa(e);
+        if (!ic) return '';
         const cravado = ic[0] > 50 || ic[1] < 50;
-        return `<div class="el-proj-row">
-            <div><b>${nome}</b><small>${nota}</small></div>
-            <div class="el-proj-num"><span style="color:${corPartido('PT')}">Lula ${fP(e.lula, 1)}</span> × <span style="color:${corPartido('PL')}">Flávio ${fP(100 - e.lula, 1)}</span>
-                <small>90%: ${fP(ic[0], 1)} a ${fP(ic[1], 1)} para Lula · chance de Lula ${fP(100 * e.probLula, 0)}</small></div>
-            <span class="el-proj-tag ${cravado ? 'ok' : ''}">${cravado ? `${lider} vence` : 'em aberto'}</span>
-        </div>`;
+        return `<span class="el-proj-tag ${cravado ? 'ok' : ''}">${cravado ? `${e.lula >= 50 ? 'Lula' : 'Flávio'} vence` : 'em aberto'}</span>`;
     };
-    const hora = new Date(p.atualizado).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+    const linha = (nome, nota, lula, extra = '', tag = '') => `<tr>
+        <td><b>${nome}</b><small>${nota}</small></td>
+        <td class="n"><span style="color:${corPartido('PT')}">${num(lula)}</span></td>
+        <td class="n"><span style="color:${corPartido('PL')}">${lula == null ? '—' : fP(100 - lula, 1)}</span></td>
+        <td><small>${extra}</small>${tag}</td></tr>`;
+    const amostra = p?.amostra?.secoes ? p.amostra : null;
+    const icM = faixa(p?.modelo), icA = faixa(amostra);
+    const hora = p ? new Date(p.atualizado).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' }) : null;
+
     el.innerHTML = `<div class="el-card el-proj">
-        <h3>Projeção do resultado final<span>atualizada às ${hora}</span></h3>
-        ${linha('Modelo por município', p.modelo, p.modelo ? `${fP(p.modelo.apuradoPct, 1)} dos votos apurados · desvio de cada município contra o próprio 1º turno` : '')}
-        ${linha('Amostra de boletins de urna', p.amostra?.secoes ? p.amostra : null, p.amostra ? `${fN(p.amostra.secoes)} de ${fN(p.amostra.amostra)} seções sorteadas (${fP(p.amostra.cobertura, 0)}) · mesma seção, 1º × 2º turno` : '')}
-        <p class="el-proj-nota">A parcial do TSE (abaixo, ${fP(res.secoes.pct, 1)} das seções) chega fora de ordem — capitais e Sudeste primeiro — e engana nas primeiras horas.
-        As projeções comparam cada local com ele mesmo no 1º turno. Estimativa estatística, não resultado oficial.</p>
+        <h3>Projeção × resultado real × 2022<button class="el-btn primary el-proj-btn" id="el-proj-atualizar">Atualizar e comparar</button></h3>
+        <div class="el-tablewrap"><table class="el-proj-tab">
+            <thead><tr><th></th><th class="n">Lula</th><th class="n">Flávio</th><th></th></tr></thead>
+            <tbody>
+            ${linha('Resultado real (TSE agora)', `${fP(secPct, 1)} das seções · ${hhmm}`, lulaReal, 'parcial oficial — chega fora de ordem')}
+            ${p?.modelo ? linha('Modelo por município', `${fP(p.modelo.apuradoPct, 1)} dos votos · às ${hora}`, p.modelo.lula, `90%: ${num(icM[0])} a ${num(icM[1])} · chance de Lula ${fP(100 * p.modelo.probLula, 0)}`, selo(p.modelo)) : ''}
+            ${amostra ? linha('Amostra de boletins de urna', `${fN(amostra.secoes)} de ${fN(amostra.amostra)} seções · às ${hora}`, amostra.lula, `90%: ${num(icA[0])} a ${num(icA[1])} · chance de Lula ${fP(100 * amostra.probLula, 0)}`, selo(amostra)) : ''}
+            ${ajustado22 != null ? linha('Parcial corrigida por 2022', `real − distorção de 2022 no mesmo % de seções`, ajustado22, `em 2022, com ${fP(secPct, 1)} das seções, a parcial estava ${mesmo22.desvio >= 0 ? '+' : ''}${mesmo22.desvio.toFixed(2).replace('.', ',')} pp vs. o final`) : ''}
+            ${linha('Pesquisas (média de véspera)', 'consolidado ponderado, aba Pesquisas', PESQUISAS_FINAL, 'intervalo de 90%: 45,7% a 52,4%')}
+            </tbody>
+            ${mesmo22 ? `<tbody class="el-proj-22">
+            ${linha('2022 no mesmo % de seções', `parcial de Lula × Bolsonaro com ${fP(secPct, 1)} apurado`, mesmo22.parcial, `final de 2022: Lula ${fP(FINAL_2022)}`)}
+            ${mesmo22.modelo22 != null ? linha('Modelo aplicado a 2022', 'mesmo método, dados reais de 2022', mesmo22.modelo22, `erro vs. final: ${(mesmo22.modelo22 - FINAL_2022 >= 0 ? '+' : '') + (mesmo22.modelo22 - FINAL_2022).toFixed(2).replace('.', ',')} pp`) : ''}
+            ${mesmo22.hora ? linha(`2022 às ${mesmo22.hora.hora}`, `${fP(mesmo22.hora.secoesPct, 1)} das seções recebidas`, mesmo22.hora.parcial, 'mesmo horário') : ''}
+            </tbody>` : ''}
+        </table></div>
+        <p class="el-proj-nota">Lula e Flávio em % dos votos válidos (em 2022, Lula × Jair Bolsonaro). As projeções comparam cada município/seção com ele mesmo no 1º turno;
+        a curva de 2022 foi reconstruída pela hora de recebimento de cada boletim de urna no TSE. Estimativa estatística, não resultado oficial.</p>
     </div>`;
+    el.querySelector('#el-proj-atualizar').addEventListener('click', e => {
+        e.currentTarget.textContent = 'Atualizando…'; e.currentTarget.disabled = true;
+        update({ force: true, silent: true });
+    });
 }
 
 function painelMajoritario(res, cargo, uf) {
