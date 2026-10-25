@@ -3,8 +3,8 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73285274,
- "coletadoEm": "2026-10-24T23:52:21.872Z",
+ "revisao": 73285526,
+ "coletadoEm": "2026-10-25T02:31:56.792Z",
  "polls": [
   {
    "instituto": "Datafolha",
@@ -79,6 +79,21 @@
    "validos": {
     "lula": 48.42,
     "flavio": 51.58
+   }
+  },
+  {
+   "instituto": "Futura",
+   "contratante": "Futura",
+   "inicio": "2026-10-23",
+   "fim": "2026-10-24",
+   "amostra": 2000,
+   "margem": 2.2,
+   "lula": 47.9,
+   "flavio": 48.2,
+   "outros": 3.9,
+   "validos": {
+    "lula": 49.84,
+    "flavio": 50.16
    }
   },
   {
