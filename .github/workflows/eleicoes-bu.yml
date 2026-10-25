@@ -53,8 +53,13 @@ jobs:
             ODS=https://cdn.tse.jus.br/estatistica/sead/odsele
             for url in $ODS/votacao_secao/votacao_secao_2022_ZZ.zip $ODS/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip; do
               rm -rf /tmp/zz2022; echo "2022: tentando $url"
-              curl -sSfL --max-time 300 -o /tmp/zz2022.zip "$url" && unzip -qo -d /tmp/zz2022 /tmp/zz2022.zip '*ZZ*' \
-                && node scripts/eleicoes/sync-2022-exterior.mjs /tmp/zz2022 && [ -f data/eleicoes/2022/exterior.json ] && break
+              curl -sSfL --max-time 300 -o /tmp/zz2022.zip "$url" || continue
+              unzip -l /tmp/zz2022.zip | head -40
+              mkdir -p /tmp/zz2022
+              # Arquivo próprio do exterior (ZZ) ou só as linhas do exterior no arquivo nacional (BRASIL)
+              unzip -qo -d /tmp/zz2022 /tmp/zz2022.zip '*ZZ*.csv' 2>/dev/null \
+                || unzip -p /tmp/zz2022.zip '*BRASIL*.csv' | awk 'NR==1 || /;"ZZ";/' > /tmp/zz2022/votacao_ZZ.csv
+              node scripts/eleicoes/sync-2022-exterior.mjs /tmp/zz2022 && [ -f data/eleicoes/2022/exterior.json ] && break
             done || echo "2022 exterior falhou"
           fi
           while :; do
