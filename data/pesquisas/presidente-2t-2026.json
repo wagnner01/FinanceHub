@@ -3,9 +3,24 @@
  "eleicao": "2026-10-25",
  "primeiroTurno": "2026-10-04",
  "fonte": "https://pt.wikipedia.org/wiki/Pesquisas_de_opini%C3%A3o_para_a_elei%C3%A7%C3%A3o_presidencial_no_Brasil_em_2026",
- "revisao": 73285526,
- "coletadoEm": "2026-10-25T02:31:56.792Z",
+ "revisao": 73286911,
+ "coletadoEm": "2026-10-25T11:54:18.309Z",
  "polls": [
+  {
+   "instituto": "PoderData",
+   "contratante": "PoderData/Aya",
+   "inicio": "2026-10-23",
+   "fim": "2026-10-24",
+   "amostra": 4000,
+   "margem": 1.6,
+   "lula": 49,
+   "flavio": 51,
+   "outros": null,
+   "validos": {
+    "lula": 49,
+    "flavio": 51
+   }
+  },
   {
    "instituto": "Datafolha",
    "contratante": "DataFolha",
@@ -3428,52 +3443,52 @@
  "agregadores": [
   {
    "agregador": "UOL",
-   "data": "2026-10-23",
-   "lula": 48.9,
-   "flavio": 51.1,
+   "data": "2026-10-24",
+   "lula": 49,
+   "flavio": 51,
    "outros": null
   },
   {
    "agregador": "PollingData",
-   "data": "2026-10-23",
-   "lula": 45.5,
-   "flavio": 46.7,
-   "outros": 7.8
+   "data": "2026-10-24",
+   "lula": 46.2,
+   "flavio": 47.7,
+   "outros": 6.1
   },
   {
    "agregador": "BBC",
-   "data": "2026-10-22",
+   "data": "2026-10-23",
    "lula": 45,
-   "flavio": 47,
-   "outros": 8
+   "flavio": 49,
+   "outros": 6
   },
   {
    "agregador": "CartaCapital",
-   "data": "2026-10-21",
+   "data": "2026-10-23",
    "lula": 46.4,
-   "flavio": 48.4,
-   "outros": 5.2
+   "flavio": 48,
+   "outros": 5.6
   },
   {
    "agregador": "Poll+Trend",
-   "data": "2026-10-22",
+   "data": "2026-10-23",
    "lula": 46.45,
    "flavio": 48.28,
    "outros": 5.27
   },
   {
    "agregador": "Plano Político",
-   "data": "2026-10-23",
-   "lula": 48.8,
-   "flavio": 51.2,
+   "data": "2026-10-24",
+   "lula": 48.9,
+   "flavio": 51.1,
    "outros": null
   },
   {
    "agregador": "Agregador presidencial",
    "data": "2026-10-24",
-   "lula": 46.2,
-   "flavio": 48.4,
-   "outros": 6.7
+   "lula": 46.7,
+   "flavio": 48.2,
+   "outros": 6.1
   }
  ]
 }
