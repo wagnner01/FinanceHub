@@ -49,8 +49,13 @@ jobs:
           BRANCH="${GITHUB_REF_NAME}"
           FIM=$(( $(date +%s) + LOOP * 60 ))
           if [ ! -f data/eleicoes/2022/exterior.json ]; then
-            curl -sSfL --max-time 120 -o /tmp/zz2022.zip https://cdn.tse.jus.br/estatistica/sead/odsele/votacao_secao/votacao_secao_2022_ZZ.zip \
-              && unzip -qo -d /tmp/zz2022 /tmp/zz2022.zip && node scripts/eleicoes/sync-2022-exterior.mjs /tmp/zz2022 || echo "2022 exterior falhou"
+            # Dados abertos do TSE: votação por seção do exterior; senão, o arquivo nacional por município/zona
+            ODS=https://cdn.tse.jus.br/estatistica/sead/odsele
+            for url in $ODS/votacao_secao/votacao_secao_2022_ZZ.zip $ODS/votacao_candidato_munzona/votacao_candidato_munzona_2022.zip; do
+              rm -rf /tmp/zz2022; echo "2022: tentando $url"
+              curl -sSfL --max-time 300 -o /tmp/zz2022.zip "$url" && unzip -qo -d /tmp/zz2022 /tmp/zz2022.zip '*ZZ*' \
+                && node scripts/eleicoes/sync-2022-exterior.mjs /tmp/zz2022 && [ -f data/eleicoes/2022/exterior.json ] && break
+            done || echo "2022 exterior falhou"
           fi
           while :; do
             node scripts/eleicoes/sync-bu-exterior.mjs ${TURNO:+--turno $TURNO} || echo "exterior falhou"
@@ -60,8 +65,9 @@ jobs:
             if ! git diff --cached --quiet; then
               git commit -q -m "data: boletins de urna $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
               ok=0
-              for i in 1 2 3; do git pull --rebase -q origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && ok=1 && break; git rebase --abort 2>/dev/null; sleep $((i*5)); done
-              # Conflito persistente: descarta a volta local (os BUs voltam do repositório na próxima)
+              for i in 1 2 3; do git pull --rebase -X theirs -q origin "$BRANCH" && git push -q origin "HEAD:$BRANCH" && ok=1 && break; git rebase --abort 2>/dev/null; sleep $((i*5)); done
+              # Conflito: vale o dado desta volta (-X theirs = o commit local no rebase); se ainda falhar,
+              # descarta a volta local (os BUs voltam do repositório na próxima)
               [ "$ok" = 1 ] || { git fetch -q origin "$BRANCH"; git reset -q --hard "origin/$BRANCH"; }
             fi
             [ "$(date +%s)" -ge "$FIM" ] && break
