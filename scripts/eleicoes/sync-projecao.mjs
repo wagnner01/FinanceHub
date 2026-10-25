@@ -17,11 +17,11 @@ const UA = { 'User-Agent': 'FinanceHub-eleicoes-sync/1.0 (+github actions)' };
 const p6 = s => String(s).padStart(6, '0');
 
 let requests = 0, failures = 0;
-async function getJSON(url, tries = 4) {
+async function getJSON(url, tries = 2) {
     for (let i = 0; i < tries; i++) {
         try {
             requests++;
-            const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(20000) });
+            const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(10000) });
             if (r.status === 404 || r.status === 403) return null;
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return await r.json();
@@ -47,17 +47,29 @@ const ufs = Object.keys(REGIAO);
 const base1 = {};
 for (const uf of ufs) base1[uf] = (await readJSON(`${DIR}/${ele1}/mun/${uf}-c1.json`)) || {};
 
-// Parcial do 2º turno por município (um arquivo por município; o que falhar reaproveita a anterior)
+// Parcial do 2º turno por município (um arquivo por município). Só consulta UFs que já têm seções
+// totalizadas e municípios ainda não fechados; o que falhar ou estourar o tempo reaproveita a anterior.
 const prevMun = (await readJSON(`${DIR}/bu/mun-t2.json`))?.mun || {};
 const parcial = {};
 const jobs = [];
-for (const uf of ufs) for (const m of muns?.[uf] || []) jobs.push({ uf, cd: m[0] });
+const ufAndamento = {};
+await pool(ufs, 8, async uf => {
+    const r = normalizeResult(await getJSON(`${BASE}/${CICLO}/${ele2}/dados/${uf}/${uf}-c0001-e${p6(ele2)}-u.json`) || null);
+    ufAndamento[uf] = r?.secoes?.totalizadas || 0;
+});
+for (const uf of ufs) for (const m of muns?.[uf] || []) {
+    const ant = prevMun[uf]?.[m[0]];
+    if (ant) (parcial[uf] ??= {})[m[0]] = ant;
+    if (ufAndamento[uf] > 0 && !(ant?.pct >= 100)) jobs.push({ uf, cd: m[0] });
+}
+const prazo = Date.now() + 240000;
 await pool(jobs, 16, async ({ uf, cd }) => {
+    if (Date.now() > prazo) return;
     const raw = await getJSON(`${BASE}/${CICLO}/${ele2}/dados/${uf}/${uf}${cd}-c0001-e${p6(ele2)}-u.json`);
     const r = raw ? normalizeResult(raw) : null;
-    const v = r ? compactForMap(r) : prevMun[uf]?.[cd];
-    if (v && v.pct > 0) (parcial[uf] ??= {})[cd] = v;
+    if (r) { const v = compactForMap(r); if (v.pct > 0) (parcial[uf] ??= {})[cd] = v; }
 });
+console.log('UFs com seções totalizadas:', Object.entries(ufAndamento).filter(([, n]) => n > 0).length, '| municípios consultados:', jobs.length);
 
 const agora = new Date().toISOString();
 const modelo = projetarApuracao(base1, parcial);

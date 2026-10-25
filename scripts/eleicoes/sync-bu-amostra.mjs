@@ -63,7 +63,7 @@ pleitos['2'] ??= '3221';
 const prev = await readJSON(OUT);
 
 // 1) Amostra: sorteada uma vez a partir do cadastro de seções do 1º turno e reaproveitada depois
-let secoes = prev?.secoes;
+let secoes = prev?.amostra;
 if (!secoes) {
     const cadastro = {};
     await pool(UFS, 4, async uf => {
