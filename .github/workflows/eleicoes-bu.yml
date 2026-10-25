@@ -1,0 +1,43 @@
+name: Eleições — boletins de urna do exterior
+
+# Soma os Boletins de Urna de todas as seções do exterior (auditoria da totalização, por cidade/país).
+on:
+  schedule:
+    # Noite do 2º turno (25/10, 17h–23h40 BRT = 20h–02h40 UTC): a cada 20 min
+    - cron: '5,25,45 20-23 25 10 *'
+    - cron: '5,25,45 0-2 26 10 *'
+  workflow_dispatch:
+    inputs:
+      turno:
+        description: 'Turno (vazio = todos os disponíveis)'
+        type: string
+        default: ''
+  push:
+    branches: [main, ccr-98653d89-r5ar8b]
+    paths: ['scripts/eleicoes/sync-bu-exterior.mjs', 'js/eleicoes/bu.js', '.github/workflows/eleicoes-bu.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eleicoes-bu
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Somar boletins de urna do exterior
+        run: node scripts/eleicoes/sync-bu-exterior.mjs ${{ inputs.turno && format('--turno {0}', inputs.turno) || '' }}
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eleicoes
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "data: boletins de urna do exterior $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done
