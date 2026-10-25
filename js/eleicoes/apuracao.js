@@ -493,10 +493,41 @@ function linhaCand(c, cargo, uf, { big = false, pct = c.pv, votos = c.v } = {}) 
 function renderPainel(panel, res, cargo) {
     const uf = state.uf;
     let html = cabecalho(res, nomeArea());
+    const comProjecao = cargo === 1 && res.turno === 2 && uf === 'br' && !state.mun;
+    if (comProjecao) html += '<div id="el-proj"></div>';
     if (isProp(cargo)) html += painelProporcional(res, cargo, uf);
     else html += painelMajoritario(res, cargo, uf);
     panel.innerHTML = html;
     bindProp(panel, res, cargo, uf);
+    if (comProjecao) renderProjecao(panel.querySelector('#el-proj'), res);
+}
+
+// Projeção do resultado final (gerada a cada ~5 min pelo GitHub Actions: modelo por município e
+// amostra de boletins de urna, ambos comparando com o 1º turno — ver js/eleicoes/modelo-apuracao.js)
+async function renderProjecao(el, res) {
+    let p = null;
+    try { const r = await fetch(`data/eleicoes/2026/bu/projecao.json?t=${Date.now()}`, { cache: 'no-store' }); if (r.ok) p = await r.json(); } catch { /* sem projeção */ }
+    if (!el.isConnected || !p || (!p.modelo && !p.amostra?.secoes)) return;
+    const linha = (nome, e, nota) => {
+        if (!e) return '';
+        const ic = e.intervalo || [e.lula - 1.645 * e.sigma, e.lula + 1.645 * e.sigma];
+        const lider = e.lula >= 50 ? 'Lula' : 'Flávio';
+        const cravado = ic[0] > 50 || ic[1] < 50;
+        return `<div class="el-proj-row">
+            <div><b>${nome}</b><small>${nota}</small></div>
+            <div class="el-proj-num"><span style="color:${corPartido('PT')}">Lula ${fP(e.lula, 1)}</span> × <span style="color:${corPartido('PL')}">Flávio ${fP(100 - e.lula, 1)}</span>
+                <small>90%: ${fP(ic[0], 1)} a ${fP(ic[1], 1)} para Lula · chance de Lula ${fP(100 * e.probLula, 0)}</small></div>
+            <span class="el-proj-tag ${cravado ? 'ok' : ''}">${cravado ? `${lider} vence` : 'em aberto'}</span>
+        </div>`;
+    };
+    const hora = new Date(p.atualizado).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });
+    el.innerHTML = `<div class="el-card el-proj">
+        <h3>Projeção do resultado final<span>atualizada às ${hora}</span></h3>
+        ${linha('Modelo por município', p.modelo, p.modelo ? `${fP(p.modelo.apuradoPct, 1)} dos votos apurados · desvio de cada município contra o próprio 1º turno` : '')}
+        ${linha('Amostra de boletins de urna', p.amostra?.secoes ? p.amostra : null, p.amostra ? `${fN(p.amostra.secoes)} de ${fN(p.amostra.amostra)} seções sorteadas (${fP(p.amostra.cobertura, 0)}) · mesma seção, 1º × 2º turno` : '')}
+        <p class="el-proj-nota">A parcial do TSE (abaixo, ${fP(res.secoes.pct, 1)} das seções) chega fora de ordem — capitais e Sudeste primeiro — e engana nas primeiras horas.
+        As projeções comparam cada local com ele mesmo no 1º turno. Estimativa estatística, não resultado oficial.</p>
+    </div>`;
 }
 
 function painelMajoritario(res, cargo, uf) {
