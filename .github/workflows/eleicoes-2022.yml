@@ -1,0 +1,35 @@
+name: Eleições — apuração de 2022 reconstruída
+
+# Reconstrói a apuração do 2º turno de 2022 pela hora de recebimento de cada boletim de urna
+# (comparação "mesmo momento" com 2026) e testa o modelo de projeção com dados reais. Roda uma vez.
+on:
+  workflow_dispatch:
+  push:
+    branches: [ccr-98653d89-r5ar8b]
+    paths: ['scripts/eleicoes/sync-2022-curva.mjs', '.github/workflows/eleicoes-2022.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eleicoes-2022
+  cancel-in-progress: true
+
+jobs:
+  curva:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Reconstruir a apuração de 2022
+        run: node scripts/eleicoes/sync-2022-curva.mjs
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/eleicoes/2022
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "data: apuração de 2022 reconstruída pelos boletins de urna [skip ci]"
+          for i in 1 2 3; do git pull --rebase -X theirs -q && git push && break; sleep $((i*5)); done
