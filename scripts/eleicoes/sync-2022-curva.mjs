@@ -30,7 +30,7 @@ async function lerZip(zip, padrao, fn) {
     let cab = null;
     for await (const l of rl) {
         const c = l.split(';').map(x => x.replace(/^"|"$/g, ''));
-        if (!cab) { cab = Object.fromEntries(c.map((n, i) => [n, i])); continue; }
+        if (!cab) { cab = Object.fromEntries(c.map((n, i) => [n.replace(/\s+/g, ''), i])); continue; }
         if (c.length < 5 || c[0] === 'DT_GERACAO') continue; // cabeçalho repetido de outro CSV
         fn(c, cab);
     }
@@ -43,7 +43,9 @@ async function recursos() {
         try {
             const r = await fetch(`${CKAN}/package_search?q=${encodeURIComponent(q)}&rows=50`, { signal: AbortSignal.timeout(30000) });
             const j = await r.json();
-            for (const p of j.result?.results || []) for (const res of p.resources || []) if (/bweb_2t_/i.test(res.url || '')) urls.add(res.url);
+            for (const p of j.result?.results || []) for (const res of p.resources || []) {
+                if (/2022/.test(res.url || '') && /bweb_2t_[a-z]{2}_.*\.zip$/i.test(res.url || '')) urls.add(res.url);
+            }
         } catch (e) { console.warn('catálogo', q, e.message); }
     }
     return [...urls];
@@ -72,16 +74,19 @@ console.log('base 1º turno 2022:', Object.values(base1).reduce((a, m) => a + Ob
 
 // 3) Boletins do 2º turno: votos de Presidente e hora de recebimento por seção
 const secoes = new Map(); // chave → { uf, mun, t, l, f }
+let campoHora = null;
 for (const url of urls) {
     const zip = `${TMP}/bweb.zip`;
     try { baixar(url, zip); } catch { console.warn('falhou', url); continue; }
     let n = 0;
     await lerZip(zip, "'*.csv'", (c, h) => {
-        if (n++ === 0 && !('DT_BU_RECEBIDO' in h)) console.log('colunas', Object.keys(h).join(','));
+        // Hora de recebimento do BU; na falta, hora de encerramento da urna (aproximação da ordem de chegada)
+        const iHora = h.DT_BU_RECEBIDO ?? h.DT_RECEBIMENTO_BU ?? h.DT_ENCERRAMENTO;
+        if (n++ === 0) { campoHora = h.DT_BU_RECEBIDO != null ? 'DT_BU_RECEBIDO' : h.DT_RECEBIMENTO_BU != null ? 'DT_RECEBIMENTO_BU' : 'DT_ENCERRAMENTO'; console.log('hora por', campoHora, '| colunas', Object.keys(h).join(',')); }
         if (!/presidente/i.test(c[h.DS_CARGO_PERGUNTA] || '')) return;
         const uf = c[h.SG_UF].toLowerCase(), mun = c[h.CD_MUNICIPIO];
         const k = `${uf}/${mun}/${c[h.NR_ZONA]}/${c[h.NR_SECAO]}`;
-        const s = secoes.get(k) || { uf, mun, t: c[h.DT_BU_RECEBIDO], l: 0, f: 0 };
+        const s = secoes.get(k) || { uf, mun, t: c[iHora], l: 0, f: 0 };
         const nv = c[h.NR_VOTAVEL], q = Number(c[h.QT_VOTOS]) || 0;
         if (nv === '13') s.l += q; else if (nv === '22') s.f += q;
         secoes.set(k, s);
@@ -130,7 +135,10 @@ const porHora = [];
 }
 const out = {
     fonte: 'TSE, dados abertos: boletins de urna do 2º turno de 2022 (DT_BU_RECEBIDO) e votação por município/zona',
-    nota: 'Hora de recebimento do BU no TSE (a divulgação ocorre minutos depois). Modelo: base 1º turno 2022 por município.',
+    campoHora,
+    nota: campoHora === 'DT_ENCERRAMENTO'
+        ? 'Ordem pela hora de encerramento de cada urna (os boletins de 2022 não trazem a hora de recebimento): aproximação da ordem de chegada. Modelo: base 1º turno 2022 por município.'
+        : 'Hora de recebimento do BU no TSE (a divulgação ocorre minutos depois). Modelo: base 1º turno 2022 por município.',
     final: { lula: +(100 * L / (L + F)).toFixed(3), secoes: totalSec },
     pontos, porHora,
 };
