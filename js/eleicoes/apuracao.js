@@ -11,6 +11,7 @@ const fP = (v, d = 2) => `${(v || 0).toLocaleString('pt-BR', { minimumFractionDi
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const titleCase = s => String(s || '').toLowerCase().replace(/(^|\s|-|')(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(De|Da|Do|Das|Dos|E)\b/g, w => w.toLowerCase());
 const SEGUNDO_TURNO = new Date('2026-10-25T17:00:00-03:00');
+const FECHAMENTO_2026 = Date.parse('2026-10-25T19:00:00-03:00'); // votação prorrogada até as 19h (decisão do STF)
 const REFRESH_MS = 30000;
 
 const CARGO_ORDEM = [1, 3, 5, 6, 7];
@@ -531,13 +532,16 @@ async function renderProjecao(el, res) {
     const agoraBRT = new Date(Date.now() - 3 * 3600000);
     const hhmm = `${String(agoraBRT.getUTCHours()).padStart(2, '0')}:${String(agoraBRT.getUTCMinutes()).padStart(2, '0')}`;
 
-    // 2022 no mesmo momento: mesmo % de seções e mesmo horário
+    // 2022 no mesmo momento: mesmo % de seções e mesmo tempo desde o fechamento das urnas
+    // (2022 fechou às 17h; em 2026 a votação foi prorrogada até as 19h por decisão do STF)
+    const minDesdeFechamento = Math.floor((Date.now() - FECHAMENTO_2026) / 60000);
+    const hhmm22 = minDesdeFechamento >= 0 ? `${String(17 + Math.floor(minDesdeFechamento / 60)).padStart(2, '0')}:${String(minDesdeFechamento % 60).padStart(2, '0')}` : '00:00';
     let mesmo22 = null;
     if (curva2022?.pontos?.length) {
         const parcial = interp(curva2022.pontos, secPct, 'parcial');
         const modeloPts = curva2022.pontos.map(x => ({ secoesPct: x.secoesPct, m: x.modelo?.lula ?? null }));
         const modelo22 = interp(modeloPts, secPct, 'm');
-        const ph = (curva2022.porHora || []).filter(x => x.hora <= hhmm).pop();
+        const ph = (curva2022.porHora || []).filter(x => x.hora <= hhmm22).pop();
         mesmo22 = { parcial, modelo22, desvio: parcial != null ? parcial - FINAL_2022 : null, hora: ph };
     }
     const ajustado22 = lulaReal != null && mesmo22?.desvio != null ? lulaReal - mesmo22.desvio : null;
@@ -573,7 +577,7 @@ async function renderProjecao(el, res) {
             ${mesmo22 ? `<tbody class="el-proj-22">
             ${linha('2022 no mesmo % de seções', `parcial de Lula × Bolsonaro com ${fP(secPct, 1)} apurado`, mesmo22.parcial, `final de 2022: Lula ${fP(FINAL_2022)}`)}
             ${mesmo22.modelo22 != null ? linha('Modelo aplicado a 2022', 'mesmo método, dados reais de 2022', mesmo22.modelo22, `erro vs. final: ${(mesmo22.modelo22 - FINAL_2022 >= 0 ? '+' : '') + (mesmo22.modelo22 - FINAL_2022).toFixed(2).replace('.', ',')} pp`) : ''}
-            ${mesmo22.hora ? linha(`2022 às ${mesmo22.hora.hora}`, `${fP(mesmo22.hora.secoesPct, 1)} das seções recebidas`, mesmo22.hora.parcial, 'mesmo horário') : ''}
+            ${mesmo22.hora ? linha(`2022 às ${mesmo22.hora.hora}`, `${fP(mesmo22.hora.secoesPct, 1)} das seções recebidas`, mesmo22.hora.parcial, `mesmo tempo após o fechamento (${minDesdeFechamento} min)`) : ''}
             </tbody>` : ''}
         </table></div>
         <p class="el-proj-nota">Lula e Flávio em % dos votos válidos (em 2022, Lula × Jair Bolsonaro). As projeções comparam cada município/seção com ele mesmo no 1º turno;
