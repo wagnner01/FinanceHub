@@ -74,7 +74,9 @@ console.log('UFs com seções totalizadas:', Object.entries(ufAndamento).filter(
 const agora = new Date().toISOString();
 const modelo = projetarApuracao(base1, parcial);
 const amostra = (await readJSON(`${DIR}/bu/amostra.json`))?.estimativa || null;
-const br = normalizeResult(await getJSON(`${BASE}/${CICLO}/${ele2}/dados/br/br-c0001-e${p6(ele2)}-u.json`) || null);
+// Placar oficial: TSE ao vivo (3 tentativas); se falhar, o último snapshot versionado
+const br = normalizeResult(await getJSON(`${BASE}/${CICLO}/${ele2}/dados/br/br-c0001-e${p6(ele2)}-u.json`, 3) || null)
+    || await readJSON(`${DIR}/${ele2}/br-c1.json`);
 const oficial = br ? {
     secoesPct: br.secoes?.pct, lula: br.candidatos.find(c => c.n === '13')?.pv, flavio: br.candidatos.find(c => c.n === '22')?.pv,
     atualizado: br.atualizado,
