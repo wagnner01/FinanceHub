@@ -11,15 +11,17 @@ const UA = { 'User-Agent': 'FinanceHub-eleicoes-sync/1.0 (+github actions)' };
 const p6 = s => String(s).padStart(6, '0');
 
 try { await readFile(OUT); console.log('2022 exterior: já existe'); process.exit(0); } catch { /* baixar */ }
+// Teto de tempo: não pode atrasar a coleta da noite
+setTimeout(() => { console.log('2022 exterior: tempo esgotado'); process.exit(0); }, 180000).unref();
 
 async function getJSON(url) {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         try {
-            const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(20000) });
+            const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(8000) });
             if (r.status === 404 || r.status === 403) return null;
             if (!r.ok) throw new Error(`HTTP ${r.status}`);
             return await r.json();
-        } catch { await new Promise(res => setTimeout(res, 1000 * 2 ** i)); }
+        } catch (e) { console.warn('falhou', url, e.message); await new Promise(res => setTimeout(res, 1000)); }
     }
     return null;
 }
