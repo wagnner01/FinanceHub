@@ -99,7 +99,7 @@ for (const [tipo, turnos] of Object.entries(eleicoes)) {
         if (any && cm && !SEM_MUN) {
             const mapCargos = tipo === 'federal' ? [1] : (turno === 't2' ? [3] : [3, 5]);
             for (const c of mapCargos) {
-                for (const uf of UFS) {
+                for (const uf of tipo === 'federal' ? [...UFS, 'zz'] : UFS) { // zz = exterior (cidades/países)
                     const muns = (cm.abr.find(a => a.cd === uf)?.mu || []);
                     const out = {};
                     await pool(muns, 16, async m => {
