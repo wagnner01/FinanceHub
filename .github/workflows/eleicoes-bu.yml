@@ -1,6 +1,9 @@
-name: Eleições — boletins de urna do exterior
+name: Eleições — boletins de urna (exterior + amostra nacional)
 
-# Soma os Boletins de Urna de todas as seções do exterior (auditoria da totalização, por cidade/país).
+# Soma os Boletins de Urna de todas as seções do exterior (por cidade/país) e de uma amostra
+# nacional estratificada por UF, que estima o 2º turno antes da totalização (variação seção a seção).
+# Agendamentos só rodam no branch padrão; na noite da eleição, dispare com loop_minutos > 0:
+# o job repete a coleta a cada ~4 min e faz commit a cada volta.
 on:
   schedule:
     # Noite do 2º turno (25/10, 17h–23h40 BRT = 20h–02h40 UTC): a cada 20 min
@@ -9,12 +12,16 @@ on:
   workflow_dispatch:
     inputs:
       turno:
-        description: 'Turno (vazio = todos os disponíveis)'
+        description: 'Turno do exterior (vazio = todos os disponíveis)'
         type: string
         default: ''
+      loop_minutos:
+        description: 'Repetir a coleta por N minutos (0 = uma vez; máx. ~340)'
+        type: string
+        default: '0'
   push:
     branches: [main, ccr-98653d89-r5ar8b]
-    paths: ['scripts/eleicoes/sync-bu-exterior.mjs', 'js/eleicoes/bu.js', '.github/workflows/eleicoes-bu.yml']
+    paths: ['scripts/eleicoes/sync-bu-*.mjs', 'js/eleicoes/bu.js', 'js/eleicoes/amostra.js', '.github/workflows/eleicoes-bu.yml']
 
 permissions:
   contents: write
@@ -26,18 +33,27 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - name: Somar boletins de urna do exterior
-        run: node scripts/eleicoes/sync-bu-exterior.mjs ${{ inputs.turno && format('--turno {0}', inputs.turno) || '' }}
-      - name: Commit
+      - name: Somar boletins de urna (exterior + amostra nacional)
+        env:
+          TURNO: ${{ inputs.turno }}
+          LOOP: ${{ inputs.loop_minutos || '0' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/eleicoes
-          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
-          git commit -m "data: boletins de urna do exterior $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep $((i*5)); done
+          FIM=$(( $(date +%s) + LOOP * 60 ))
+          while :; do
+            node scripts/eleicoes/sync-bu-exterior.mjs ${TURNO:+--turno $TURNO} || echo "exterior falhou"
+            node scripts/eleicoes/sync-bu-amostra.mjs || echo "amostra falhou"
+            git add data/eleicoes
+            if ! git diff --cached --quiet; then
+              git commit -q -m "data: boletins de urna $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+              for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep $((i*5)); done
+            fi
+            [ "$(date +%s)" -ge "$FIM" ] && break
+            sleep 240
+          done
